@@ -1,4 +1,5 @@
-import logging ,paramiko,multiprocessing
+
+import logging ,paramiko,multiprocessing,time
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)-8s %(message)s',
@@ -35,9 +36,11 @@ def switch_system():
 def add(a=4,b=None):
     if a and b:
         sum = a+b
+        time.sleep(5)
         print(sum) 
     else:
         sum = a + a
+        time.sleep(5)
         print(sum )
 
 def sub(a,b,m=None):
@@ -50,12 +53,14 @@ def sub(a,b,m=None):
 
 if __name__=='__main__':
     #sshConn("172.25.26.9",'admin','admin')
-     add(5,12)
-   
+     #add(5,12)
      p = multiprocessing.Process(target=add, args=(1,3))
+     p.daemon = True
      p.start()
-     sub(7,1)
-     a = 12323
-     logger.info("this is %s"%a)
+     q = multiprocessing.Process(target=add, args=(1,6))
+     q.start()
+     print("waiting deamon to complete")
+     p.join()
+     q.join()
     #print [x for x in range(1,20) if x%2==0 ] 
     #print [x for x in 'MATHEMATICS' if x in ['A','E','I','O','U']]

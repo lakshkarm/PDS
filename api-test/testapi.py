@@ -451,18 +451,17 @@ def rebuild_media_grp(md_grp):
         rebuild_media_grp(md_grp)
 
 
-def do_io(host, vol_name, size="80%", pattern=None,mpath=None):
+def do_io(host, vol_name, size,timebase,runtime, pattern=None,mpath=None):
     if mpath:
         dev_name = get_dev_name(HOST_IP, vol_name,mpath)
         logger.info("Starting FIO load on %s"%dev_name)
-        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=4k --rw=write --name=1 --filename=%s --verify_pattern=0x%s' %( size,dev_name,  pattern)
+        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=%s --verify_pattern=0x%s --time_based=%s --runtime=%s' %( size,dev_name,pattern,timebase,runtime)
 
         run(cmd, HOST_IP , 'test')
     else:
         dev_name = get_dev_name(HOST_IP, vol_name)
         logger.info("Starting FIO load on %s"%dev_name)
-        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=4k --rw=write --name=1 --filename=%s --verify_pattern=0x%s' %( size,dev_name,  pattern)
-
+        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=%s --verify_pattern=0x%s --time_based=%s --runtime=%s' %( size,dev_name,pattern,timebase,runtime)
         run(cmd, HOST_IP , 'test')
 
 
@@ -490,21 +489,24 @@ if __name__=='__main__':
         volname= 'ML_TV'
         for i in range(no):
             vol = volname+"_"+str(i)
-            p = multiprocessing.Process(target=create_assign_vol,args=('100', '4',vol, str(100), 'manishmg1', 'INSANE',CTRL_1_IP,CTRL_2_IP))
+            p = multiprocessing.Process(target=create_assign_vol,args=('300', '4',vol, str(70), 'manishmg1', 'INSANE',CTRL_1_IP,CTRL_2_IP))
             p.start()
             p.join()
             vol_list.append(vol)
    
     # Starting the test here 
-    multiproc(2)
+    multiproc(7)
     for volname in vol_list:
     # connect the volume to the host 
         connect_host(CTRL_IPS, HOST_IP, volname)
     # start io on the volumes 
         # 1 for multipath vol
-        p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1))
+        p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,7200,1))
+        #p.daemon = True
         p.start()
+        #p.join()
     # disconnect all the volumes
+    
     
     
     
