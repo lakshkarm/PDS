@@ -1,0 +1,11 @@
+fsd=fsd1,anchor=/mnt_test4/,depth=1,width=1,files=800,size=1G
+fsd=fsd2,anchor=/mnt_test3/,depth=1,width=1,files=1600,size=512M
+fsd=fsd3,anchor=/mnt_test5/,depth=1,width=1,files=3200,size=256M
+fsd=fsd4,anchor=/mnt_test2/,depth=1,width=1,files=80,size=10G
+fsd=fsd5,anchor=/mnt_test1/,depth=1,width=1,files=8,size=100G
+fwd=fwd1,fsd=fsd1,rdpct=0,xfersize=128K,fileselect=random,fileio=random,threads=64
+fwd=fwd2,fsd=fsd2,rdpct=0,xfersize=1M,fileselect=random,fileio=random,threads=16
+fwd=fwd3,fsd=fsd3,rdpct=0,xfersize=32K,fileselect=random,fileio=random,threads=32
+fwd=fwd4,fsd=fsd4,rdpct=0,xfersize=64K,fileselect=random,fileio=random,threads=128
+fwd=fwd5,fsd=fsd5,rdpct=0,xfersize=16K,fileselect=random,fileio=random,threads=256
+rd=rd1,fwd=(fwd1-fwd5),fwdrate=max,format=yes,elapsed=1h,interval=30

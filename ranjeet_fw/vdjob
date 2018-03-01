@@ -1,0 +1,7 @@
+sd=sd1,lun=/dev/pd_vol/lv4,openflags=o_direct
+sd=sd2,lun=/dev/pd_vol/lv2,openflags=o_direct
+wd=wd1,sd=sd1,rdpct=30,xfersize=1M
+wd=wd2,sd=sd2,rdpct=70,xfersize=4K
+rd=rd1,wd=wd1,iorate=max,elapsed=4h,interval=30
+rd=rd2,wd=wd2,iorate=100,elapsed=4h,interval=30
+

@@ -1,0 +1,36 @@
+
+import logging
+'''
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+fh = logging.FileHandler("logfile")
+fh.setLevel(logging.DEBUG)
+
+formate = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+fh.setFormatter(formate)
+logger.addHandler(fh)
+'''
+
+logging.info("hello this is my logging classs")
+
+def customLogger():
+    ## initiate logger object and get logger
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+    
+    ##file handler
+    fh = logging.FileHandler("logfile")
+    fh.setLevel(logging.DEBUG)
+
+    ## setup formatter
+    formate = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    fh.setFormatter(formate)
+    logger.addHandler(fh)
+
+    return(logger)
+
+
+logger = customLogger()
+logger.info("hello bro this is just an information ")
+    

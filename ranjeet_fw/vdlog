@@ -1,0 +1,181 @@
+nohup: ignoring input
+
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+Vdbench distribution: vdbench50406 Wed July 20 15:49:52 MDT 2016
+For documentation, see 'vdbench.pdf'.
+
+15:09:01.882 input argument scanned: '-vr'
+15:09:01.884 input argument scanned: '-fvdjob'
+15:09:02.060 Anchor size: anchor=/mnt_test1/: dirs:            1; files:           20; bytes:   200.000g (214,748,364,800)
+15:09:02.060 Anchor size: anchor=/mnt_test2/: dirs:            1; files:          200; bytes:   200.000g (214,748,364,800)
+15:09:02.061 Anchor size: anchor=/mnt_test3/: dirs:            1; files:          400; bytes:   200.000g (214,748,364,800)
+15:09:02.062 Anchor size: anchor=/mnt_test4/: dirs:            1; files:            2; bytes:   200.000g (214,748,364,800)
+15:09:02.069 Estimated totals for all 4 anchors: dirs: 4; files: 622; bytes: 800.000g 
+15:09:02.171 Starting slave: /root/vdbench/vdbench SlaveJvm -m localhost -n localhost-10-180130-15.09.01.781 -l localhost-0 -p 5570   
+15:09:02.725 All slaves are now connected
+15:09:04.002 Starting RD=format_for_rd1
+15:09:04.145 localhost-0: Starting cleanup for anchor=/mnt_test1/
+15:09:04.162 localhost-0: Starting cleanup for anchor=/mnt_test2/
+15:09:04.178 localhost-0: Starting cleanup for anchor=/mnt_test3/
+15:09:04.195 localhost-0: Starting cleanup for anchor=/mnt_test4/
+15:09:04.274 localhost-0: anchor=/mnt_test1/ mkdir complete.
+15:09:04.366 localhost-0: anchor=/mnt_test2/ mkdir complete.
+15:09:04.552 localhost-0: anchor=/mnt_test3/ mkdir complete.
+15:09:04.994 localhost-0: anchor=/mnt_test4/ mkdir complete.
+15:09:24.556 localhost-0: anchor=/mnt_test3/: Created 12 of 400 files (3.00%)
+
+Jan 30, 2018 .Interval. .ReqstdOps... ...cpu%...  read ....read..... ....write.... ..mb/sec... mb/sec .xfer.. ...mkdir.... ...rmdir.... ...create... ....open.... ...close.... ...delete...
+                          rate   resp total  sys   pct   rate   resp   rate   resp  read write  total    size  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp
+15:09:34.265          1 9628.0  1.760  34.2 6.44  50.0 9627.8  0.903 9628.0  1.760  1203  1203 2406.9  131072   0.1  0.621   0.0  0.000   0.8  14696   1.6  0.594   0.8  0.039   0.0  0.000
+15:09:40.848 localhost-0: anchor=/mnt_test3/: Created 24 of 400 files (6.00%)
+15:09:56.549 localhost-0: anchor=/mnt_test2/: Created 14 of 200 files (7.00%)
+15:10:04.270          2 9183.1  1.873  35.9 7.28  50.0 9183.2  0.932 9183.1  1.873  1147  1147 2295.7  131072   0.0  0.000   0.0  0.000   0.8  18013   0.8 27.281   0.8  0.034   0.0  0.000
+15:10:18.391 localhost-0: anchor=/mnt_test2/: Created 18 of 200 files (9.00%)
+15:10:34.110          3 9041.0  1.947  34.6 6.99  50.0 9040.9  0.926 9041.0  1.947  1130  1130 2260.2  131072   0.0  0.000   0.0  0.000   0.8  18696   0.8  0.278   0.8  0.039   0.0  0.000
+15:10:36.551 localhost-0: anchor=/mnt_test3/: Created 52 of 400 files (13.00%)
+15:10:53.902 localhost-0: anchor=/mnt_test3/: Created 64 of 400 files (16.00%)
+15:11:04.137          4 9250.0  1.880  34.5 7.15  50.0 9250.0  0.896 9250.0  1.880  1156  1156 2312.5  131072   0.0  0.000   0.0  0.000   0.9  16642   0.9 283.07   0.9  0.038   0.0  0.000
+15:11:10.312 localhost-0: anchor=/mnt_test2/: Created 34 of 200 files (17.00%)
+15:11:30.612 localhost-0: anchor=/mnt_test3/: Created 84 of 400 files (21.00%)
+15:11:34.090          5 9100.4  1.936  34.3 7.04  50.0 9100.3  0.908 9100.4  1.936  1137  1137 2274.9  131061   0.0  0.000   0.0  0.000   1.0  18313   0.9  0.694   1.0  0.040   0.0  0.000
+15:11:47.521 localhost-0: anchor=/mnt_test3/: Created 96 of 400 files (24.00%)
+15:12:04.102          6 9179.8  1.952  33.3 6.74  50.0 9179.6  0.873 9179.8  1.952  1147  1147 2294.9  131072   0.0  0.000   0.0  0.000   1.0  17118   1.0 127.23   1.0  0.041   0.0  0.000
+15:12:04.574 localhost-0: anchor=/mnt_test2/: Created 54 of 200 files (27.00%)
+15:12:22.331 localhost-0: anchor=/mnt_test3/: Created 120 of 400 files (30.00%)
+15:12:34.294          7 9160.0  1.916  34.5 7.54  50.0 9160.2  0.897 9160.0  1.916  1145  1145 2290.0  131072   0.0  0.000   0.0  0.000   1.0  16959   1.0 107.90   1.0  0.038   0.0  0.000
+15:12:45.088 localhost-0: anchor=/mnt_test3/: Created 128 of 400 files (32.00%)
+15:13:01.900 localhost-0: anchor=/mnt_test2/: Created 66 of 200 files (33.00%)
+15:13:04.178          8 6369.2  3.126  24.4 4.89  50.0 6368.9  0.927 6369.2  3.126 796.1 796.1 1592.2  131072   0.0  0.000   0.0  0.000   0.7  20404   0.8 231.75   0.7  0.041   0.0  0.000
+15:13:19.791 localhost-0: anchor=/mnt_test3/: Created 152 of 400 files (38.00%)
+15:13:34.138          9 9185.9  1.913  34.7 7.17  50.0 9186.2  0.907 9185.9  1.913  1148  1148 2296.5  131072   0.0  0.000   0.0  0.000   1.0  17853   1.0 131.66   1.0  0.042   0.0  0.000
+15:13:40.066 localhost-0: anchor=/mnt_test3/: Created 164 of 400 files (41.00%)
+15:14:00.411 localhost-0: anchor=/mnt_test2/: Created 82 of 200 files (41.00%)
+15:14:04.033         10 8289.5  2.173  31.4 6.65  50.0 8289.4  0.921 8289.5  2.173  1036  1036 2072.3  131071   0.0  0.000   0.0  0.000   1.1  80514   1.0  0.599   1.1  0.041   0.0  0.000
+15:14:23.249 localhost-0: anchor=/mnt_test2/: Created 88 of 200 files (44.00%)
+15:14:34.081         11 7483.0  2.464  29.4 6.32  50.0 7483.2  0.966 7483.0  2.464 935.3 935.3 1870.7  131071   0.0  0.000   0.0  0.000   0.6  19960   0.7 364.22   0.6  0.041   0.0  0.000
+15:14:38.806 localhost-0: anchor=/mnt_test2/: Created 92 of 200 files (46.00%)
+15:14:55.133 localhost-0: anchor=/mnt_test2/: Created 96 of 200 files (48.00%)
+15:15:04.070         12 7593.1  2.487  29.6 6.10  50.0 7593.1  0.965 7593.1  2.487 949.1 949.1 1898.2  131071   0.0  0.000   0.0  0.000   0.8  22963   0.8 14.468   0.8  0.037   0.0  0.000
+15:15:11.416 localhost-0: anchor=/mnt_test3/: Created 212 of 400 files (53.00%)
+15:15:34.318         13 7103.4  2.646  28.0 5.94  50.0 7103.4  0.969 7103.4  2.646 887.9 887.9 1775.8  131071   0.0  0.000   0.0  0.000   0.6  23534   0.6 264.79   0.6  0.042   0.0  0.000
+15:15:35.130 localhost-0: anchor=/mnt_test3/: Created 220 of 400 files (55.00%)
+15:15:56.254 localhost-0: anchor=/mnt_test3/: Created 228 of 400 files (57.00%)
+15:16:04.070         14 7230.5  2.600  29.6 6.52  50.0 7230.4  0.989 7230.5  2.600 903.8 903.8 1807.6  131072   0.0  0.000   0.0  0.000   0.8  23671   0.8 23.634   0.8  0.040   0.0  0.000
+15:16:11.564 localhost-0: anchor=/mnt_test2/: Created 120 of 200 files (60.00%)
+15:16:26.628 localhost-0: anchor=/mnt_test3/: Created 240 of 400 files (60.00%)
+15:16:34.109         15 7269.6  2.573  29.8 6.28  50.0 7269.6  0.983 7269.6  2.573 908.7 908.7 1817.4  131072   0.0  0.000   0.0  0.000   0.6  22534   0.6 265.36   0.6  0.040   0.0  0.000
+15:16:47.486 localhost-0: anchor=/mnt_test2/: Created 130 of 200 files (65.00%)
+15:17:04.060         16 7229.9  2.594  29.6 6.30  50.0 7229.7  0.983 7229.9  2.594 903.7 903.7 1807.4  131070   0.0  0.000   0.0  0.000   0.7  23270   0.7 116.41   0.7  0.041   0.0  0.000
+15:17:10.290 localhost-0: anchor=/mnt_test3/: Created 256 of 400 files (64.00%)
+15:17:30.129 localhost-0: anchor=/mnt_test3/: Created 264 of 400 files (66.00%)
+15:17:34.083         17 7209.5  2.561  29.6 6.47  50.0 7209.4  0.984 7209.5  2.561 901.1 901.1 1802.3  131072   0.0  0.000   0.0  0.000   0.7  22572   0.7 602.99   0.7  0.041   0.0  0.000
+15:17:49.466 localhost-0: anchor=/mnt_test2/: Created 152 of 200 files (76.00%)
+15:18:04.069         18 7178.0  2.606  29.6 6.39  50.0 7178.0  0.984 7178.0  2.606 897.2 897.2 1794.5  131072   0.0  0.000   0.0  0.000   0.8  22926   0.7 63.347   0.8  0.045   0.0  0.000
+15:18:08.144 localhost-0: anchor=/mnt_test2/: Created 158 of 200 files (79.00%)
+15:18:24.572 localhost-0: anchor=/mnt_test3/: Created 284 of 400 files (71.00%)
+15:18:34.040         19 7176.8  2.613  29.3 6.55  50.0 7177.0  0.980 7176.8  2.613 897.1 897.1 1794.2  131071   0.0  0.000   0.0  0.000   0.6  23726   0.7 279.83   0.6  0.042   0.0  0.000
+15:18:41.612 localhost-0: anchor=/mnt_test2/: Created 168 of 200 files (84.00%)
+15:18:57.247 localhost-0: anchor=/mnt_test3/: Created 296 of 400 files (74.00%)
+15:19:04.073         20 7196.0  2.627  29.5 6.38  50.0 7195.9  0.980 7196.0  2.627 899.4 899.5 1798.9  131072   0.0  0.000   0.0  0.000   0.6  23656   0.7 93.660   0.6  0.042   0.0  0.000
+15:19:14.379 localhost-0: anchor=/mnt_test2/: Created 178 of 200 files (89.00%)
+15:19:30.112 localhost-0: anchor=/mnt_test2/: Created 182 of 200 files (91.00%)
+15:19:34.067         21 7079.5  2.654  29.0 6.09  50.0 7079.6  0.985 7079.5  2.654 884.9 884.9 1769.8  131072   0.0  0.000   0.0  0.000   0.7  22576   0.7 75.463   0.7  0.041   0.0  0.000
+15:19:45.178 localhost-0: anchor=/mnt_test3/: Created 316 of 400 files (79.00%)
+15:20:01.971 localhost-0: anchor=/mnt_test3/: Created 324 of 400 files (81.00%)
+15:20:04.025         22 7182.2  2.630  29.5 6.70  50.0 7182.3  0.994 7182.2  2.630 897.7 897.7 1795.5  131072   0.0  0.000   0.0  0.000   0.8  38091   0.7  0.267   0.8  0.041   0.0  0.000
+15:20:19.127 localhost-0: anchor=/mnt_test3/: Created 332 of 400 files (83.00%)
+15:20:34.087         23 7129.4  2.129  29.2 6.47  50.0 7129.5  0.978 7129.4  2.129 891.1 891.1 1782.3  131072   0.0  0.000   0.0  0.000   0.9 119488   0.6 182.33   0.9  0.045   0.0  0.000
+15:20:35.642 localhost-0: anchor=/mnt_test2/ create complete.
+15:20:36.197 localhost-0: anchor=/mnt_test3/: Created 340 of 400 files (85.00%)
+15:20:51.518 localhost-0: anchor=/mnt_test3/: Created 344 of 400 files (86.00%)
+15:21:04.076         24 4369.4  2.270  18.1 4.04  50.0 4369.3  0.957 4369.4  2.270 546.1 546.1 1092.3  131072   0.0  0.000   0.0  0.000   0.6  20070   0.5  0.266   0.6  0.040   0.0  0.000
+15:21:10.806 localhost-0: anchor=/mnt_test3/: Created 356 of 400 files (89.00%)
+15:21:28.567 localhost-0: anchor=/mnt_test3/: Created 368 of 400 files (92.00%)
+15:21:34.044         25 6841.8  1.074  28.8 6.07  50.0 6841.8  0.957 6841.8  1.074 855.2 855.2 1710.4  131072   0.0  0.000   0.0  0.000   0.6  12686   0.6  0.275   0.6  0.038   0.0  0.000
+15:21:48.678 localhost-0: anchor=/mnt_test3/: Created 380 of 400 files (95.00%)
+15:22:04.056         26 6840.1  1.095  28.9 6.17  50.0 6840.1  0.951 6840.1  1.095 854.9 854.9 1709.9  131064   0.0  0.000   0.0  0.000   0.7  12550   0.7 21.198   0.7  0.042   0.0  0.000
+15:22:07.006 localhost-0: anchor=/mnt_test3/: Created 392 of 400 files (98.00%)
+15:22:15.382 localhost-0: anchor=/mnt_test3/ create complete.
+15:22:32.943 localhost-0: anchor=/mnt_test1/ create complete.
+15:22:34.055         27 5175.4  0.566  22.0 4.93  50.0 5175.5  0.939 5175.4  0.566 646.9 646.9 1293.8  131072   0.0  0.000   0.0  0.000   0.5  45800   0.1 719.45   0.5  0.037   0.0  0.000
+15:23:04.058         28 1594.7  0.309   7.0 1.64  50.0 1594.7  0.936 1594.7  0.309 199.3 199.3 398.68  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:23:34.056         29 1563.2  0.337   6.7 1.52  50.0 1563.2  0.936 1563.2  0.337 195.4 195.4 390.79  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:24:04.053         30 1571.0  0.329   6.8 1.59  50.0 1571.0  0.936 1571.0  0.329 196.3 196.3 392.75  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+
+Jan 30, 2018 .Interval. .ReqstdOps... ...cpu%...  read ....read..... ....write.... ..mb/sec... mb/sec .xfer.. ...mkdir.... ...rmdir.... ...create... ....open.... ...close.... ...delete...
+                          rate   resp total  sys   pct   rate   resp   rate   resp  read write  total    size  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp
+15:24:34.057         31 1488.6  0.398   6.4 1.42  50.0 1488.6  0.936 1488.6  0.398 186.0 186.0 372.15  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:25:04.053         32 1587.1  0.318   6.8 1.48  50.0 1587.1  0.935 1587.1  0.318 198.3 198.3 396.77  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:25:34.052         33 1539.6  0.355   6.7 1.58  50.0 1539.6  0.935 1539.6  0.355 192.4 192.4 384.90  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:26:04.058         34 1196.9  0.726   5.2 1.21  50.0 1197.0  0.935 1196.9  0.726 149.6 149.6 299.24  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:26:34.053         35 1571.6  0.330   6.7 1.53  50.0 1571.6  0.936 1571.6  0.330 196.4 196.4 392.90  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+15:26:57.398 localhost-0: anchor=/mnt_test4/ create complete.
+15:26:57.570 localhost-0: 15:26:57.569 Total amount of key blocks read and validated: 24,576,000; key blocks marked in error:    0 
+15:26:58.018         36  665.9  0.344   3.6 0.80  50.0  665.9  0.935  665.9  0.344 83.24 83.24 166.48  131072   0.0  0.000   0.0  0.000   0.1 1061890   0.0  0.000   0.1  0.089   0.0  0.000
+15:26:58.032   avg_2-36 6068.1  2.061  24.1 5.11  50.0 6068.1  0.945 6068.1  2.061 758.5 758.5 1517.0  131071   0.0  0.621   0.0  0.000   0.6  31870   0.6 120.22   0.6  0.040   0.0  0.000
+15:26:58.449 
+15:26:58.449 Miscellaneous statistics:
+15:26:58.449 (These statistics do not include activity between the last reported interval and shutdown.)
+15:26:58.449 FILE_CREATES        Files created:                                  622          0/sec
+15:26:58.449 DIRECTORY_CREATES   Directories created:                              4          0/sec
+15:26:58.449 WRITE_OPENS         Files opened for write activity:                622          0/sec
+15:26:58.450 DIR_BUSY_MKDIR      Directory busy (mkdir):                           5          0/sec
+15:26:58.450 DIR_EXISTS          Directory may not exist (yet):                   11          0/sec
+15:26:58.450 FILE_CLOSES         Close requests:                                 622          0/sec
+15:26:58.450 
+15:27:02.001 Starting RD=rd1; elapsed=3600; fwdrate=max. For loops: None
+15:27:13.113 
+15:27:13.113 Message from slave localhost-0: 
+15:27:13.113 file=/mnt_test1//vdb.1_1.dir/vdb_f0001.file,busy=true
+15:27:13.113 file=/mnt_test1//vdb.1_1.dir/vdb_f0002.file,busy=true
+15:27:13.113 file=/mnt_test1//vdb.1_1.dir/vdb_f0003.file,busy=true
+15:27:13.113 file=/mnt_test1//vdb.1_1.dir/vdb_f0004.file,busy=true
+15:27:13.113 file=/mnt_test1//vdb.1_1.dir/vdb_f0005.file,busy=true
+15:27:13.113 file=/mnt_test1//vdb.1_1.dir/vdb_f0006.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0007.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0008.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0009.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0010.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0011.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0012.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0013.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0014.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0015.file,busy=true
+15:27:13.114 file=/mnt_test1//vdb.1_1.dir/vdb_f0016.file,busy=true
+15:27:13.115 file=/mnt_test1//vdb.1_1.dir/vdb_f0017.file,busy=true
+15:27:13.115 file=/mnt_test1//vdb.1_1.dir/vdb_f0018.file,busy=true
+15:27:13.115 file=/mnt_test1//vdb.1_1.dir/vdb_f0019.file,busy=true
+15:27:13.115 file=/mnt_test1//vdb.1_1.dir/vdb_f0020.file,busy=true
+15:27:13.115 Thread: FwgThread read /mnt_test1/ rd=rd1 For loops: None
+15:27:13.115 
+15:27:13.115 last_ok_request: Tue Jan 30 15:26:59 IST 2018
+15:27:13.115 Duration: 13.57 seconds
+15:27:13.115 consecutive_blocks: 10001
+15:27:13.115 last_block:         FILE_BUSY           File busy
+15:27:13.116 operation:          read
+15:27:13.116 
+15:27:13.116 Do you maybe have more threads running than that you have 
+15:27:13.116 files and therefore some threads ultimately give up after 10000 tries?
+15:27:13.167 *
+15:27:13.167 ******************************************************
+15:27:13.167 * Slave localhost-0 aborting: Too many thread blocks *
+15:27:13.167 ******************************************************
+15:27:13.167 *
+15:27:15.629 
+15:27:15.629 Slave localhost-0 prematurely terminated. 
+15:27:15.629 
+15:27:15.629 Slave aborted. Abort message received: 
+15:27:15.630 Too many thread blocks
+15:27:15.630 
+15:27:15.630 Look at file localhost-0.stdout.html for more information.
+15:27:16.444 
+15:27:16.444 Slave localhost-0 prematurely terminated. 
+15:27:16.444 
+java.lang.RuntimeException: Slave localhost-0 prematurely terminated. 
+	at Vdb.common.failure(common.java:335)
+	at Vdb.SlaveStarter.startSlave(SlaveStarter.java:198)
+	at Vdb.SlaveStarter.run(SlaveStarter.java:47)
+Command exited with non-zero status 157
+7160.55user 1113.31system 18:17.00elapsed 754%CPU (0avgtext+0avgdata 310788maxresident)k
+7129344inputs+1684093176outputs (17235major+622654minor)pagefaults 0swaps

@@ -1,0 +1,90 @@
+nohup: ignoring input
+mpnvme2n1: (g=0): rw=write, bs=(R) 512KiB-512KiB, (W) 512KiB-512KiB, (T) 512KiB-512KiB, ioengine=libaio, iodepth=32
+mpnvme4n1: (g=0): rw=write, bs=(R) 512KiB-512KiB, (W) 512KiB-512KiB, (T) 512KiB-512KiB, ioengine=libaio, iodepth=512
+mpnvme6n1: (g=0): rw=write, bs=(R) 32.0KiB-32.0KiB, (W) 32.0KiB-32.0KiB, (T) 32.0KiB-32.0KiB, ioengine=libaio, iodepth=32
+mpnvme8n1: (g=0): rw=write, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=libaio, iodepth=32
+mpnvme2n1: (g=1): rw=read, bs=(R) 512KiB-512KiB, (W) 512KiB-512KiB, (T) 512KiB-512KiB, ioengine=libaio, iodepth=32
+mpnvme4n1: (g=1): rw=read, bs=(R) 512KiB-512KiB, (W) 512KiB-512KiB, (T) 512KiB-512KiB, ioengine=libaio, iodepth=512
+mpnvme6n1: (g=1): rw=read, bs=(R) 32.0KiB-32.0KiB, (W) 32.0KiB-32.0KiB, (T) 32.0KiB-32.0KiB, ioengine=libaio, iodepth=32
+mpnvme8n1: (g=1): rw=read, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=libaio, iodepth=32
+fio-3.0
+Starting 8 threads
+mpnvme2n1: Laying out IO files (8 files / total 876544MiB)
+mpnvme4n1: Laying out IO files (32 files / total 851968MiB)
+mpnvme6n1: Laying out IO files (32 files / total 851968MiB)
+mpnvme8n1: Laying out IO files (64 files / total 851968MiB)
+fio: io_u error on file /mnt_test3//mpnvme6n1.0.6: Input/output error: read offset=15293939712, buflen=32768
+fio: io_u error on file /mnt_test3//mpnvme6n1.0.7: Input/output error: read offset=15293939712, buflen=32768
+fio: pid=22320, err=5/file:io_u.c:1756, func=io_u error, error=Input/output error
+fio: io_u error on file /mnt_test4//mpnvme8n1.0.5: Input/output error: read offset=7189594112, buflen=16384
+fio: io_u error on file /mnt_test4//mpnvme8n1.0.6: Input/output error: read offset=7189594112, buflen=16384
+fio: pid=22321, err=5/file:io_u.c:1756, func=io_u error, error=Input/output error
+fio: io_u error on file /mnt_test1//mpnvme2n1.0.0: Input/output error: read offset=63106449408, buflen=524288
+fio: io_u error on file /mnt_test1//mpnvme2n1.0.1: Input/output error: read offset=63106449408, buflen=524288
+fio: pid=22318, err=5/file:io_u.c:1756, func=io_u error, error=Input/output error
+fio: io_u error on file /mnt_test2//mpnvme4n1.0.4: Input/output error: read offset=15751708672, buflen=524288
+fio: io_u error on file /mnt_test2//mpnvme4n1.0.5: Input/output error: read offset=15751708672, buflen=524288
+fio: pid=22319, err=5/file:io_u.c:1756, func=io_u error, error=Input/output error
+
+mpnvme2n1: (groupid=0, jobs=4): err= 0: pid=17996: Fri Feb 16 15:26:41 2018
+  write: IOPS=11.8k, BW=476MiB/s (499MB/s)(3352GiB/7214445msec)
+    slat (usec): min=7, max=386, avg=15.97, stdev=23.46
+    clat (usec): min=108, max=16921k, avg=34733.64, stdev=205655.22
+     lat (usec): min=118, max=16921k, avg=34749.89, stdev=205671.80
+    clat percentiles (usec):
+     |  1.00th=[   1762],  5.00th=[   2442], 10.00th=[   2802],
+     | 20.00th=[   2900], 30.00th=[   3097], 40.00th=[   3851],
+     | 50.00th=[   4686], 60.00th=[   5407], 70.00th=[   5604],
+     | 80.00th=[   6390], 90.00th=[   8455], 95.00th=[  14484],
+     | 99.00th=[1400898], 99.50th=[1400898], 99.90th=[1400898],
+     | 99.95th=[1417675], 99.99th=[1434452]
+   bw (  KiB/s): min= 1501, max=227212, per=26.58%, avg=129508.23, stdev=31273.75, samples=44649
+   iops        : min=    7, max=10833, avg=3137.61, stdev=2745.56, samples=44649
+  lat (usec)   : 250=0.01%, 500=0.01%, 750=0.02%, 1000=0.06%
+  lat (msec)   : 2=1.82%, 4=39.99%, 10=50.81%, 20=2.86%, 50=0.37%
+  lat (msec)   : 100=2.05%, 250=0.03%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2000=2.00%, >=2000=0.01%
+  cpu          : usr=80.56%, sys=6.21%, ctx=2614977, majf=0, minf=6
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=98.0%, >=64=2.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.1%
+     issued rwt: total=0,85245952,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+mpnvme2n1: (groupid=1, jobs=4): err= 5 (file:io_u.c:1756, func=io_u error, error=Input/output error): pid=22318: Fri Feb 16 15:26:41 2018
+   read: IOPS=18.1k, BW=753MiB/s (789MB/s)(1824GiB/2481818msec)
+    slat (usec): min=5, max=733, avg=13.98, stdev=27.34
+    clat (usec): min=114, max=1552.2k, avg=33345.37, stdev=190384.89
+     lat (usec): min=123, max=1552.3k, avg=33359.58, stdev=190404.80
+    clat percentiles (msec):
+     |  1.00th=[    3],  5.00th=[    3], 10.00th=[    3], 20.00th=[    3],
+     | 30.00th=[    3], 40.00th=[    3], 50.00th=[    3], 60.00th=[    3],
+     | 70.00th=[    6], 80.00th=[    6], 90.00th=[    6], 95.00th=[    6],
+     | 99.00th=[ 1318], 99.50th=[ 1318], 99.90th=[ 1318], 99.95th=[ 1318],
+     | 99.99th=[ 1318]
+   bw (  KiB/s): min=85568, max=210340, per=25.04%, avg=192964.14, stdev=7941.51, samples=19850
+   iops        : min=  280, max=11798, avg=4532.26, stdev=4552.46, samples=19850
+  lat (usec)   : 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.12%, 4=62.19%, 10=33.32%, 20=0.05%, 50=0.01%
+  lat (msec)   : 100=2.14%, 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2000=2.14%
+  cpu          : usr=93.15%, sys=6.77%, ctx=23983, majf=0, minf=893
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=97.9%, >=64=2.1%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwt: total=44944785,0,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+  WRITE: bw=476MiB/s (499MB/s), 476MiB/s-476MiB/s (499MB/s-499MB/s), io=3352GiB (3599GB), run=7214445-7214445msec
+
+Run status group 1 (all jobs):
+   READ: bw=753MiB/s (789MB/s), 753MiB/s-753MiB/s (789MB/s-789MB/s), io=1824GiB (1958GB), run=2481818-2481818msec
+
+Disk stats (read/write):
+  mpnvme2n1: ios=962851/1753546, merge=0/0, ticks=1041060/15972084, in_queue=17013308, util=51.87%
+  mpnvme4n1: ios=961513/1704380, merge=0/0, ticks=1175912/36393276, in_queue=37584848, util=50.13%
+  mpnvme6n1: ios=14935492/27263467, merge=0/0, ticks=5428656/98396076, in_queue=103840240, util=83.34%
+  mpnvme8n1: ios=28084346/54526541, merge=0/0, ticks=9168740/148191252, in_queue=157385804, util=100.00%
+Command exited with non-zero status 4
+27354.14user 2076.60system 2:41:40elapsed 303%CPU (0avgtext+0avgdata 543716maxresident)k
+3825657904inputs+7029654200outputs (0major+197757minor)pagefaults 0swaps

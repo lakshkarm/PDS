@@ -1,0 +1,98 @@
+nohup: ignoring input
+Namespace(cleanup=False, count='0', fs_type=None, interval='240', ios_enabled=False, iterations='10', lvm=False, nodes=None, ports='eth4,eth5', rand=True, target_conf_file=None)
+dmesg -c > /dev/null
+pnvme --listall | grep -A 2 mpnv 
+ifconfig eth4 | grep 'inet addr'
+ifconfig eth5 | grep 'inet addr'
+Active port on host:eth4
+Putting down port:eth5
+ifconfig eth5 down
+nvme list; pnvme --listall
+Node             SN                   Model                                    Namespace Usage                      Format           FW Rev  
+---------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
+/dev/mpnvme1n1   GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+/dev/nvme0n1     GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+/dev/nvme2n1                                                                   0           0.00   B /   0.00   B      1   B +  0 B   
+----------------------------------------------------------------------------------
+  mpDevice    Device  Active     Subnqn              Target IP           Size
+  		      Path
+----------------------------------------------------------------------------------
+ mpnvme1n1   nvme0n1   (A)   GB00002004bbf912       192.168.44.104         4.9T 
+             nvme2n1     -                          192.168.45.105              
+
+ifconfig eth5 up
+FailOver not expected
+dmesg -c > /dev/null
+pnvme --listall | grep -A 2 mpnv 
+ifconfig eth4 | grep 'inet addr'
+ifconfig eth5 | grep 'inet addr'
+Active port on host:eth4
+Putting down port:eth5
+ifconfig eth5 down
+nvme list; pnvme --listall
+Node             SN                   Model                                    Namespace Usage                      Format           FW Rev  
+---------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
+/dev/mpnvme1n1   GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+/dev/nvme0n1     GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+/dev/nvme2n1                                                                   0           0.00   B /   0.00   B      1   B +  0 B   
+----------------------------------------------------------------------------------
+  mpDevice    Device  Active     Subnqn              Target IP           Size
+  		      Path
+----------------------------------------------------------------------------------
+ mpnvme1n1   nvme0n1   (A)   GB00002004bbf912       192.168.44.104         4.9T 
+             nvme2n1     -                          192.168.45.105              
+
+ifconfig eth5 up
+FailOver not expected
+dmesg -c > /dev/null
+pnvme --listall | grep -A 2 mpnv 
+ifconfig eth4 | grep 'inet addr'
+ifconfig eth5 | grep 'inet addr'
+Active port on host:eth4
+Putting down port:eth4
+ifconfig eth4 down
+nvme list; pnvme --listall
+----------------------------------------------------------------------------------
+  mpDevice    Device  Active     Subnqn              Target IP           Size
+  		      Path
+----------------------------------------------------------------------------------
+ mpnvme1n1   nvme0n1     P   GB00002004bbf912       192.168.44.104         4.9T 
+             nvme2n1     P                          192.168.45.105              
+
+ifconfig eth4 up
+Expected FailOver, checking...
+dmesg -T | grep 'nvme_trigger_failover'
+[Thu Jan 18 13:30:42 2018] nvme_trigger_failover: flags=0x18 nsid=1
+
+Waiting for 240 seconds
+nvme list; pnvme --listall
+Node             SN                   Model                                    Namespace Usage                      Format           FW Rev  
+---------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
+/dev/mpnvme1n1   GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+/dev/nvme0n1     GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+/dev/nvme2n1     GB00002004bbf912     PVL-MX18S0P2L2C1-F100TP1TY1              1           5.37  TB /   5.37  TB      4 KiB +  0 B   15007406
+----------------------------------------------------------------------------------
+  mpDevice    Device  Active     Subnqn              Target IP           Size
+  		      Path
+----------------------------------------------------------------------------------
+ mpnvme1n1   nvme0n1     -   GB00002004bbf912       192.168.44.104         4.9T 
+             nvme2n1   (A)                          192.168.45.105              
+
+Completed 10 iterations of FO
+dmesg -c > /dev/null
+pnvme --listall | grep -A 2 mpnv 
+ifconfig eth4 | grep 'inet addr'
+ifconfig eth5 | grep 'inet addr'
+Active port on host:eth5
+Putting down port:eth5
+ifconfig eth5 down
+Traceback (most recent call last):
+  File "myscripts/main.py", line 79, in <module>
+    if (results.ports or results.nodes) and common.trigger_fo(results):
+  File "/root/myscripts/common.py", line 178, in trigger_fo
+    st, msg = flip_flap_ports_host(_dict.ports, _dict.rand)
+  File "/root/myscripts/common.py", line 73, in flip_flap_ports_host
+    st = down_up_port(_port)
+  File "/root/myscripts/common.py", line 21, in down_up_port
+    time.sleep(10)
+KeyboardInterrupt
