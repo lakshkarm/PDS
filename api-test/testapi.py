@@ -455,13 +455,13 @@ def do_io(host, vol_name, size,timebase,runtime, pattern=None,mpath=None):
     if mpath:
         dev_name = get_dev_name(HOST_IP, vol_name,mpath)
         logger.info("Starting FIO load on %s"%dev_name)
-        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=%s --verify_pattern=0x%s --time_based=%s --runtime=%s' %( size,dev_name,pattern,timebase,runtime)
+        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=%s --verify_pattern=0x%s --time_based=%s --runtime=%s' %( size,dev_name,pattern,timebase,runtime)
 
         run(cmd, HOST_IP , 'test')
     else:
         dev_name = get_dev_name(HOST_IP, vol_name)
         logger.info("Starting FIO load on %s"%dev_name)
-        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=%s --verify_pattern=0x%s --time_based=%s --runtime=%s' %( size,dev_name,pattern,timebase,runtime)
+        cmd ='fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=%s  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=%s --verify_pattern=0x%s --time_based=%s --runtime=%s' %( size,dev_name,pattern,timebase,runtime)
         run(cmd, HOST_IP , 'test')
 
 
@@ -495,7 +495,7 @@ if __name__=='__main__':
             vol_list.append(vol)
    
     # Starting the test here 
-    multiproc(7)
+    multiproc(2)
     for volname in vol_list:
     # connect the volume to the host 
         connect_host(CTRL_IPS, HOST_IP, volname)

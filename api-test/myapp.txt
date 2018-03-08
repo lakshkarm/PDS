@@ -1,47 +1,23 @@
-2018-03-01 07:47:24,750 : 13206 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '100'}
-2018-03-01 07:47:32,394 : 13206 : INFO : Current task c14a6729-934d-4f75-a6aa-7837171dfd7b  state  Completed 
-2018-03-01 07:47:32,800 : 13206 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-01 07:47:40,154 : 13206 : INFO : Current task 96f4141e-42b5-43de-bb3a-c9f43b63ea26  state  Completed 
-2018-03-01 07:47:40,425 : 13199 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf91 " 
-2018-03-01 07:47:40,876 : 13199 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf91 "  
+2018-03-08 09:09:48,051 : 8838 : INFO : powering off the drive 39
+2018-03-08 09:15:29,286 : 8853 : INFO : powering off the drive 39
+2018-03-08 09:26:47,026 : 8879 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
+2018-03-08 09:26:54,661 : 8879 : INFO : Current task 6b45dd00-7f0b-40c3-89b1-2eb93843c8a9  state  Completed 
+2018-03-08 09:26:55,066 : 8879 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-03-08 09:27:02,403 : 8879 : INFO : Current task bf0ff4dd-efff-49b3-a23d-328e10ef12e7  state  Completed 
+2018-03-08 09:27:02,854 : 8872 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf99 " 
+2018-03-08 09:27:03,319 : 8872 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf99 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-01 07:47:40,877 : 13199 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf91 " 
-2018-03-01 07:47:41,230 : 13199 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf91 "  
+2018-03-08 09:27:03,320 : 8872 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf99 " 
+2018-03-08 09:27:03,683 : 8872 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf99 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-01 07:47:41,233 : 13261 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf91 |awk '{print \$1}' " 
-2018-03-01 07:47:41,418 : 13261 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf91 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme1n1
-                                           /dev/nvme0n1
-                                           /dev/nvme2n1
-
-
-2018-03-01 07:47:41,418 : 13261 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-01 07:51:28,269 : 13307 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '100'}
-2018-03-01 07:51:35,903 : 13307 : INFO : Current task d361cede-a36e-4097-a1b5-2bb8c884416e  state  Completed 
-2018-03-01 07:51:36,307 : 13307 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-01 07:51:43,653 : 13307 : INFO : Current task 36caf038-f86b-464a-82f8-7842198d74dc  state  Completed 
-2018-03-01 07:51:43,926 : 13300 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf92 " 
-2018-03-01 07:51:44,296 : 13300 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf92 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 07:51:44,297 : 13300 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf92 " 
-2018-03-01 07:51:44,649 : 13300 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf92 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 07:51:44,653 : 13360 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf92 |awk '{print \$1}' " 
-2018-03-01 07:51:44,837 : 13360 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf92 |awk '{print \$1}' "  
+2018-03-08 09:27:03,686 : 8935 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf99 |awk '{print \$1}' " 
+2018-03-08 09:27:03,872 : 8935 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf99 |awk '{print \$1}' "  
                                     EXIT_CODE - 0
                                     STDOUT 
                                            /dev/mpnvme1n1
@@ -49,279 +25,18 @@
                                            /dev/nvme2n1
 
 
-2018-03-01 07:51:44,838 : 13360 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-01 07:51:44,838 : 13360 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:18:30,827 : 13663 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '100'}
-2018-03-01 08:18:38,460 : 13663 : INFO : Current task 8d394394-fb49-44a8-bf8f-9f5536f03080  state  Completed 
-2018-03-01 08:18:38,865 : 13663 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:18:47,079 : 13663 : INFO : Current task 4df6eb44-d55e-4c03-b5cb-3cd06cbb2f16  state  Completed 
-2018-03-01 08:18:47,261 : 13664 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '100'}
-2018-03-01 08:18:55,193 : 13664 : INFO : Current task 3b4ba896-dae8-4ede-a018-f3aed2022052  state  Completed 
-2018-03-01 08:18:55,594 : 13664 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:19:02,942 : 13664 : INFO : Current task f70a9fd6-ead9-42aa-95a4-4c3d8b8d2316  state  Completed 
-2018-03-01 08:19:03,216 : 13656 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf93 " 
-2018-03-01 08:19:03,612 : 13656 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf93 "  
+2018-03-08 09:27:03,873 : 8935 : INFO : Starting FIO load on /dev/mpnvme1n1
+2018-03-08 09:27:03,873 : 8935 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-08 09:27:04,070 : 8872 : INFO : powering off the drive 39
+2018-03-08 09:27:18,885 : 8872 : INFO : Current task 5e299df4-8422-4f34-8a5a-28c163d1d6b7  state  Completed 
+2018-03-08 09:35:43,552 : 9166 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
+2018-03-08 09:35:51,193 : 9166 : INFO : Current task ec983fcd-76aa-4d48-8ad1-cb31f8deee87  state  Completed 
+2018-03-08 09:35:51,603 : 9166 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-03-08 09:35:58,940 : 9166 : INFO : Current task eaab1919-1137-476e-831e-ae004ede701f  state  Completed 
+2018-03-08 09:36:59,265 : 9159 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf910 " 
+2018-03-08 09:36:59,626 : 9159 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf910 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-01 08:19:03,613 : 13656 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf93 " 
-2018-03-01 08:19:03,985 : 13656 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf93 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:19:03,988 : 13720 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf93 |awk '{print \$1}' " 
-2018-03-01 08:19:04,174 : 13720 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf93 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme1n1
-                                           /dev/nvme0n1
-                                           /dev/nvme2n1
-
-
-2018-03-01 08:19:04,175 : 13720 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-01 08:19:04,175 : 13720 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:23:14,810 : 13831 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '100'}
-2018-03-01 08:23:22,447 : 13831 : INFO : Current task f004a525-e8d7-4dfc-8edd-efd352ac36d9  state  Completed 
-2018-03-01 08:23:22,845 : 13831 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:23:30,202 : 13831 : INFO : Current task 6a1f4200-4eb1-49a1-a30c-49edc41b8e40  state  Completed 
-2018-03-01 08:23:30,379 : 13832 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '100'}
-2018-03-01 08:23:38,319 : 13832 : INFO : Current task a888b813-a951-4752-b3e2-a1f18570429e  state  Completed 
-2018-03-01 08:23:38,720 : 13832 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:23:46,066 : 13832 : INFO : Current task 5c69800c-b965-4950-a514-6e2092f65254  state  Completed 
-2018-03-01 08:23:46,338 : 13824 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf95 " 
-2018-03-01 08:23:46,788 : 13824 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf95 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:23:46,789 : 13824 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf95 " 
-2018-03-01 08:23:47,141 : 13824 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf95 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:23:47,144 : 13886 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf95 |awk '{print \$1}' " 
-2018-03-01 08:23:47,314 : 13824 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf96 " 
-2018-03-01 08:23:47,331 : 13886 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf95 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme1n1
-                                           /dev/nvme0n1
-                                           /dev/nvme2n1
-
-
-2018-03-01 08:23:47,332 : 13886 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-01 08:23:47,332 : 13886 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:23:47,665 : 13824 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf96 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:23:47,666 : 13824 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf96 " 
-2018-03-01 08:23:48,025 : 13824 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf96 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:23:48,028 : 13998 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf96 |awk '{print \$1}' " 
-2018-03-01 08:23:48,225 : 13998 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf96 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme4n1
-                                           /dev/nvme3n1
-                                           /dev/nvme5n1
-
-
-2018-03-01 08:23:48,225 : 13998 : INFO : Starting FIO load on /dev/mpnvme4n1
-2018-03-01 08:23:48,226 : 13998 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:27:09,595 : 14095 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:27:17,237 : 14095 : INFO : Current task e0d3a2ba-203a-4162-9ee8-b0501315c31c  state  Completed 
-2018-03-01 08:27:17,635 : 14095 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:27:24,978 : 14095 : INFO : Current task 0f7465ea-d07e-4036-9ff6-7059014461ec  state  Completed 
-2018-03-01 08:27:25,161 : 14096 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:27:33,084 : 14096 : INFO : Current task 09260910-e6a7-45ef-8338-885fcc2331e8  state  Completed 
-2018-03-01 08:27:33,482 : 14096 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:27:40,823 : 14096 : INFO : Current task 5e9fb910-8240-4b51-8af9-b0c2a1fd7bd8  state  Completed 
-2018-03-01 08:27:41,004 : 14097 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:27:48,954 : 14097 : INFO : Current task 31c161d8-1953-4353-b62e-74015f1b4aef  state  Completed 
-2018-03-01 08:27:49,353 : 14097 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:27:56,695 : 14097 : INFO : Current task 543dc041-f37c-428a-a8c6-9a8b4f7fb839  state  Completed 
-2018-03-01 08:27:57,122 : 14098 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:28:05,832 : 14098 : INFO : Current task 364c9e65-7f74-4fad-a89b-c35a08a098f2  state  Completed 
-2018-03-01 08:28:06,231 : 14098 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:28:13,574 : 14098 : INFO : Current task edff92c4-60c9-48c8-8465-80df01d57fd0  state  Completed 
-2018-03-01 08:28:13,753 : 14099 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:28:21,707 : 14099 : INFO : Current task 7b934293-d4e2-48ee-9301-a6e06765259b  state  Completed 
-2018-03-01 08:28:22,113 : 14099 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:28:29,457 : 14099 : INFO : Current task 2873993f-056b-4343-8b67-b11e0cefe4f6  state  Completed 
-2018-03-01 08:28:29,635 : 14100 : INFO : creating volume ML_TV_5 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_5', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:28:37,557 : 14100 : INFO : Current task 791d80f1-dfd4-449a-9c43-d79bf63fb701  state  Completed 
-2018-03-01 08:28:37,957 : 14100 : INFO : Assigning volume ML_TV_5 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:28:45,305 : 14100 : INFO : Current task e5a20ff5-acba-4f6d-b07e-1c641bfa3a65  state  Completed 
-2018-03-01 08:28:45,484 : 14101 : INFO : creating volume ML_TV_6 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_6', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f20692f8-30f7-46b3-8728-c8238d876362', 'size': '300'}
-2018-03-01 08:28:53,416 : 14101 : INFO : Current task 0fa1ec93-2a88-4afa-a661-91a15ad34839  state  Completed 
-2018-03-01 08:28:53,820 : 14101 : INFO : Assigning volume ML_TV_6 to ip 192.168.6.1,192.168.7.2
-2018-03-01 08:29:01,163 : 14101 : INFO : Current task baf190a4-4298-49fb-ba41-a25f38a886bb  state  Completed 
-2018-03-01 08:29:01,435 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf97 " 
-2018-03-01 08:29:01,858 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf97 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:01,859 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf97 " 
-2018-03-01 08:29:02,235 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf97 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:02,238 : 14199 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf97 |awk '{print \$1}' " 
-2018-03-01 08:29:02,409 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf98 " 
-2018-03-01 08:29:02,422 : 14199 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf97 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme1n1
-                                           /dev/nvme0n1
-                                           /dev/nvme2n1
-
-
-2018-03-01 08:29:02,422 : 14199 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-01 08:29:02,422 : 14199 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:29:02,764 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf98 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:02,764 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf98 " 
-2018-03-01 08:29:03,122 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf98 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:03,126 : 14312 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf98 |awk '{print \$1}' " 
-2018-03-01 08:29:03,297 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf99 " 
-2018-03-01 08:29:03,323 : 14312 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf98 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme4n1
-                                           /dev/nvme3n1
-                                           /dev/nvme5n1
-
-
-2018-03-01 08:29:03,324 : 14312 : INFO : Starting FIO load on /dev/mpnvme4n1
-2018-03-01 08:29:03,324 : 14312 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:29:03,690 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf99 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:03,690 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf99 " 
-2018-03-01 08:29:04,050 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf99 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:04,054 : 14424 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf99 |awk '{print \$1}' " 
-2018-03-01 08:29:04,228 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf910 " 
-2018-03-01 08:29:04,261 : 14424 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf99 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme7n1
-                                           /dev/nvme6n1
-                                           /dev/nvme8n1
-
-
-2018-03-01 08:29:04,262 : 14424 : INFO : Starting FIO load on /dev/mpnvme7n1
-2018-03-01 08:29:04,262 : 14424 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme7n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:29:04,940 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf910 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:04,940 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf910 " 
-2018-03-01 08:29:05,296 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf910 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:05,300 : 14538 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf910 |awk '{print \$1}' " 
-2018-03-01 08:29:05,471 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf911 " 
-2018-03-01 08:29:05,522 : 14538 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf910 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme10n1
-                                           /dev/nvme11n1
-                                           /dev/nvme9n1
-
-
-2018-03-01 08:29:05,523 : 14538 : INFO : Starting FIO load on /dev/mpnvme10n1
-2018-03-01 08:29:05,523 : 14538 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme10n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:29:06,236 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf911 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:06,236 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf911 " 
-2018-03-01 08:29:06,585 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf911 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:06,588 : 14651 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf911 |awk '{print \$1}' " 
-2018-03-01 08:29:06,759 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf912 " 
-2018-03-01 08:29:06,815 : 14651 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf911 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme13n1
-                                           /dev/nvme12n1
-                                           /dev/nvme14n1
-
-
-2018-03-01 08:29:06,816 : 14651 : INFO : Starting FIO load on /dev/mpnvme13n1
-2018-03-01 08:29:06,816 : 14651 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme13n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:29:07,590 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf912 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:07,590 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf912 " 
-2018-03-01 08:29:07,940 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf912 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:07,943 : 14764 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf912 |awk '{print \$1}' " 
-2018-03-01 08:29:08,114 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf913 " 
-2018-03-01 08:29:08,193 : 14764 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf912 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme16n1
-                                           /dev/nvme15n1
-                                           /dev/nvme17n1
-
-
-2018-03-01 08:29:08,193 : 14764 : INFO : Starting FIO load on /dev/mpnvme16n1
-2018-03-01 08:29:08,194 : 14764 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme16n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-01 08:29:08,569 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf913 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:08,570 : 14088 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf913 " 
-2018-03-01 08:29:08,918 : 14088 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf913 "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-
-
-2018-03-01 08:29:08,921 : 14877 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf913 |awk '{print \$1}' " 
-2018-03-01 08:29:09,159 : 14877 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf913 |awk '{print \$1}' "  
-                                    EXIT_CODE - 0
-                                    STDOUT 
-                                           /dev/mpnvme19n1
-                                           /dev/nvme18n1
-                                           /dev/nvme20n1
-
-
-2018-03-01 08:29:09,160 : 14877 : INFO : Starting FIO load on /dev/mpnvme19n1
-2018-03-01 08:29:09,160 : 14877 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=1 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=1 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme19n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-08 09:36:59,627 : 9159 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf910 " 
