@@ -564,8 +564,8 @@ if __name__=='__main__':
     device_list =  used_media_in_mg(MG_NAME)    
 
     ## starting rebuild for all the drives one by one
-    rebuild_no = 0
     def rebuild_loop(device_list):
+        rebuild_no = 0
         for i in device_list:
             drive_poweroff(i)
             logger.info("wating for 60 sec to confirm the disk status ")
