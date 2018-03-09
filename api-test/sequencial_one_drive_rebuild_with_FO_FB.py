@@ -27,6 +27,8 @@ CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
 CTRL_1_IP = "192.168.6.1"
 CTRL_2_IP = "192.168.7.2"
+CTRL_NO1 = 6
+CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
 NO_OF_VOLUMES = 5
@@ -478,6 +480,8 @@ def ctrl_poweroff(ctrl_slot):
             }
     stdout,retcode = call_api(url,'POST',data)
     logger.info("controller %s is getting powered Off"%ctrl_slot)
+    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+    wait_till_task_completes(taskid)
     #print json.dumps(stdout,indent=4)
 
 def ctrl_poweron(ctrl_slot):
@@ -487,6 +491,8 @@ def ctrl_poweron(ctrl_slot):
             }
     stdout,retcode = call_api(url,'POST',data)
     logger.info("controller %s is getting powered On"%ctrl_slot)
+    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+    wait_till_task_completes(taskid)
     #print json.dumps(stdout,indent=4)
 
 
@@ -498,7 +504,6 @@ def ctrl_poweron(ctrl_slot):
 #create_vol('100', '4','vol1', str(100), MG_NAME, 'INSANE')
 
 if __name__=='__main__':
-    
     #vol= 'ML_TV'
     #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
     #assign(vol,'192.168.6.1','192.168.7.2')
@@ -560,20 +565,41 @@ if __name__=='__main__':
 
     ## starting rebuild for all the drives one by one
     rebuild_no = 0
-    for i in device_list:
-        drive_poweroff(i)
-        logger.info("wating for 60 sec to confirm the disk status ")
-        time.sleep(60)
-        logging.info("drive got powered off successfully")
-        drive_poweron(i)
-        time.sleep(120)
-        if check_disk_state(str(i),MG_NAME) == "Active":
-            print "Disk is Active now"
-            logging.info("starting rebuild")
-            rebuild_media_grp(MG_NAME)
-            logger.info("next rebuild will start in 120 sec")
+    def rebuild_loop(device_list):
+        for i in device_list:
+            drive_poweroff(i)
+            logger.info("wating for 60 sec to confirm the disk status ")
+            time.sleep(60)
+            logging.info("drive got powered off successfully")
+            drive_poweron(i)
             time.sleep(120)
-            logger.info("Rebuild iteration %s completed "%rebuild_no)
-        rebuild_no += 1
+            if check_disk_state(str(i),MG_NAME) == "Active":
+                print "Disk is Active now"
+                logging.info("starting rebuild")
+                rebuild_media_grp(MG_NAME)
+                logger.info("next rebuild will start in 120 sec")
+                time.sleep(120)
+                logger.info("Rebuild iteration %s completed "%rebuild_no)
+            rebuild_no += 1
         #sys.exit()
+    def ctrl_poweroff_on(ctrl_no1,crtl_no2):
+        ctrls = locals() ## locals() retruns dict for function local variables 
+        for i in ctrls:
+            slot = ctrls[i]
+            logger.info("powering off controller %s"%slot)
+            ctrl_poweroff(slot)
+            time.sleep(60)
+            ctrl_poweron(slot)
+            logger.info("next failover will triggered in 10 min")
+            time.sleep(600)
+        
+    ## Now runnigng rebuild loop as a saparate process
+    p = multiprocessing.Process(target=rebuild_loop , args=(device_list,)) 
+    p.start()
+    
+    # now start the FO/FB using cotnroller powerOff/on
+    logger.info("now start the FO/FB using cotnroller powerOff/on")
+    for i in range(10):
+        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
 
+    logger.info("Successfully completed this test")

@@ -1,23 +1,27 @@
-2018-03-08 09:09:48,051 : 8838 : INFO : powering off the drive 39
-2018-03-08 09:15:29,286 : 8853 : INFO : powering off the drive 39
-2018-03-08 09:26:47,026 : 8879 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
-2018-03-08 09:26:54,661 : 8879 : INFO : Current task 6b45dd00-7f0b-40c3-89b1-2eb93843c8a9  state  Completed 
-2018-03-08 09:26:55,066 : 8879 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-08 09:27:02,403 : 8879 : INFO : Current task bf0ff4dd-efff-49b3-a23d-328e10ef12e7  state  Completed 
-2018-03-08 09:27:02,854 : 8872 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf99 " 
-2018-03-08 09:27:03,319 : 8872 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf99 "  
+2018-03-08 09:49:01,416 : 9339 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
+2018-03-08 09:49:09,036 : 9339 : INFO : Current task 8f052132-258a-49d6-b789-834ee0f5ce64  state  Completed 
+2018-03-08 09:49:09,448 : 9339 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-03-08 09:49:16,808 : 9339 : INFO : Current task 01a9abb9-a5f6-49f6-b6d1-8d1ce898c4bf  state  Completed 
+2018-03-08 09:49:16,986 : 9340 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
+2018-03-08 09:49:24,889 : 9340 : INFO : Current task 5f442352-89a8-4772-8fdc-b35e40dead2c  state  Completed 
+2018-03-08 09:49:25,295 : 9340 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-03-08 09:49:32,631 : 9340 : INFO : Current task 6c321c99-de7a-44a5-aa24-dee075a804e4  state  Completed 
+2018-03-08 09:49:32,633 : 9332 : INFO : sleeing for 60 sec
+2018-03-08 09:50:32,958 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf911 " 
+2018-03-08 09:50:33,317 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf911 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:27:03,320 : 8872 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf99 " 
-2018-03-08 09:27:03,683 : 8872 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf99 "  
+2018-03-08 09:50:33,318 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf911 " 
+2018-03-08 09:50:33,680 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf911 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:27:03,686 : 8935 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf99 |awk '{print \$1}' " 
-2018-03-08 09:27:03,872 : 8935 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf99 |awk '{print \$1}' "  
+2018-03-08 09:50:33,683 : 9401 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf911 |awk '{print \$1}' " 
+2018-03-08 09:50:33,849 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf912 " 
+2018-03-08 09:50:33,868 : 9401 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf911 |awk '{print \$1}' "  
                                     EXIT_CODE - 0
                                     STDOUT 
                                            /dev/mpnvme1n1
@@ -25,18 +29,195 @@
                                            /dev/nvme2n1
 
 
-2018-03-08 09:27:03,873 : 8935 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-08 09:27:03,873 : 8935 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-08 09:27:04,070 : 8872 : INFO : powering off the drive 39
-2018-03-08 09:27:18,885 : 8872 : INFO : Current task 5e299df4-8422-4f34-8a5a-28c163d1d6b7  state  Completed 
-2018-03-08 09:35:43,552 : 9166 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
-2018-03-08 09:35:51,193 : 9166 : INFO : Current task ec983fcd-76aa-4d48-8ad1-cb31f8deee87  state  Completed 
-2018-03-08 09:35:51,603 : 9166 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-08 09:35:58,940 : 9166 : INFO : Current task eaab1919-1137-476e-831e-ae004ede701f  state  Completed 
-2018-03-08 09:36:59,265 : 9159 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf910 " 
-2018-03-08 09:36:59,626 : 9159 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf910 "  
+2018-03-08 09:50:33,868 : 9401 : INFO : Starting FIO load on /dev/mpnvme1n1
+2018-03-08 09:50:33,868 : 9401 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-08 09:50:34,205 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf912 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:36:59,627 : 9159 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf910 " 
+2018-03-08 09:50:34,205 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf912 " 
+2018-03-08 09:50:34,605 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf912 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-08 09:50:34,606 : 9332 : INFO : Wating for some time to populate the data through FIO
+2018-03-08 09:50:34,608 : 9513 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf912 |awk '{print \$1}' " 
+2018-03-08 09:50:34,805 : 9513 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf912 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme4n1
+                                           /dev/nvme3n1
+                                           /dev/nvme5n1
+
+
+2018-03-08 09:50:34,805 : 9513 : INFO : Starting FIO load on /dev/mpnvme4n1
+2018-03-08 09:50:34,805 : 9513 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-08 09:55:34,842 : 9332 : INFO : powering off the drive 39
+2018-03-08 09:55:49,143 : 9332 : INFO : Current task 467008eb-5c77-4436-afa3-aca3fcd788cb  state  Completed 
+2018-03-08 09:55:49,144 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 09:56:49,204 : 9332 : INFO : powering on the drive 39
+2018-03-08 09:56:56,440 : 9332 : INFO : Current task 45780be6-ac2a-4c13-86ac-02875e366994  state  Completed 
+2018-03-08 09:58:57,524 : 9332 : INFO : waiting for 180 sec
+2018-03-08 10:17:18,494 : 9332 : INFO : Current task ce033faa-0ecd-4d6c-a5ce-f065a5617456  state  Completed 
+2018-03-08 10:17:18,495 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 10:19:18,497 : 9332 : INFO : Rebuild iteration 0 completed 
+2018-03-08 10:19:18,497 : 9332 : INFO : powering off the drive 38
+2018-03-08 10:19:33,807 : 9332 : INFO : Current task 7f220656-b919-4ca8-bf0b-7fea2a2f0c4e  state  Completed 
+2018-03-08 10:19:33,807 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 10:20:33,868 : 9332 : INFO : powering on the drive 38
+2018-03-08 10:20:41,095 : 9332 : INFO : Current task 505a51a6-8034-466d-b8f6-a3f1812e00f2  state  Completed 
+2018-03-08 10:22:42,177 : 9332 : INFO : waiting for 180 sec
+2018-03-08 10:40:19,619 : 9332 : INFO : Current task ac385476-b31b-4c30-86d0-84e54a6c3d0b  state  Completed 
+2018-03-08 10:40:19,620 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 10:42:19,623 : 9332 : INFO : Rebuild iteration 1 completed 
+2018-03-08 10:42:19,623 : 9332 : INFO : powering off the drive 37
+2018-03-08 10:42:33,960 : 9332 : INFO : Current task 8ed48615-2798-402f-bd1e-7f7b5bcfe34f  state  Completed 
+2018-03-08 10:42:33,960 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 10:43:34,014 : 9332 : INFO : powering on the drive 37
+2018-03-08 10:43:41,244 : 9332 : INFO : Current task ef5d4f61-c2b1-461d-b03a-0b01d7ef7c26  state  Completed 
+2018-03-08 10:45:42,331 : 9332 : INFO : waiting for 180 sec
+2018-03-08 11:00:01,616 : 9332 : INFO : Current task 6a1b2072-e41e-483a-a654-089f2a1ac9e2  state  Completed 
+2018-03-08 11:00:01,617 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 11:02:01,717 : 9332 : INFO : Rebuild iteration 2 completed 
+2018-03-08 11:02:01,717 : 9332 : INFO : powering off the drive 44
+2018-03-08 11:02:17,035 : 9332 : INFO : Current task 33295b62-2605-4720-967b-19363069d7ba  state  Completed 
+2018-03-08 11:02:17,035 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 11:03:17,096 : 9332 : INFO : powering on the drive 44
+2018-03-08 11:03:24,693 : 9332 : INFO : Current task f93f3ecc-b97b-4723-8c8f-a3cc40f0f7f8  state  Completed 
+2018-03-08 11:05:25,782 : 9332 : INFO : waiting for 180 sec
+2018-03-08 11:24:27,966 : 9332 : INFO : Current task f11cca0e-c5a1-40f0-8f22-1be26b7680bd  state  Completed 
+2018-03-08 11:24:27,967 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 11:26:27,973 : 9332 : INFO : Rebuild iteration 3 completed 
+2018-03-08 11:26:27,973 : 9332 : INFO : powering off the drive 45
+2018-03-08 11:26:42,275 : 9332 : INFO : Current task 5e057b5a-ce3a-4169-b732-c6023cce490e  state  Completed 
+2018-03-08 11:26:42,275 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 11:27:42,336 : 9332 : INFO : powering on the drive 45
+2018-03-08 11:27:50,307 : 9332 : INFO : Current task fdc7a4f9-d397-455a-96b1-f40429c0109b  state  Completed 
+2018-03-08 11:29:51,395 : 9332 : INFO : waiting for 180 sec
+2018-03-08 11:46:32,128 : 9332 : INFO : Current task fa545ed1-a420-4a99-9594-45d02b6ed7eb  state  Completed 
+2018-03-08 11:46:32,129 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 11:48:32,229 : 9332 : INFO : Rebuild iteration 4 completed 
+2018-03-08 11:48:32,230 : 9332 : INFO : powering off the drive 42
+2018-03-08 11:48:47,528 : 9332 : INFO : Current task bb3b7e7d-5dd9-4678-b264-9c3cfa24168c  state  Completed 
+2018-03-08 11:48:47,528 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 11:49:47,589 : 9332 : INFO : powering on the drive 42
+2018-03-08 11:49:54,815 : 9332 : INFO : Current task 12cea692-7adc-4cb5-b455-773553171ad3  state  Completed 
+2018-03-08 11:50:35,450 : 9401 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
+                                           fio-3.2
+                                           Starting 1 process
+                                           
+                                           1: (groupid=0, jobs=1): err= 0: pid=9504: Thu Mar  8 11:50:35 2018
+                                             write: IOPS=24.4k, BW=190MiB/s (200MB/s)(1338GiB/7200008msec)
+                                               slat (usec): min=3, max=1932, avg= 7.56, stdev= 1.84
+                                               clat (usec): min=39, max=184730, avg=2618.27, stdev=2078.85
+                                                lat (usec): min=44, max=184736, avg=2626.03, stdev=2078.98
+                                               clat percentiles (usec):
+                                                |  1.00th=[  215],  5.00th=[  486], 10.00th=[  668], 20.00th=[  947],
+                                                | 30.00th=[ 1254], 40.00th=[ 1647], 50.00th=[ 2114], 60.00th=[ 2638],
+                                                | 70.00th=[ 3294], 80.00th=[ 4080], 90.00th=[ 5211], 95.00th=[ 6259],
+                                                | 99.00th=[ 8979], 99.50th=[10945], 99.90th=[15664], 99.95th=[17695],
+                                                | 99.99th=[26084]
+                                              bw (  KiB/s): min=84000, max=655744, per=100.00%, avg=194938.91, stdev=81712.01, samples=14400
+                                              iops        : min=10500, max=81968, avg=24367.35, stdev=10214.00, samples=14400
+                                             lat (usec)   : 50=0.01%, 100=0.04%, 250=1.33%, 500=3.97%, 750=7.49%
+                                             lat (usec)   : 1000=9.07%
+                                             lat (msec)   : 2=25.79%, 4=31.49%, 10=20.15%, 20=0.64%, 50=0.03%
+                                             lat (msec)   : 100=0.01%, 250=0.01%
+                                             cpu          : usr=5.63%, sys=19.73%, ctx=17861835, majf=0, minf=5542
+                                             IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+                                                submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+                                                complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+                                                issued rwt: total=0,175383339,0, short=0,0,0, dropped=0,0,0
+                                                latency   : target=0, window=0, percentile=100.00%, depth=64
+                                           
+                                           Run status group 0 (all jobs):
+                                             WRITE: bw=190MiB/s (200MB/s), 190MiB/s-190MiB/s (200MB/s-200MB/s), io=1338GiB (1437GB), run=7200008-7200008msec
+                                           
+                                           Disk stats (read/write):
+                                             mpnvme1n1: ios=276/175380741, merge=0/0, ticks=254/445929512, in_queue=446069478, util=100.00%
+
+
+2018-03-08 11:50:36,392 : 9513 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
+                                           fio-3.2
+                                           Starting 1 process
+                                           
+                                           1: (groupid=0, jobs=1): err= 0: pid=9577: Thu Mar  8 11:50:36 2018
+                                             write: IOPS=24.1k, BW=189MiB/s (198MB/s)(1325GiB/7200005msec)
+                                               slat (usec): min=3, max=2592, avg= 8.67, stdev= 2.39
+                                               clat (usec): min=41, max=172541, avg=2642.11, stdev=2080.32
+                                                lat (usec): min=48, max=172547, avg=2650.99, stdev=2080.43
+                                               clat percentiles (usec):
+                                                |  1.00th=[  225],  5.00th=[  523], 10.00th=[  693], 20.00th=[  971],
+                                                | 30.00th=[ 1287], 40.00th=[ 1680], 50.00th=[ 2147], 60.00th=[ 2671],
+                                                | 70.00th=[ 3294], 80.00th=[ 4080], 90.00th=[ 5211], 95.00th=[ 6259],
+                                                | 99.00th=[ 9110], 99.50th=[10945], 99.90th=[15795], 99.95th=[17695],
+                                                | 99.99th=[26084]
+                                              bw (  KiB/s): min=82368, max=611568, per=100.00%, avg=193096.78, stdev=76461.35, samples=14400
+                                              iops        : min=10296, max=76446, avg=24137.08, stdev=9557.68, samples=14400
+                                             lat (usec)   : 50=0.01%, 100=0.03%, 250=1.22%, 500=3.26%, 750=7.46%
+                                             lat (usec)   : 1000=8.96%
+                                             lat (msec)   : 2=26.30%, 4=31.69%, 10=20.41%, 20=0.65%, 50=0.03%
+                                             lat (msec)   : 100=0.01%, 250=0.01%
+                                             cpu          : usr=5.41%, sys=22.35%, ctx=16091562, majf=0, minf=5980
+                                             IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+                                                submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+                                                complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+                                                issued rwt: total=0,173735891,0, short=0,0,0, dropped=0,0,0
+                                                latency   : target=0, window=0, percentile=100.00%, depth=64
+                                           
+                                           Run status group 0 (all jobs):
+                                             WRITE: bw=189MiB/s (198MB/s), 189MiB/s-189MiB/s (198MB/s-198MB/s), io=1325GiB (1423GB), run=7200005-7200005msec
+                                           
+                                           Disk stats (read/write):
+                                             mpnvme4n1: ios=304/173730588, merge=0/0, ticks=270/443095958, in_queue=443327007, util=100.00%
+
+
+2018-03-08 11:51:55,906 : 9332 : INFO : waiting for 180 sec
+2018-03-08 11:54:56,077 : 9332 : INFO : Current task 8c81bcef-7cec-4df9-81bc-3ce107e159ef  state  Completed 
+2018-03-08 11:54:56,077 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 11:56:56,081 : 9332 : INFO : Rebuild iteration 5 completed 
+2018-03-08 11:56:56,081 : 9332 : INFO : powering off the drive 43
+2018-03-08 11:57:11,359 : 9332 : INFO : Current task d5c00492-5428-4fbf-81b6-abf1f5cc49d6  state  Completed 
+2018-03-08 11:57:11,359 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 11:58:11,401 : 9332 : INFO : powering on the drive 43
+2018-03-08 11:58:18,633 : 9332 : INFO : Current task 091cfd83-168a-4fdd-a9a4-1410ef9b2601  state  Completed 
+2018-03-08 12:00:19,856 : 9332 : INFO : waiting for 180 sec
+2018-03-08 12:03:20,040 : 9332 : INFO : Current task b61efd45-da52-468a-8d39-8493d972d888  state  Completed 
+2018-03-08 12:03:20,040 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 12:05:20,043 : 9332 : INFO : Rebuild iteration 6 completed 
+2018-03-08 12:05:20,043 : 9332 : INFO : powering off the drive 40
+2018-03-08 12:05:34,411 : 9332 : INFO : Current task 3ea49481-fe01-4e99-8bbd-85de296beffa  state  Completed 
+2018-03-08 12:05:34,411 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 12:06:34,472 : 9332 : INFO : powering on the drive 40
+2018-03-08 12:06:41,702 : 9332 : INFO : Current task 0c4cf8e5-016b-4968-94cf-2e431ad131e5  state  Completed 
+2018-03-08 12:08:42,801 : 9332 : INFO : waiting for 180 sec
+2018-03-08 12:11:42,968 : 9332 : INFO : Current task de38a29e-fa75-498b-89b7-856b912380f5  state  Completed 
+2018-03-08 12:11:42,968 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 12:13:42,972 : 9332 : INFO : Rebuild iteration 7 completed 
+2018-03-08 12:13:42,972 : 9332 : INFO : powering off the drive 41
+2018-03-08 12:13:57,313 : 9332 : INFO : Current task 7891870a-dae4-4f11-a096-62739081eef3  state  Completed 
+2018-03-08 12:13:57,313 : 9332 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-08 12:14:57,374 : 9332 : INFO : powering on the drive 41
+2018-03-08 12:15:04,643 : 9332 : INFO : Current task 66e70a14-1c22-4953-89be-0b627db461fc  state  Completed 
+2018-03-08 12:17:05,749 : 9332 : INFO : waiting for 180 sec
+2018-03-08 12:20:05,919 : 9332 : INFO : Current task aa723944-9987-4409-88e9-e4b525037a55  state  Completed 
+2018-03-08 12:20:05,919 : 9332 : INFO : next rebuild will start in 120 sec
+2018-03-08 12:22:05,923 : 9332 : INFO : Rebuild iteration 8 completed 
+2018-03-09 08:33:02,224 : 31192 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-03-09 08:33:02,224 : 31192 : INFO : powering off controller 16
+2018-03-09 08:33:02,426 : 31192 : INFO : controller 16 is getting powered Off
+2018-03-09 08:34:06,187 : 31192 : INFO : Current task ffb0b27a-1d7c-4949-b1d2-d4506c9e58c1  state  Completed 
+2018-03-09 08:35:06,351 : 31192 : INFO : controller 16 is getting powered On
+2018-03-09 08:35:13,505 : 31192 : INFO : Current task 1c62f824-fee7-4a86-a370-91f4430e7f64  state  Completed 
+2018-03-09 08:35:13,505 : 31192 : INFO : next failover will triggered in 10 min
+2018-03-09 08:36:13,565 : 31192 : INFO : powering off controller 20
+2018-03-09 08:36:13,670 : 31192 : INFO : controller 20 is getting powered Off
+2018-03-09 08:37:17,470 : 31192 : INFO : Current task cd204248-606c-4ee5-b8c4-dc80ae8e18e4  state  Completed 
