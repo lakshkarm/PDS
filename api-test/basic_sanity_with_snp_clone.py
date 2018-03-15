@@ -25,13 +25,13 @@ xref = None
 CHASSIS_IP = '172.25.26.9'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
-CTRL_1_IP = "192.168.6.6"
-CTRL_2_IP = "192.168.7.7"
-CTRL_NO1 = 16
-CTRL_NO2 = 20
-ZONE = 4
-MG_NAME = "testmg1"
-NO_OF_VOLUMES = 1
+CTRL_1_IP = "192.168.6.1"
+CTRL_2_IP = "192.168.7.2"
+CTRL_NO1 = 6
+CTRL_NO2 = 10
+ZONE = 3
+MG_NAME = "manishmg1"
+NO_OF_VOLUMES = 4
 HOST_IP = "172.25.26.215"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
@@ -173,7 +173,7 @@ def delete_mg(mg_name):
 def get_object_id(object_type, object_name):
     url = "https://%s/api/v1.0/chassis/object_id?object_type=%s&object_name=%s"%(CHASSIS_IP,object_type,object_name)
     stdout,status =  call_api(url,"GET")
-    print json.dumps(stdout,indent=4)
+    #print json.dumps(stdout,indent=4)
     id = stdout["id"]
     return id 
     
@@ -537,15 +537,17 @@ if __name__=='__main__':
     #vol= 'ML_TV'
     #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
     #assign(vol,'192.168.6.1','192.168.7.2')
-    '''
     vol_list = []  
+    snap_list = []
+    clone_list =[]
     def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
         create_vol(size, stripe , name, reservation, md_grp, flavor)
         #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE') 
         assign(name,IP1,IP2)
     
     def multiproc(no):
-        volname= 'ML_TV'
+        #volname= 'ML_TV'
+        volname= 'V'
         for i in range(no):
             vol = volname+"_"+str(i)
             p = multiprocessing.Process(target=create_assign_vol,args=('300', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
@@ -558,10 +560,9 @@ if __name__=='__main__':
     logger.info("sleeing for 60 sec")
     time.sleep(60)
     for volname in vol_list:
-    # connect the volume to the host 
+     #connect the volume to the host 
         connect_host(CTRL_IPS, HOST_IP, volname)
-    # start io on the volumes 
-        # 1 for multipath vol
+     #start io on the volumes / # 1 for multipath vol
         p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,7200,1))
         #p.daemon = True
         p.start()
@@ -570,7 +571,7 @@ if __name__=='__main__':
     ## Wating for some time to populate the data through FIO 
     logger.info("Wating for some time to populate the data through FIO")
     time.sleep(300)
-    #collecting media used in that MG 
+    ##collecting media used in that MG 
     ## collecting the slot if for the disks used in MG , And check its "Active" status
     def used_media_in_mg(mgname):
         device_list = dict()
@@ -627,17 +628,59 @@ if __name__=='__main__':
     ## Now runnigng rebuild loop as a saparate process
     p = multiprocessing.Process(target=rebuild_loop , args=(device_list,)) 
     p.start()
-    
-    # now start the FO/FB using cotnroller powerOff/on
-    logger.info("now start the FO/FB using cotnroller powerOff/on")
-    for i in range(10):
-        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
+   
+#   # now start the FO/FB using cotnroller powerOff/on
+#    logger.info("now start the FO/FB using cotnroller powerOff/on")
+#    for i in range(10):
+#        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
+#
+#    logger.info("Successfully completed this test")
 
-    logger.info("Successfully completed this test")
-    '''
-    #a =  get_object_id('volume', "vol1")
-    a =  get_object_id("snapshot", "Sp1")
-    #create_snap(a,"Snapshot","Sp1",resr=0)
-    create_copy(a,"Clone","csp1",30)
-    #create_clone1('abcd', 'Sp2', 30)
+    ## Now taking snaphsots for all the volumes 
+    def create_snap_clone(c=None):
+        if c == 1:
+            for i in vol_list:
+                count = 1
+                vol_id = get_object_id('volume', i)
+                snap_name = "snap"+str(count)+"_"+str(i)
+                create_copy(vol_id,"Snapshot",snap_name)
+                time.sleep(30)
+                snap_id = get_object_id("snapshot", snap_name)
+                clone_name = "C"+str(count)+"_"+str(snap_name)
+                create_copy(snap_id,"Clone",clone_name,90)
+                time.sleep(30)
+                snap_list.append(snap_name)
+                clone_list.append(clone_name)
+                count+=1
+        else:
+            for i in vol_list:
+                count = 1
+                vol_id = get_object_id('volume', i)
+                snap_name = "snap"+str(count)+"_"+str(i)
+                create_copy(vol_id,"Snapshot",snap_name)
+                time.sleep(30)
+                snap_list.append(snap_name)
+                count+=1
+
+    create_snap_clone(1) 
+   
+    ## Assigning snapshot to the controllers 
+    for snap_name in snap_list:
+        logger.info("Assigning %s to the controllers"%snap_name)
+        assign(snap_name,CTRL_1_IP,CTRL_2_IP)
+        time.sleep(6)
+    ## Assign clones to the controllers 
+    for clone_name in clone_list:
+        logger.info("Assigning %s to the controllers"%clone_name)
+        assign(clone_name,CTRL_1_IP,CTRL_2_IP)
+        time.sleep(10)
+        logger.info("Connecting %s to the host-%s"%(clone_name,HOST_IP))
+        connect_host(CTRL_IPS, HOST_IP, clone_name)
+    time.sleep(60)
+    ##Now start IO load on the clones devices as well
+    for clone_name in clone_list:
+        p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,7200,1))
+        p.start()
+    
+        
 

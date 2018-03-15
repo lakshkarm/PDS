@@ -1,27 +1,39 @@
-2018-03-08 09:49:01,416 : 9339 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
-2018-03-08 09:49:09,036 : 9339 : INFO : Current task 8f052132-258a-49d6-b789-834ee0f5ce64  state  Completed 
-2018-03-08 09:49:09,448 : 9339 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
-2018-03-08 09:49:16,808 : 9339 : INFO : Current task 01a9abb9-a5f6-49f6-b6d1-8d1ce898c4bf  state  Completed 
-2018-03-08 09:49:16,986 : 9340 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'374080a5-3837-47ca-8d6c-e18a3faa4090', 'size': '300'}
-2018-03-08 09:49:24,889 : 9340 : INFO : Current task 5f442352-89a8-4772-8fdc-b35e40dead2c  state  Completed 
-2018-03-08 09:49:25,295 : 9340 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
-2018-03-08 09:49:32,631 : 9340 : INFO : Current task 6c321c99-de7a-44a5-aa24-dee075a804e4  state  Completed 
-2018-03-08 09:49:32,633 : 9332 : INFO : sleeing for 60 sec
-2018-03-08 09:50:32,958 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf911 " 
-2018-03-08 09:50:33,317 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf911 "  
+2018-03-13 07:47:59,625 : 21829 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-13 07:48:37,282 : 21841 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-13 07:48:45,623 : 21841 : INFO : Current task e0bfd083-bf4a-4ddb-a45f-a1f3d822daf8  state  Completed 
+2018-03-13 07:48:46,037 : 21841 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-03-13 07:48:53,471 : 21841 : INFO : Current task 0d2c5501-7aac-42e0-95d3-7524768322d0  state  Completed 
+2018-03-13 07:48:53,647 : 21842 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-13 07:49:02,007 : 21842 : INFO : Current task b7f54f3f-6a68-4594-a8c0-e495a10d8799  state  Completed 
+2018-03-13 07:49:02,417 : 21842 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-03-13 07:49:09,848 : 21842 : INFO : Current task 18b6b7e7-b6af-41ab-b959-8c88ac10b0f7  state  Completed 
+2018-03-13 07:49:10,021 : 21843 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-13 07:49:18,330 : 21843 : INFO : Current task 3199f446-1b9d-4041-8e3b-426fc7644924  state  Completed 
+2018-03-13 07:49:18,738 : 21843 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-03-13 07:49:26,154 : 21843 : INFO : Current task 6a5dce41-634c-41cf-86a7-d148a7efd7fa  state  Completed 
+2018-03-13 07:49:26,327 : 21844 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-13 07:49:34,670 : 21844 : INFO : Current task 2bc924e3-23d9-4907-8724-2bad16c8d30f  state  Completed 
+2018-03-13 07:49:35,082 : 21844 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-03-13 07:49:42,502 : 21844 : INFO : Current task b8a4d707-39ab-4255-a11c-17f345591bec  state  Completed 
+2018-03-13 07:49:42,676 : 21889 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-13 07:49:50,978 : 21889 : INFO : Current task 5b330876-2fa3-4354-b666-30f59623daba  state  Completed 
+2018-03-13 07:49:51,385 : 21889 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-03-13 07:49:58,799 : 21889 : INFO : Current task c803061e-e485-46e2-9907-4a0daf375bff  state  Completed 
+2018-03-13 07:49:58,801 : 21834 : INFO : sleeing for 60 sec
+2018-03-13 07:50:59,225 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf948 " 
+2018-03-13 07:50:59,609 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf948 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:50:33,318 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf911 " 
-2018-03-08 09:50:33,680 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf911 "  
+2018-03-13 07:50:59,609 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf948 " 
+2018-03-13 07:50:59,962 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf948 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:50:33,683 : 9401 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf911 |awk '{print \$1}' " 
-2018-03-08 09:50:33,849 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf912 " 
-2018-03-08 09:50:33,868 : 9401 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf911 |awk '{print \$1}' "  
+2018-03-13 07:50:59,965 : 21951 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf948 |awk '{print \$1}' " 
+2018-03-13 07:51:00,151 : 21951 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf948 |awk '{print \$1}' "  
                                     EXIT_CODE - 0
                                     STDOUT 
                                            /dev/mpnvme1n1
@@ -29,22 +41,22 @@
                                            /dev/nvme2n1
 
 
-2018-03-08 09:50:33,868 : 9401 : INFO : Starting FIO load on /dev/mpnvme1n1
-2018-03-08 09:50:33,868 : 9401 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-08 09:50:34,205 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf912 "  
+2018-03-13 07:51:00,152 : 21951 : INFO : Starting FIO load on /dev/mpnvme1n1
+2018-03-13 07:51:00,152 : 21951 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-13 07:51:00,215 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf949 " 
+2018-03-13 07:51:00,602 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf949 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:50:34,205 : 9332 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf912 " 
-2018-03-08 09:50:34,605 : 9332 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf912 "  
+2018-03-13 07:51:00,603 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf949 " 
+2018-03-13 07:51:00,963 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf949 "  
                                     EXIT_CODE - 0
                                     STDOUT 
 
 
-2018-03-08 09:50:34,606 : 9332 : INFO : Wating for some time to populate the data through FIO
-2018-03-08 09:50:34,608 : 9513 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf912 |awk '{print \$1}' " 
-2018-03-08 09:50:34,805 : 9513 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf912 |awk '{print \$1}' "  
+2018-03-13 07:51:00,967 : 22065 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf949 |awk '{print \$1}' " 
+2018-03-13 07:51:01,163 : 22065 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf949 |awk '{print \$1}' "  
                                     EXIT_CODE - 0
                                     STDOUT 
                                            /dev/mpnvme4n1
@@ -52,172 +64,821 @@
                                            /dev/nvme5n1
 
 
-2018-03-08 09:50:34,805 : 9513 : INFO : Starting FIO load on /dev/mpnvme4n1
-2018-03-08 09:50:34,805 : 9513 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
-2018-03-08 09:55:34,842 : 9332 : INFO : powering off the drive 39
-2018-03-08 09:55:49,143 : 9332 : INFO : Current task 467008eb-5c77-4436-afa3-aca3fcd788cb  state  Completed 
-2018-03-08 09:55:49,144 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 09:56:49,204 : 9332 : INFO : powering on the drive 39
-2018-03-08 09:56:56,440 : 9332 : INFO : Current task 45780be6-ac2a-4c13-86ac-02875e366994  state  Completed 
-2018-03-08 09:58:57,524 : 9332 : INFO : waiting for 180 sec
-2018-03-08 10:17:18,494 : 9332 : INFO : Current task ce033faa-0ecd-4d6c-a5ce-f065a5617456  state  Completed 
-2018-03-08 10:17:18,495 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 10:19:18,497 : 9332 : INFO : Rebuild iteration 0 completed 
-2018-03-08 10:19:18,497 : 9332 : INFO : powering off the drive 38
-2018-03-08 10:19:33,807 : 9332 : INFO : Current task 7f220656-b919-4ca8-bf0b-7fea2a2f0c4e  state  Completed 
-2018-03-08 10:19:33,807 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 10:20:33,868 : 9332 : INFO : powering on the drive 38
-2018-03-08 10:20:41,095 : 9332 : INFO : Current task 505a51a6-8034-466d-b8f6-a3f1812e00f2  state  Completed 
-2018-03-08 10:22:42,177 : 9332 : INFO : waiting for 180 sec
-2018-03-08 10:40:19,619 : 9332 : INFO : Current task ac385476-b31b-4c30-86d0-84e54a6c3d0b  state  Completed 
-2018-03-08 10:40:19,620 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 10:42:19,623 : 9332 : INFO : Rebuild iteration 1 completed 
-2018-03-08 10:42:19,623 : 9332 : INFO : powering off the drive 37
-2018-03-08 10:42:33,960 : 9332 : INFO : Current task 8ed48615-2798-402f-bd1e-7f7b5bcfe34f  state  Completed 
-2018-03-08 10:42:33,960 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 10:43:34,014 : 9332 : INFO : powering on the drive 37
-2018-03-08 10:43:41,244 : 9332 : INFO : Current task ef5d4f61-c2b1-461d-b03a-0b01d7ef7c26  state  Completed 
-2018-03-08 10:45:42,331 : 9332 : INFO : waiting for 180 sec
-2018-03-08 11:00:01,616 : 9332 : INFO : Current task 6a1b2072-e41e-483a-a654-089f2a1ac9e2  state  Completed 
-2018-03-08 11:00:01,617 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 11:02:01,717 : 9332 : INFO : Rebuild iteration 2 completed 
-2018-03-08 11:02:01,717 : 9332 : INFO : powering off the drive 44
-2018-03-08 11:02:17,035 : 9332 : INFO : Current task 33295b62-2605-4720-967b-19363069d7ba  state  Completed 
-2018-03-08 11:02:17,035 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 11:03:17,096 : 9332 : INFO : powering on the drive 44
-2018-03-08 11:03:24,693 : 9332 : INFO : Current task f93f3ecc-b97b-4723-8c8f-a3cc40f0f7f8  state  Completed 
-2018-03-08 11:05:25,782 : 9332 : INFO : waiting for 180 sec
-2018-03-08 11:24:27,966 : 9332 : INFO : Current task f11cca0e-c5a1-40f0-8f22-1be26b7680bd  state  Completed 
-2018-03-08 11:24:27,967 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 11:26:27,973 : 9332 : INFO : Rebuild iteration 3 completed 
-2018-03-08 11:26:27,973 : 9332 : INFO : powering off the drive 45
-2018-03-08 11:26:42,275 : 9332 : INFO : Current task 5e057b5a-ce3a-4169-b732-c6023cce490e  state  Completed 
-2018-03-08 11:26:42,275 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 11:27:42,336 : 9332 : INFO : powering on the drive 45
-2018-03-08 11:27:50,307 : 9332 : INFO : Current task fdc7a4f9-d397-455a-96b1-f40429c0109b  state  Completed 
-2018-03-08 11:29:51,395 : 9332 : INFO : waiting for 180 sec
-2018-03-08 11:46:32,128 : 9332 : INFO : Current task fa545ed1-a420-4a99-9594-45d02b6ed7eb  state  Completed 
-2018-03-08 11:46:32,129 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 11:48:32,229 : 9332 : INFO : Rebuild iteration 4 completed 
-2018-03-08 11:48:32,230 : 9332 : INFO : powering off the drive 42
-2018-03-08 11:48:47,528 : 9332 : INFO : Current task bb3b7e7d-5dd9-4678-b264-9c3cfa24168c  state  Completed 
-2018-03-08 11:48:47,528 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 11:49:47,589 : 9332 : INFO : powering on the drive 42
-2018-03-08 11:49:54,815 : 9332 : INFO : Current task 12cea692-7adc-4cb5-b455-773553171ad3  state  Completed 
-2018-03-08 11:50:35,450 : 9401 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+2018-03-13 07:51:01,164 : 22065 : INFO : Starting FIO load on /dev/mpnvme4n1
+2018-03-13 07:51:01,164 : 22065 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-13 07:51:01,217 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf950 " 
+2018-03-13 07:51:01,904 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf950 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-13 07:51:01,904 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf950 " 
+2018-03-13 07:51:02,257 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf950 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-13 07:51:02,261 : 22178 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf950 |awk '{print \$1}' " 
+2018-03-13 07:51:02,469 : 22178 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf950 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme7n1
+                                           /dev/nvme6n1
+                                           /dev/nvme8n1
+
+
+2018-03-13 07:51:02,469 : 22178 : INFO : Starting FIO load on /dev/mpnvme7n1
+2018-03-13 07:51:02,470 : 22178 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme7n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-13 07:51:02,512 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf951 " 
+2018-03-13 07:51:03,033 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf951 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-13 07:51:03,033 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf951 " 
+2018-03-13 07:51:03,387 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf951 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-13 07:51:03,390 : 22292 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf951 |awk '{print \$1}' " 
+2018-03-13 07:51:03,603 : 22292 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf951 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme10n1
+                                           /dev/nvme11n1
+                                           /dev/nvme9n1
+
+
+2018-03-13 07:51:03,604 : 22292 : INFO : Starting FIO load on /dev/mpnvme10n1
+2018-03-13 07:51:03,604 : 22292 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme10n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-13 07:51:03,640 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf952 " 
+2018-03-13 07:51:04,111 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf952 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-13 07:51:04,111 : 21834 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf952 " 
+2018-03-13 07:51:04,460 : 21834 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf952 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-13 07:51:04,461 : 21834 : INFO : Wating for some time to populate the data through FIO
+2018-03-13 07:51:04,463 : 22404 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf952 |awk '{print \$1}' " 
+2018-03-13 07:51:04,690 : 22404 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf952 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme13n1
+                                           /dev/nvme12n1
+                                           /dev/nvme14n1
+
+
+2018-03-13 07:51:04,691 : 22404 : INFO : Starting FIO load on /dev/mpnvme13n1
+2018-03-13 07:51:04,691 : 22404 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme13n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-13 07:56:04,711 : 21834 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-03-13 07:56:04,712 : 21834 : INFO : powering off controller 6
+2018-03-13 07:56:04,712 : 22471 : INFO : powering off the drive 39
+2018-03-13 07:56:05,470 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 07:56:19,558 : 22471 : INFO : Current task 7e3342be-5ba1-4fc8-accf-2f783ac09d6e  state  Completed 
+2018-03-13 07:56:19,559 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 07:57:16,290 : 21834 : INFO : Current task 1091fda4-bff1-4d79-8db5-877abae0eab7  state  Completed 
+2018-03-13 07:57:19,619 : 22471 : INFO : powering on the drive 39
+2018-03-13 07:57:26,849 : 22471 : INFO : Current task 82bab176-2b18-4809-824f-a5078767e9ef  state  Completed 
+2018-03-13 07:58:16,439 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 07:58:23,581 : 21834 : INFO : Current task 5a5eea3b-ec27-4394-9eb6-bcc7875a0d50  state  Completed 
+2018-03-13 07:58:23,581 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 07:59:43,358 : 22471 : INFO : waiting for 180 sec
+2018-03-13 08:08:23,681 : 21834 : INFO : powering off controller 10
+2018-03-13 08:08:23,771 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 08:09:27,497 : 21834 : INFO : Current task bc329348-37e5-4985-ab80-21d760437618  state  Completed 
+2018-03-13 08:10:27,650 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 08:10:34,792 : 21834 : INFO : Current task d754b917-9664-486e-b40b-2bc04dc4bde0  state  Completed 
+2018-03-13 08:10:34,792 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 08:20:34,892 : 21834 : INFO : powering off controller 6
+2018-03-13 08:20:34,985 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 08:21:38,718 : 21834 : INFO : Current task f19ecab2-5fef-43af-9fbc-d91786470c4b  state  Completed 
+2018-03-13 08:22:38,869 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 08:22:46,008 : 21834 : INFO : Current task 648af3d4-edbe-4cc1-9c33-cd2b145f9a7c  state  Completed 
+2018-03-13 08:22:46,008 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 08:32:46,108 : 21834 : INFO : powering off controller 10
+2018-03-13 08:32:46,201 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 08:33:49,932 : 21834 : INFO : Current task 967f757e-940d-401f-a25d-0ce32270868a  state  Completed 
+2018-03-13 08:34:50,088 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 08:34:57,231 : 21834 : INFO : Current task f782b199-b05f-465f-811c-da16d7bea309  state  Completed 
+2018-03-13 08:34:57,231 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 08:36:41,342 : 22471 : INFO : Current task 23f7d842-6c3e-4c69-a551-174265dcb0f4  state  Completed 
+2018-03-13 08:36:41,343 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 08:38:41,443 : 22471 : INFO : Rebuild iteration 0 completed 
+2018-03-13 08:38:41,444 : 22471 : INFO : powering off the drive 38
+2018-03-13 08:38:55,739 : 22471 : INFO : Current task e35d8b36-5a09-4728-8c1e-1fb7d0fb515b  state  Completed 
+2018-03-13 08:38:55,739 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 08:39:55,800 : 22471 : INFO : powering on the drive 38
+2018-03-13 08:40:03,026 : 22471 : INFO : Current task 481f6ba4-89e9-49ad-89b8-9070d4c025f2  state  Completed 
+2018-03-13 08:42:04,221 : 22471 : INFO : waiting for 180 sec
+2018-03-13 08:44:57,332 : 21834 : INFO : powering off controller 6
+2018-03-13 08:44:57,425 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 08:46:01,147 : 21834 : INFO : Current task d6b173d7-0e29-4a6f-8db6-48f31b66f1a9  state  Completed 
+2018-03-13 08:47:01,296 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 08:47:08,434 : 21834 : INFO : Current task 90ca796d-721e-451a-ac4a-6068a3e6ba61  state  Completed 
+2018-03-13 08:47:08,434 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 08:57:08,534 : 21834 : INFO : powering off controller 10
+2018-03-13 08:57:08,626 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 08:58:12,358 : 21834 : INFO : Current task 18c1b51f-997b-4542-9f8f-4037cb99728a  state  Completed 
+2018-03-13 08:59:12,461 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 08:59:19,603 : 21834 : INFO : Current task 392dd7d8-eb36-421b-ade3-401d66eba4d5  state  Completed 
+2018-03-13 08:59:19,603 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 09:09:19,703 : 21834 : INFO : powering off controller 6
+2018-03-13 09:09:19,793 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 09:10:23,528 : 21834 : INFO : Current task f6a60dac-8b0a-4737-9d81-3c9e60d1b80f  state  Completed 
+2018-03-13 09:11:23,677 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 09:11:30,819 : 21834 : INFO : Current task f1e3b2ad-2776-4b75-a1db-bcc630abe774  state  Completed 
+2018-03-13 09:11:30,819 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 09:21:30,896 : 21834 : INFO : powering off controller 10
+2018-03-13 09:21:30,984 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 09:22:34,717 : 21834 : INFO : Current task 541d94a4-68e6-4b01-8803-fbc50d34fa0e  state  Completed 
+2018-03-13 09:22:55,006 : 22471 : INFO : Current task 158a8299-d428-42c4-a48e-4a44d8ca8169  state  Completed 
+2018-03-13 09:22:55,006 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 09:23:34,827 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 09:23:41,967 : 21834 : INFO : Current task c0b56eea-fdf9-4199-a319-d0f9cd4ae5fe  state  Completed 
+2018-03-13 09:23:41,968 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 09:24:55,063 : 22471 : INFO : Rebuild iteration 1 completed 
+2018-03-13 09:24:55,064 : 22471 : INFO : powering off the drive 37
+2018-03-13 09:25:09,368 : 22471 : INFO : Current task ea096e6c-a6ea-40a2-afce-49b285291850  state  Completed 
+2018-03-13 09:25:09,368 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 09:26:09,429 : 22471 : INFO : powering on the drive 37
+2018-03-13 09:26:16,658 : 22471 : INFO : Current task 2fb891d2-ae15-4977-8da4-2a2abbe3c6f9  state  Completed 
+2018-03-13 09:28:17,940 : 22471 : INFO : waiting for 180 sec
+2018-03-13 09:33:41,971 : 21834 : INFO : powering off controller 6
+2018-03-13 09:33:42,065 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 09:34:45,793 : 21834 : INFO : Current task ce31b6c5-5d2b-45b1-bc0c-6a427df1b22d  state  Completed 
+2018-03-13 09:35:45,928 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 09:35:53,069 : 21834 : INFO : Current task fcd14745-a3b2-49c4-9d9d-f1fe6f90e07e  state  Completed 
+2018-03-13 09:35:53,069 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 09:38:33,302 : 24022 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:38:33,303 : 24022 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='a7482a31-0162-492c-b45a-5ab8b46bf89d', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"error":-1,"error_msg":"Wrong object name"}', 'headers': {'Content-Length': '44', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=a7482a31-0162-492c-b45a-5ab8b46bf89d; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:14:54 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'application/json;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/chassis/object_id?object_type=mediagroup&object_name=testmg1', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x255c290>, 'elapsed': datetime.timedelta(0, 0, 59488), 'raw': <urllib3.response.HTTPResponse object at 0x2a8e150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:38:33,306 : 24015 : INFO : sleeing for 60 sec
+2018-03-13 09:38:33,307 : 24015 : INFO : Wating for some time to populate the data through FIO
+2018-03-13 09:43:19,337 : 24128 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:43:19,338 : 24128 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='fdfdb3a3-6555-4b42-a458-5ef9c87a93dd', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"error":-1,"error_msg":"Wrong object name"}', 'headers': {'Content-Length': '44', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=fdfdb3a3-6555-4b42-a458-5ef9c87a93dd; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:19:40 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'application/json;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/chassis/object_id?object_type=mediagroup&object_name=testmg1', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x2181290>, 'elapsed': datetime.timedelta(0, 0, 61299), 'raw': <urllib3.response.HTTPResponse object at 0x26b4150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:43:19,341 : 24121 : INFO : sleeing for 60 sec
+2018-03-13 09:43:19,571 : 24121 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:43:19,571 : 24121 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='e2e817ae-638e-437e-b51d-47958aaf75da', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '[{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed37","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":28,"displayTemp":"28 \xc2\xbaC","slot":"37","serial":"CVPF63450066450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"7aea1b17-8306-4895-8b63-a053e71b872c"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed38","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"38","serial":"CVPF6345005G450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"c0aad47d-eb91-464c-b530-e79ba5f94499"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed39","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"39","serial":"CVPF6345000S450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"2eeb17ab-6fb2-41f6-9139-d0a693b4be74"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed40","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":30,"displayTemp":"30 \xc2\xbaC","slot":"40","serial":"CVPF63420084450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"3c928797-c469-46f4-8733-3529ddcf6ca1"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed41","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"41","serial":"CVPF63450025450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"49e4140f-c7c1-47ad-a55a-83f4d7d13842"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed42","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"42","serial":"CVPF634600LE450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"9a0fb0b4-7342-4398-8e39-450a83623367"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed43","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":30,"displayTemp":"30 \xc2\xbaC","slot":"43","serial":"CVPF634600FJ450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"33cd3a82-2422-4aaf-9b1c-f9b7ae94391c"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed44","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"44","serial":"CVPF63450020450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"923aa9b3-b125-4b4d-acbf-95b63dfbf2aa"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed45","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":31,"displayTemp":"31 \xc2\xbaC","slot":"45","serial":"CVPF6346007M450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"67a0094e-7714-485c-abdf-53a6f2a0ab82"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"5","name":"nvmed46","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":37,"displayTemp":"37 \xc2\xbaC","slot":"46","serial":"ZC5020M9            ","firmware":"PA00ST01","model":"ST1920KN0001                            ","totalCapacity":1.920383410176E12,"displayTotalCapacity":"1,788.496 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"e4adb2bd-6118-4d79-a68f-b64ece065614"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"5","name":"nvmed47","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":38,"displayTemp":"38 \xc2\xbaC","slot":"47","serial":"ZC5020P6            ","firmware":"PA00ST01","model":"ST1920KN0001                            ","totalCapacity":1.920383410176E12,"displayTotalCapacity":"1,788.496 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"228ce223-07ea-41ae-b666-7cca64bfa6a0"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"6","name":"nvmed56","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":40,"displayTemp":"40 \xc2\xbaC","slot":"56","serial":"ZC5020Q0            ","firmware":"PA00ST01","model":"ST1920KN0001                            ","totalCapacity":1.920383410176E12,"displayTotalCapacity":"1,788.496 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"45c4d47e-2f22-458c-b6a0-4aae2c45e9c4"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed64","vendor":"-","presenceState":2,"displayPresenceState":"Powered-Off","status":99,"displayStatus":"Inactive","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Inactive","temp":26,"displayTemp":"26 \xc2\xbaC","slot":"64","serial":"CVPF634600L0450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"20384893-3cbf-43bb-9bd2-b9b29a801f5e"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed65","vendor":"-","presenceState":2,"displayPresenceState":"Powered-Off","status":99,"displayStatus":"Inactive","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Inactive","temp":23,"displayTemp":"23 \xc2\xbaC","slot":"65","serial":"CVPF6342008W450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"740bf76b-5961-4fd8-aab7-a28f168aca17"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed66","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"66","serial":"CVPF6345002G450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"2687663a-35f6-4eb5-8be5-25481dbd7deb"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed67","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"67","serial":"CVPF634200K4450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"3e5c67b1-ca6c-4304-b9f5-035f8143a366"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed68","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":26,"displayTemp":"26 \xc2\xbaC","slot":"68","serial":"CVPF632500AJ450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"86d09126-312e-493e-9c76-780cdfcf2e11"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed69","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"69","serial":"CVPF63450058450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"582d12a6-2a5c-4410-ae25-eb31a42bcea8"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed70","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"70","serial":"CVPF632400BU450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"836c8e8c-55ba-419a-8ee2-e6bdc29e992d"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed71","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"71","serial":"CVPF6342008V450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"e9dccd6d-757d-4830-949e-420fef22bca5"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed72","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":25,"displayTemp":"25 \xc2\xbaC","slot":"72","serial":"CVCQ5465004J400CGN  ","firmware":"8EV10171","model":"INTEL SSDPE2MW400G4                     ","totalCapacity":4.00088457216E11,"displayTotalCapacity":"372.611 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"2e28a31e-d840-483f-a3e5-29630c4a3825"}]', 'headers': {'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Set-Cookie': 'XSRF-TOKEN=e2e817ae-638e-437e-b51d-47958aaf75da; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Vary': 'Accept-Encoding', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:19:40 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'application/json;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/storage/medias', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x262fb50>, 'elapsed': datetime.timedelta(0, 0, 124285), 'raw': <urllib3.response.HTTPResponse object at 0x26b4150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:08,517 : 24142 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:08,517 : 24142 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='867470d1-048c-4733-968b-ffcc71729d1c', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"error":-1,"error_msg":"Wrong object name"}', 'headers': {'Content-Length': '44', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=867470d1-048c-4733-968b-ffcc71729d1c; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:29 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'application/json;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/chassis/object_id?object_type=mediagroup&object_name=testmg1', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1636290>, 'elapsed': datetime.timedelta(0, 0, 59660), 'raw': <urllib3.response.HTTPResponse object at 0x1b69150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:08,521 : 24135 : INFO : sleeing for 60 sec
+2018-03-13 09:44:08,744 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:08,745 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '[{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed37","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":27,"displayTemp":"27 \xc2\xbaC","slot":"37","serial":"CVPF63450066450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"7aea1b17-8306-4895-8b63-a053e71b872c"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed38","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":28,"displayTemp":"28 \xc2\xbaC","slot":"38","serial":"CVPF6345005G450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"c0aad47d-eb91-464c-b530-e79ba5f94499"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed39","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"39","serial":"CVPF6345000S450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"2eeb17ab-6fb2-41f6-9139-d0a693b4be74"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed40","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"40","serial":"CVPF63420084450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"3c928797-c469-46f4-8733-3529ddcf6ca1"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed41","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":28,"displayTemp":"28 \xc2\xbaC","slot":"41","serial":"CVPF63450025450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"49e4140f-c7c1-47ad-a55a-83f4d7d13842"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed42","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"42","serial":"CVPF634600LE450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"9a0fb0b4-7342-4398-8e39-450a83623367"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed43","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":30,"displayTemp":"30 \xc2\xbaC","slot":"43","serial":"CVPF634600FJ450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"33cd3a82-2422-4aaf-9b1c-f9b7ae94391c"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed44","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":29,"displayTemp":"29 \xc2\xbaC","slot":"44","serial":"CVPF63450020450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"923aa9b3-b125-4b4d-acbf-95b63dfbf2aa"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"4","name":"nvmed45","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":2,"displayStatus":"In Use","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"In Use","temp":31,"displayTemp":"31 \xc2\xbaC","slot":"45","serial":"CVPF6346007M450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","mediaGroupId":"be1fa1f4-143f-4849-9c50-f13053c2a832","mediaGrpName":"manishmg1","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"67a0094e-7714-485c-abdf-53a6f2a0ab82"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"5","name":"nvmed46","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":37,"displayTemp":"37 \xc2\xbaC","slot":"46","serial":"ZC5020M9            ","firmware":"PA00ST01","model":"ST1920KN0001                            ","totalCapacity":1.920383410176E12,"displayTotalCapacity":"1,788.496 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"e4adb2bd-6118-4d79-a68f-b64ece065614"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"5","name":"nvmed47","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":38,"displayTemp":"38 \xc2\xbaC","slot":"47","serial":"ZC5020P6            ","firmware":"PA00ST01","model":"ST1920KN0001                            ","totalCapacity":1.920383410176E12,"displayTotalCapacity":"1,788.496 GB","block":0,"qDepth":0,"zone":3,"isSpare":0,"id":"228ce223-07ea-41ae-b666-7cca64bfa6a0"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"6","name":"nvmed56","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":40,"displayTemp":"40 \xc2\xbaC","slot":"56","serial":"ZC5020Q0            ","firmware":"PA00ST01","model":"ST1920KN0001                            ","totalCapacity":1.920383410176E12,"displayTotalCapacity":"1,788.496 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"45c4d47e-2f22-458c-b6a0-4aae2c45e9c4"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed64","vendor":"-","presenceState":2,"displayPresenceState":"Powered-Off","status":99,"displayStatus":"Inactive","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Inactive","temp":26,"displayTemp":"26 \xc2\xbaC","slot":"64","serial":"CVPF634600L0450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"20384893-3cbf-43bb-9bd2-b9b29a801f5e"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed65","vendor":"-","presenceState":2,"displayPresenceState":"Powered-Off","status":99,"displayStatus":"Inactive","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Inactive","temp":23,"displayTemp":"23 \xc2\xbaC","slot":"65","serial":"CVPF6342008W450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"740bf76b-5961-4fd8-aab7-a28f168aca17"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed66","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"66","serial":"CVPF6345002G450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"2687663a-35f6-4eb5-8be5-25481dbd7deb"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed67","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"67","serial":"CVPF634200K4450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"3e5c67b1-ca6c-4304-b9f5-035f8143a366"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed68","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":26,"displayTemp":"26 \xc2\xbaC","slot":"68","serial":"CVPF632500AJ450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"86d09126-312e-493e-9c76-780cdfcf2e11"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed69","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"69","serial":"CVPF63450058450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"582d12a6-2a5c-4410-ae25-eb31a42bcea8"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed70","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"70","serial":"CVPF632400BU450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"836c8e8c-55ba-419a-8ee2-e6bdc29e992d"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed71","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":24,"displayTemp":"24 \xc2\xbaC","slot":"71","serial":"CVPF6342008V450RGN  ","firmware":"MDV10253","model":"INTEL SSDPE2MX450G7                     ","totalCapacity":4.50098159616E11,"displayTotalCapacity":"419.187 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"e9dccd6d-757d-4830-949e-420fef22bca5"},{"chassisId":"GB000026000000020010115FEB171JVD","bankId":"7","name":"nvmed72","vendor":"-","presenceState":1,"displayPresenceState":"Active","status":4,"displayStatus":"Free","subState":0,"displaySubState":"","failedReason":0,"rcStatus":0,"displayRecoveryStatus":"Free","temp":25,"displayTemp":"25 \xc2\xbaC","slot":"72","serial":"CVCQ5465004J400CGN  ","firmware":"8EV10171","model":"INTEL SSDPE2MW400G4                     ","totalCapacity":4.00088457216E11,"displayTotalCapacity":"372.611 GB","block":0,"qDepth":0,"zone":4,"isSpare":0,"id":"2e28a31e-d840-483f-a3e5-29630c4a3825"}]', 'headers': {'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Vary': 'Accept-Encoding', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:29 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'application/json;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/storage/medias', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3b50>, 'elapsed': datetime.timedelta(0, 0, 118332), 'raw': <urllib3.response.HTTPResponse object at 0x1b69150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:08,811 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:08,811 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"id":"c5b37b58-1eb8-42c0-a355-4bf134331569","object_name":"ML_TV_0","object_type":"volume"}', 'headers': {'Content-Length': '92', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:29 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'application/json;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/chassis/object_id?object_type=volume&object_name=ML_TV_0', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae38d0>, 'elapsed': datetime.timedelta(0, 0, 59336), 'raw': <urllib3.response.HTTPResponse object at 0x1b69a90>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:08,812 : 24135 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-03-13 09:44:09,445 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:09,445 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"error":0,"snapshotid":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","taskid":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '111', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': '0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:29 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/storage/snapshots/create', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [POST]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3a50>, 'elapsed': datetime.timedelta(0, 0, 627927), 'raw': <urllib3.response.HTTPResponse object at 0x1b771d0>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:09,513 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:09,514 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:30 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3190>, 'elapsed': datetime.timedelta(0, 0, 62982), 'raw': <urllib3.response.HTTPResponse object at 0x1b77150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:16,584 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:16,585 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:37 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3a50>, 'elapsed': datetime.timedelta(0, 0, 62052), 'raw': <urllib3.response.HTTPResponse object at 0x1b773d0>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:23,659 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:23,659 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:44 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3190>, 'elapsed': datetime.timedelta(0, 0, 61860), 'raw': <urllib3.response.HTTPResponse object at 0x1b771d0>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:30,733 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:30,733 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:51 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3a50>, 'elapsed': datetime.timedelta(0, 0, 61417), 'raw': <urllib3.response.HTTPResponse object at 0x1b77150>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:37,808 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:37,808 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:20:58 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3190>, 'elapsed': datetime.timedelta(0, 0, 62233), 'raw': <urllib3.response.HTTPResponse object at 0x1b773d0>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:44,882 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:44,883 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:21:05 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3a50>, 'elapsed': datetime.timedelta(0, 0, 61904), 'raw': <urllib3.response.HTTPResponse object at 0x1b69f50>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:51,956 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:51,957 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":1,"displayState":"Running","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:20:30.000444224","endTimeStamp":1520968830000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '418', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:21:12 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3190>, 'elapsed': datetime.timedelta(0, 0, 61341), 'raw': <urllib3.response.HTTPResponse object at 0x1b69890>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:59,032 : 24135 : INFO : aaaaaaaaaaaaaaaaaaaa['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2018-03-13 09:44:59,032 : 24135 : INFO : {'cookies': <<class 'requests.cookies.RequestsCookieJar'>[Cookie(version=0, name='XSRF-TOKEN', value='343a80e7-b663-4dfc-99e1-2cbd28f041ec', port=None, port_specified=False, domain='172.25.26.9', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)]>, '_content': '{"objectId":"4fa4f54d-a443-4b98-868d-b0fd8920fdb9","objectName":"snap1_ML_TV_0","objectType":"PVL_SNAPSHOT","type":1,"displayType":"User","state":0,"displayState":"Completed","time":"2018-03-13 12:20:30.000444224","formattedTime":"2018-03-13T12:20:30Z","timeStamp":1520968830000,"endTime":"2018-03-13 12:21:17.000398286","endTimeStamp":1520968877000,"message":"","children":0,"id":"487485f6-3f23-4575-8e1f-2c9b08d5d2c3"}', 'headers': {'Content-Length': '420', 'X-XSS-Protection': '1; mode=block', 'X-Application-Context': 'application:443', 'X-Content-Type-Options': 'nosniff', 'Set-Cookie': 'XSRF-TOKEN=343a80e7-b663-4dfc-99e1-2cbd28f041ec; Path=/', 'Expires': 'Wed, 31 Dec 1969 16:00:00 PST, 0', 'Server': 'Apache-Coyote/1.1', 'Pragma': 'no-cache', 'Cache-Control': 'private, no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Tue, 13 Mar 2018 12:21:20 GMT', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'Content-Type': 'text/plain;charset=UTF-8', 'X-Frame-Options': 'DENY'}, 'url': u'https://172.25.26.9/api/v1.0/notification/tasks/487485f6-3f23-4575-8e1f-2c9b08d5d2c3', 'status_code': 200, '_content_consumed': True, 'encoding': 'UTF-8', 'request': <PreparedRequest [GET]>, 'connection': <requests.adapters.HTTPAdapter object at 0x1ae3a50>, 'elapsed': datetime.timedelta(0, 0, 62674), 'raw': <urllib3.response.HTTPResponse object at 0x1b69b90>, 'reason': 'OK', '_next': None, 'history': []}
+2018-03-13 09:44:59,033 : 24135 : INFO : Current task 487485f6-3f23-4575-8e1f-2c9b08d5d2c3  state  Completed 
+2018-03-13 09:45:53,099 : 21834 : INFO : powering off controller 10
+2018-03-13 09:45:53,191 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 09:46:56,927 : 21834 : INFO : Current task 5ddbe207-37c9-4939-b931-8c5f0ab19d4f  state  Completed 
+2018-03-13 09:47:42,233 : 24186 : INFO : sleeing for 60 sec
+2018-03-13 09:47:57,024 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 09:48:04,161 : 21834 : INFO : Current task d657f982-d397-4675-b981-e60aedd56747  state  Completed 
+2018-03-13 09:48:04,162 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 09:51:01,952 : 21951 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
                                     EXIT_CODE - 0
                                     STDOUT 
                                            1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
                                            fio-3.2
                                            Starting 1 process
                                            
-                                           1: (groupid=0, jobs=1): err= 0: pid=9504: Thu Mar  8 11:50:35 2018
-                                             write: IOPS=24.4k, BW=190MiB/s (200MB/s)(1338GiB/7200008msec)
-                                               slat (usec): min=3, max=1932, avg= 7.56, stdev= 1.84
-                                               clat (usec): min=39, max=184730, avg=2618.27, stdev=2078.85
-                                                lat (usec): min=44, max=184736, avg=2626.03, stdev=2078.98
+                                           1: (groupid=0, jobs=1): err= 0: pid=22045: Tue Mar 13 09:51:01 2018
+                                             write: IOPS=11.6k, BW=90.5MiB/s (94.9MB/s)(636GiB/7200009msec)
+                                               slat (usec): min=3, max=3981, avg= 9.14, stdev= 2.75
+                                               clat (usec): min=45, max=70386k, avg=5515.32, stdev=90069.90
+                                                lat (usec): min=51, max=70387k, avg=5524.66, stdev=90069.92
                                                clat percentiles (usec):
-                                                |  1.00th=[  215],  5.00th=[  486], 10.00th=[  668], 20.00th=[  947],
-                                                | 30.00th=[ 1254], 40.00th=[ 1647], 50.00th=[ 2114], 60.00th=[ 2638],
-                                                | 70.00th=[ 3294], 80.00th=[ 4080], 90.00th=[ 5211], 95.00th=[ 6259],
-                                                | 99.00th=[ 8979], 99.50th=[10945], 99.90th=[15664], 99.95th=[17695],
-                                                | 99.99th=[26084]
-                                              bw (  KiB/s): min=84000, max=655744, per=100.00%, avg=194938.91, stdev=81712.01, samples=14400
-                                              iops        : min=10500, max=81968, avg=24367.35, stdev=10214.00, samples=14400
-                                             lat (usec)   : 50=0.01%, 100=0.04%, 250=1.33%, 500=3.97%, 750=7.49%
-                                             lat (usec)   : 1000=9.07%
-                                             lat (msec)   : 2=25.79%, 4=31.49%, 10=20.15%, 20=0.64%, 50=0.03%
-                                             lat (msec)   : 100=0.01%, 250=0.01%
-                                             cpu          : usr=5.63%, sys=19.73%, ctx=17861835, majf=0, minf=5542
+                                                |  1.00th=[  363],  5.00th=[  963], 10.00th=[ 1467], 20.00th=[ 2024],
+                                                | 30.00th=[ 2671], 40.00th=[ 3490], 50.00th=[ 4359], 60.00th=[ 5276],
+                                                | 70.00th=[ 6390], 80.00th=[ 7898], 90.00th=[10290], 95.00th=[13042],
+                                                | 99.00th=[20579], 99.50th=[24511], 99.90th=[34866], 99.95th=[40633],
+                                                | 99.99th=[86508]
+                                              bw (  KiB/s): min=  272, max=583248, per=100.00%, avg=95609.38, stdev=44595.79, samples=13960
+                                              iops        : min=   34, max=72906, avg=11951.15, stdev=5574.47, samples=13960
+                                             lat (usec)   : 50=0.01%, 100=0.02%, 250=0.53%, 500=1.15%, 750=1.71%
+                                             lat (usec)   : 1000=1.84%
+                                             lat (msec)   : 2=14.32%, 4=26.66%, 10=42.75%, 20=9.91%, 50=1.09%
+                                             lat (msec)   : 100=0.02%, 250=0.01%, 500=0.01%, >=2000=0.01%
+                                             cpu          : usr=2.62%, sys=11.33%, ctx=8263499, majf=0, minf=3754
                                              IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
                                                 submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
                                                 complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
-                                                issued rwt: total=0,175383339,0, short=0,0,0, dropped=0,0,0
+                                                issued rwt: total=0,83388058,0, short=0,0,0, dropped=0,0,0
                                                 latency   : target=0, window=0, percentile=100.00%, depth=64
                                            
                                            Run status group 0 (all jobs):
-                                             WRITE: bw=190MiB/s (200MB/s), 190MiB/s-190MiB/s (200MB/s-200MB/s), io=1338GiB (1437GB), run=7200008-7200008msec
+                                             WRITE: bw=90.5MiB/s (94.9MB/s), 90.5MiB/s-90.5MiB/s (94.9MB/s-94.9MB/s), io=636GiB (683GB), run=7200009-7200009msec
                                            
                                            Disk stats (read/write):
-                                             mpnvme1n1: ios=276/175380741, merge=0/0, ticks=254/445929512, in_queue=446069478, util=100.00%
+                                             mpnvme1n1: ios=122/83386340, merge=0/0, ticks=155/451683393, in_queue=451743531, util=100.00%
 
 
-2018-03-08 11:50:36,392 : 9513 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+2018-03-13 09:51:02,765 : 22065 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
                                     EXIT_CODE - 0
                                     STDOUT 
                                            1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
                                            fio-3.2
                                            Starting 1 process
                                            
-                                           1: (groupid=0, jobs=1): err= 0: pid=9577: Thu Mar  8 11:50:36 2018
-                                             write: IOPS=24.1k, BW=189MiB/s (198MB/s)(1325GiB/7200005msec)
-                                               slat (usec): min=3, max=2592, avg= 8.67, stdev= 2.39
-                                               clat (usec): min=41, max=172541, avg=2642.11, stdev=2080.32
-                                                lat (usec): min=48, max=172547, avg=2650.99, stdev=2080.43
+                                           1: (groupid=0, jobs=1): err= 0: pid=22147: Tue Mar 13 09:51:02 2018
+                                             write: IOPS=11.5k, BW=89.7MiB/s (94.1MB/s)(631GiB/7200008msec)
+                                               slat (usec): min=3, max=183, avg= 8.98, stdev= 2.65
+                                               clat (usec): min=48, max=70117k, avg=5561.25, stdev=69243.82
+                                                lat (usec): min=56, max=70117k, avg=5570.43, stdev=69243.84
                                                clat percentiles (usec):
-                                                |  1.00th=[  225],  5.00th=[  523], 10.00th=[  693], 20.00th=[  971],
-                                                | 30.00th=[ 1287], 40.00th=[ 1680], 50.00th=[ 2147], 60.00th=[ 2671],
-                                                | 70.00th=[ 3294], 80.00th=[ 4080], 90.00th=[ 5211], 95.00th=[ 6259],
-                                                | 99.00th=[ 9110], 99.50th=[10945], 99.90th=[15795], 99.95th=[17695],
-                                                | 99.99th=[26084]
-                                              bw (  KiB/s): min=82368, max=611568, per=100.00%, avg=193096.78, stdev=76461.35, samples=14400
-                                              iops        : min=10296, max=76446, avg=24137.08, stdev=9557.68, samples=14400
-                                             lat (usec)   : 50=0.01%, 100=0.03%, 250=1.22%, 500=3.26%, 750=7.46%
-                                             lat (usec)   : 1000=8.96%
-                                             lat (msec)   : 2=26.30%, 4=31.69%, 10=20.41%, 20=0.65%, 50=0.03%
-                                             lat (msec)   : 100=0.01%, 250=0.01%
-                                             cpu          : usr=5.41%, sys=22.35%, ctx=16091562, majf=0, minf=5980
+                                                |  1.00th=[  375],  5.00th=[ 1020], 10.00th=[ 1500], 20.00th=[ 2057],
+                                                | 30.00th=[ 2704], 40.00th=[ 3523], 50.00th=[ 4359], 60.00th=[ 5342],
+                                                | 70.00th=[ 6456], 80.00th=[ 8029], 90.00th=[10552], 95.00th=[13304],
+                                                | 99.00th=[21103], 99.50th=[25035], 99.90th=[35390], 99.95th=[41681],
+                                                | 99.99th=[82314]
+                                              bw (  KiB/s): min= 1664, max=439024, per=100.00%, avg=94148.36, stdev=44326.03, samples=14060
+                                              iops        : min=  208, max=54878, avg=11768.53, stdev=5540.76, samples=14060
+                                             lat (usec)   : 50=0.01%, 100=0.01%, 250=0.50%, 500=1.09%, 750=1.54%
+                                             lat (usec)   : 1000=1.74%
+                                             lat (msec)   : 2=14.06%, 4=26.72%, 10=42.83%, 20=10.29%, 50=1.19%
+                                             lat (msec)   : 100=0.02%, 250=0.01%, 500=0.01%, >=2000=0.01%
+                                             cpu          : usr=2.58%, sys=11.08%, ctx=8417968, majf=0, minf=4330
                                              IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
                                                 submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
                                                 complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
-                                                issued rwt: total=0,173735891,0, short=0,0,0, dropped=0,0,0
+                                                issued rwt: total=0,82703144,0, short=0,0,0, dropped=0,0,0
                                                 latency   : target=0, window=0, percentile=100.00%, depth=64
                                            
                                            Run status group 0 (all jobs):
-                                             WRITE: bw=189MiB/s (198MB/s), 189MiB/s-189MiB/s (198MB/s-198MB/s), io=1325GiB (1423GB), run=7200005-7200005msec
+                                             WRITE: bw=89.7MiB/s (94.1MB/s), 89.7MiB/s-89.7MiB/s (94.1MB/s-94.1MB/s), io=631GiB (678GB), run=7200008-7200008msec
                                            
                                            Disk stats (read/write):
-                                             mpnvme4n1: ios=304/173730588, merge=0/0, ticks=270/443095958, in_queue=443327007, util=100.00%
+                                             mpnvme4n1: ios=120/82703144, merge=0/0, ticks=159/452055458, in_queue=452116160, util=100.00%
 
 
-2018-03-08 11:51:55,906 : 9332 : INFO : waiting for 180 sec
-2018-03-08 11:54:56,077 : 9332 : INFO : Current task 8c81bcef-7cec-4df9-81bc-3ce107e159ef  state  Completed 
-2018-03-08 11:54:56,077 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 11:56:56,081 : 9332 : INFO : Rebuild iteration 5 completed 
-2018-03-08 11:56:56,081 : 9332 : INFO : powering off the drive 43
-2018-03-08 11:57:11,359 : 9332 : INFO : Current task d5c00492-5428-4fbf-81b6-abf1f5cc49d6  state  Completed 
-2018-03-08 11:57:11,359 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 11:58:11,401 : 9332 : INFO : powering on the drive 43
-2018-03-08 11:58:18,633 : 9332 : INFO : Current task 091cfd83-168a-4fdd-a9a4-1410ef9b2601  state  Completed 
-2018-03-08 12:00:19,856 : 9332 : INFO : waiting for 180 sec
-2018-03-08 12:03:20,040 : 9332 : INFO : Current task b61efd45-da52-468a-8d39-8493d972d888  state  Completed 
-2018-03-08 12:03:20,040 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 12:05:20,043 : 9332 : INFO : Rebuild iteration 6 completed 
-2018-03-08 12:05:20,043 : 9332 : INFO : powering off the drive 40
-2018-03-08 12:05:34,411 : 9332 : INFO : Current task 3ea49481-fe01-4e99-8bbd-85de296beffa  state  Completed 
-2018-03-08 12:05:34,411 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 12:06:34,472 : 9332 : INFO : powering on the drive 40
-2018-03-08 12:06:41,702 : 9332 : INFO : Current task 0c4cf8e5-016b-4968-94cf-2e431ad131e5  state  Completed 
-2018-03-08 12:08:42,801 : 9332 : INFO : waiting for 180 sec
-2018-03-08 12:11:42,968 : 9332 : INFO : Current task de38a29e-fa75-498b-89b7-856b912380f5  state  Completed 
-2018-03-08 12:11:42,968 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 12:13:42,972 : 9332 : INFO : Rebuild iteration 7 completed 
-2018-03-08 12:13:42,972 : 9332 : INFO : powering off the drive 41
-2018-03-08 12:13:57,313 : 9332 : INFO : Current task 7891870a-dae4-4f11-a096-62739081eef3  state  Completed 
-2018-03-08 12:13:57,313 : 9332 : INFO : wating for 60 sec to confirm the disk status 
-2018-03-08 12:14:57,374 : 9332 : INFO : powering on the drive 41
-2018-03-08 12:15:04,643 : 9332 : INFO : Current task 66e70a14-1c22-4953-89be-0b627db461fc  state  Completed 
-2018-03-08 12:17:05,749 : 9332 : INFO : waiting for 180 sec
-2018-03-08 12:20:05,919 : 9332 : INFO : Current task aa723944-9987-4409-88e9-e4b525037a55  state  Completed 
-2018-03-08 12:20:05,919 : 9332 : INFO : next rebuild will start in 120 sec
-2018-03-08 12:22:05,923 : 9332 : INFO : Rebuild iteration 8 completed 
-2018-03-09 08:33:02,224 : 31192 : INFO : now start the FO/FB using cotnroller powerOff/on
-2018-03-09 08:33:02,224 : 31192 : INFO : powering off controller 16
-2018-03-09 08:33:02,426 : 31192 : INFO : controller 16 is getting powered Off
-2018-03-09 08:34:06,187 : 31192 : INFO : Current task ffb0b27a-1d7c-4949-b1d2-d4506c9e58c1  state  Completed 
-2018-03-09 08:35:06,351 : 31192 : INFO : controller 16 is getting powered On
-2018-03-09 08:35:13,505 : 31192 : INFO : Current task 1c62f824-fee7-4a86-a370-91f4430e7f64  state  Completed 
-2018-03-09 08:35:13,505 : 31192 : INFO : next failover will triggered in 10 min
-2018-03-09 08:36:13,565 : 31192 : INFO : powering off controller 20
-2018-03-09 08:36:13,670 : 31192 : INFO : controller 20 is getting powered Off
-2018-03-09 08:37:17,470 : 31192 : INFO : Current task cd204248-606c-4ee5-b8c4-dc80ae8e18e4  state  Completed 
+2018-03-13 09:51:04,283 : 22178 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme7n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
+                                           fio-3.2
+                                           Starting 1 process
+                                           
+                                           1: (groupid=0, jobs=1): err= 0: pid=22265: Tue Mar 13 09:51:04 2018
+                                             write: IOPS=11.6k, BW=90.8MiB/s (95.2MB/s)(638GiB/7200010msec)
+                                               slat (usec): min=3, max=750, avg= 8.50, stdev= 2.61
+                                               clat (usec): min=48, max=68756k, avg=5497.93, stdev=67629.70
+                                                lat (usec): min=56, max=68756k, avg=5506.63, stdev=67629.72
+                                               clat percentiles (usec):
+                                                |  1.00th=[  355],  5.00th=[  971], 10.00th=[ 1467], 20.00th=[ 2024],
+                                                | 30.00th=[ 2638], 40.00th=[ 3458], 50.00th=[ 4359], 60.00th=[ 5276],
+                                                | 70.00th=[ 6456], 80.00th=[ 7963], 90.00th=[10421], 95.00th=[13173],
+                                                | 99.00th=[20841], 99.50th=[24773], 99.90th=[34866], 99.95th=[40633],
+                                                | 99.99th=[84411]
+                                              bw (  KiB/s): min= 1648, max=386032, per=100.00%, avg=95190.35, stdev=44968.34, samples=14067
+                                              iops        : min=  206, max=48254, avg=11898.77, stdev=5621.05, samples=14067
+                                             lat (usec)   : 50=0.01%, 100=0.02%, 250=0.55%, 500=1.19%, 750=1.66%
+                                             lat (usec)   : 1000=1.81%
+                                             lat (msec)   : 2=14.42%, 4=26.58%, 10=42.51%, 20=10.10%, 50=1.13%
+                                             lat (msec)   : 100=0.02%, 250=0.01%, 500=0.01%, 750=0.01%, >=2000=0.01%
+                                             cpu          : usr=2.57%, sys=10.67%, ctx=8544795, majf=0, minf=3332
+                                             IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+                                                submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+                                                complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+                                                issued rwt: total=0,83661344,0, short=0,0,0, dropped=0,0,0
+                                                latency   : target=0, window=0, percentile=100.00%, depth=64
+                                           
+                                           Run status group 0 (all jobs):
+                                             WRITE: bw=90.8MiB/s (95.2MB/s), 90.8MiB/s-90.8MiB/s (95.2MB/s-95.2MB/s), io=638GiB (685GB), run=7200010-7200010msec
+                                           
+                                           Disk stats (read/write):
+                                             mpnvme7n1: ios=182/83659766, merge=0/0, ticks=243/452242197, in_queue=452341468, util=100.00%
+
+
+2018-03-13 09:51:05,261 : 22292 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme10n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
+                                           fio-3.2
+                                           Starting 1 process
+                                           
+                                           1: (groupid=0, jobs=1): err= 0: pid=22379: Tue Mar 13 09:51:05 2018
+                                             write: IOPS=11.7k, BW=91.8MiB/s (96.2MB/s)(645GiB/7200007msec)
+                                               slat (usec): min=3, max=3141, avg= 9.18, stdev= 2.74
+                                               clat (usec): min=46, max=15145k, avg=5438.35, stdev=33512.84
+                                                lat (usec): min=54, max=15145k, avg=5447.73, stdev=33512.88
+                                               clat percentiles (usec):
+                                                |  1.00th=[  363],  5.00th=[  938], 10.00th=[ 1401], 20.00th=[ 1991],
+                                                | 30.00th=[ 2638], 40.00th=[ 3458], 50.00th=[ 4293], 60.00th=[ 5276],
+                                                | 70.00th=[ 6390], 80.00th=[ 7898], 90.00th=[10421], 95.00th=[13173],
+                                                | 99.00th=[20841], 99.50th=[24773], 99.90th=[35390], 99.95th=[41681],
+                                                | 99.99th=[84411]
+                                              bw (  KiB/s): min= 1168, max=349456, per=100.00%, avg=95496.02, stdev=47160.99, samples=14174
+                                              iops        : min=  146, max=43682, avg=11936.98, stdev=5895.12, samples=14174
+                                             lat (usec)   : 50=0.01%, 100=0.02%, 250=0.52%, 500=1.14%, 750=1.71%
+                                             lat (usec)   : 1000=2.09%
+                                             lat (msec)   : 2=14.62%, 4=26.21%, 10=42.49%, 20=10.02%, 50=1.13%
+                                             lat (msec)   : 100=0.02%, 250=0.01%, 500=0.01%, 750=0.01%, >=2000=0.01%
+                                             cpu          : usr=2.66%, sys=11.52%, ctx=8362739, majf=0, minf=3498
+                                             IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+                                                submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+                                                complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+                                                issued rwt: total=0,84565206,0, short=0,0,0, dropped=0,0,0
+                                                latency   : target=0, window=0, percentile=100.00%, depth=64
+                                           
+                                           Run status group 0 (all jobs):
+                                             WRITE: bw=91.8MiB/s (96.2MB/s), 91.8MiB/s-91.8MiB/s (96.2MB/s-96.2MB/s), io=645GiB (693GB), run=7200007-7200007msec
+                                           
+                                           Disk stats (read/write):
+                                             mpnvme10n1: ios=184/84564459, merge=0/0, ticks=243/451554793, in_queue=451636579, util=100.00%
+
+
+2018-03-13 09:51:06,137 : 22404 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme13n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=64
+                                           fio-3.2
+                                           Starting 1 process
+                                           
+                                           1: (groupid=0, jobs=1): err= 0: pid=22468: Tue Mar 13 09:51:06 2018
+                                             write: IOPS=11.6k, BW=90.5MiB/s (94.9MB/s)(636GiB/7200014msec)
+                                               slat (usec): min=3, max=1806, avg= 9.30, stdev= 2.75
+                                               clat (usec): min=49, max=69433k, avg=5512.70, stdev=67941.62
+                                                lat (usec): min=56, max=69433k, avg=5522.20, stdev=67941.64
+                                               clat percentiles (usec):
+                                                |  1.00th=[  367],  5.00th=[  979], 10.00th=[ 1467], 20.00th=[ 2024],
+                                                | 30.00th=[ 2671], 40.00th=[ 3490], 50.00th=[ 4359], 60.00th=[ 5276],
+                                                | 70.00th=[ 6456], 80.00th=[ 7963], 90.00th=[10421], 95.00th=[13173],
+                                                | 99.00th=[20841], 99.50th=[24773], 99.90th=[35390], 99.95th=[42206],
+                                                | 99.99th=[92799]
+                                              bw (  KiB/s): min= 1088, max=285168, per=100.00%, avg=94894.52, stdev=45119.24, samples=14071
+                                              iops        : min=  136, max=35646, avg=11861.79, stdev=5639.91, samples=14071
+                                             lat (usec)   : 50=0.01%, 100=0.02%, 250=0.51%, 500=1.14%, 750=1.65%
+                                             lat (usec)   : 1000=1.87%
+                                             lat (msec)   : 2=14.29%, 4=26.49%, 10=42.79%, 20=10.07%, 50=1.15%
+                                             lat (msec)   : 100=0.02%, 250=0.01%, 500=0.01%, >=2000=0.01%
+                                             cpu          : usr=2.60%, sys=11.58%, ctx=8244517, majf=0, minf=3489
+                                             IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+                                                submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+                                                complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+                                                issued rwt: total=0,83425347,0, short=0,0,0, dropped=0,0,0
+                                                latency   : target=0, window=0, percentile=100.00%, depth=64
+                                           
+                                           Run status group 0 (all jobs):
+                                             WRITE: bw=90.5MiB/s (94.9MB/s), 90.5MiB/s-90.5MiB/s (94.9MB/s-94.9MB/s), io=636GiB (683GB), run=7200014-7200014msec
+                                           
+                                           Disk stats (read/write):
+                                             mpnvme13n1: ios=127/83423942, merge=0/0, ticks=162/451507083, in_queue=451606941, util=100.00%
+
+
+2018-03-13 09:53:13,811 : 22471 : INFO : Current task 6b3097b7-bbc4-4acf-92b9-9569b7288f16  state  Completed 
+2018-03-13 09:53:13,812 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 09:55:13,815 : 22471 : INFO : Rebuild iteration 2 completed 
+2018-03-13 09:55:13,815 : 22471 : INFO : powering off the drive 44
+2018-03-13 09:55:28,156 : 22471 : INFO : Current task 85d7a6f4-59e1-4bc8-8991-54cac97c86b0  state  Completed 
+2018-03-13 09:55:28,156 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 09:56:28,216 : 22471 : INFO : powering on the drive 44
+2018-03-13 09:56:35,480 : 22471 : INFO : Current task 117d1e1f-2e2a-4472-be83-96e84e125cee  state  Completed 
+2018-03-13 09:58:04,262 : 21834 : INFO : powering off controller 6
+2018-03-13 09:58:04,349 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 09:58:36,744 : 22471 : INFO : waiting for 180 sec
+2018-03-13 09:59:08,077 : 21834 : INFO : Current task 7a2f9fd1-17e9-42fe-bc48-8e4269e27730  state  Completed 
+2018-03-13 10:00:08,227 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 10:00:15,371 : 21834 : INFO : Current task 147869e7-5e3d-4a4a-9a5e-a510c97db183  state  Completed 
+2018-03-13 10:00:15,371 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 10:01:36,911 : 22471 : INFO : Current task 684a4c25-c2bf-4879-a1f2-e61167a6ad26  state  Completed 
+2018-03-13 10:01:36,912 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 10:03:36,917 : 22471 : INFO : Rebuild iteration 3 completed 
+2018-03-13 10:03:36,917 : 22471 : INFO : powering off the drive 45
+2018-03-13 10:03:51,237 : 22471 : INFO : Current task 15e6e579-e0a9-4fdc-969b-8d1c8e0f84c1  state  Completed 
+2018-03-13 10:03:51,237 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 10:04:51,298 : 22471 : INFO : powering on the drive 45
+2018-03-13 10:04:58,565 : 22471 : INFO : Current task 334b354c-a4c2-415a-9e11-f6878a58ab96  state  Completed 
+2018-03-13 10:06:59,666 : 22471 : INFO : waiting for 180 sec
+2018-03-13 10:09:59,850 : 22471 : INFO : Current task 45aa719d-dd11-48ca-8cf8-a891b4e0a534  state  Completed 
+2018-03-13 10:09:59,850 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 10:10:15,471 : 21834 : INFO : powering off controller 10
+2018-03-13 10:10:15,564 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 10:11:19,313 : 21834 : INFO : Current task 19266ff5-d25e-4e7e-9758-9a7332e48e3b  state  Completed 
+2018-03-13 10:11:59,854 : 22471 : INFO : Rebuild iteration 4 completed 
+2018-03-13 10:11:59,854 : 22471 : INFO : powering off the drive 42
+2018-03-13 10:12:14,957 : 22471 : INFO : Current task 15e1eed3-5a58-46e0-a91e-2711fab3b95c  state  Completed 
+2018-03-13 10:12:14,958 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 10:12:19,482 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 10:12:26,637 : 21834 : INFO : Current task 5cd65ffa-5c31-4560-9ea0-d24d3f8a28d3  state  Completed 
+2018-03-13 10:12:26,637 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 10:13:15,018 : 22471 : INFO : powering on the drive 42
+2018-03-13 10:13:22,247 : 22471 : INFO : Current task a9ede199-454a-4399-b36d-405e7ac0cb49  state  Completed 
+2018-03-13 10:15:23,344 : 22471 : INFO : waiting for 180 sec
+2018-03-13 10:18:23,529 : 22471 : INFO : Current task 07c1ae41-5a65-40ee-be6e-f3f05ba2407f  state  Completed 
+2018-03-13 10:18:23,530 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 10:20:23,532 : 22471 : INFO : Rebuild iteration 5 completed 
+2018-03-13 10:20:23,532 : 22471 : INFO : powering off the drive 43
+2018-03-13 10:20:37,848 : 22471 : INFO : Current task a0dc1a29-679e-4691-bdb8-f8a0e55173ac  state  Completed 
+2018-03-13 10:20:37,848 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 10:21:37,909 : 22471 : INFO : powering on the drive 43
+2018-03-13 10:21:45,151 : 22471 : INFO : Current task 54022b29-ccaa-44ff-94f7-966b13e18f27  state  Completed 
+2018-03-13 10:22:26,641 : 21834 : INFO : powering off controller 6
+2018-03-13 10:22:26,747 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 10:23:30,484 : 21834 : INFO : Current task cf88a62c-20a2-4520-bf70-8177f60500b1  state  Completed 
+2018-03-13 10:23:46,309 : 22471 : INFO : waiting for 180 sec
+2018-03-13 10:24:30,634 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 10:24:37,774 : 21834 : INFO : Current task c15ef2c0-3300-4278-bb8b-e7c00afbdbcf  state  Completed 
+2018-03-13 10:24:37,774 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 10:26:46,478 : 22471 : INFO : Current task df204a0a-3254-4cb5-99b7-2aaf0e3e45d7  state  Completed 
+2018-03-13 10:26:46,479 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 10:28:46,482 : 22471 : INFO : Rebuild iteration 6 completed 
+2018-03-13 10:28:46,482 : 22471 : INFO : powering off the drive 40
+2018-03-13 10:29:00,786 : 22471 : INFO : Current task a06b0d4d-3c37-488d-9aef-ab28663b97bb  state  Completed 
+2018-03-13 10:29:00,786 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 10:30:00,847 : 22471 : INFO : powering on the drive 40
+2018-03-13 10:30:08,076 : 22471 : INFO : Current task 1d3e13af-236b-4cdf-9f13-e5aa2136b4b0  state  Completed 
+2018-03-13 10:32:09,166 : 22471 : INFO : waiting for 180 sec
+2018-03-13 10:34:37,874 : 21834 : INFO : powering off controller 10
+2018-03-13 10:34:37,962 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 10:35:09,251 : 22471 : INFO : Current task 28cb41f0-fdbd-45c5-b50f-7a9ffbfe9431  state  Completed 
+2018-03-13 10:35:09,251 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 10:35:41,691 : 21834 : INFO : Current task da803b7b-5fb7-4fa6-81d8-d0ee74f0552c  state  Completed 
+2018-03-13 10:36:41,839 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 10:36:48,981 : 21834 : INFO : Current task fdf8d610-80cd-4598-98a8-b997b15302da  state  Completed 
+2018-03-13 10:36:48,982 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 10:37:09,254 : 22471 : INFO : Rebuild iteration 7 completed 
+2018-03-13 10:37:09,254 : 22471 : INFO : powering off the drive 41
+2018-03-13 10:37:23,556 : 22471 : INFO : Current task abf09163-5198-4682-ab09-a0ea3121372d  state  Completed 
+2018-03-13 10:37:23,556 : 22471 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-13 10:38:23,616 : 22471 : INFO : powering on the drive 41
+2018-03-13 10:38:30,845 : 22471 : INFO : Current task 852cb55a-9c55-428d-9044-a4d63e1476f2  state  Completed 
+2018-03-13 10:40:31,943 : 22471 : INFO : waiting for 180 sec
+2018-03-13 10:43:32,110 : 22471 : INFO : Current task 03a61057-29a2-48e1-9bf9-22477e8c9d01  state  Completed 
+2018-03-13 10:43:32,111 : 22471 : INFO : next rebuild will start in 120 sec
+2018-03-13 10:45:32,115 : 22471 : INFO : Rebuild iteration 8 completed 
+2018-03-13 10:46:49,082 : 21834 : INFO : powering off controller 6
+2018-03-13 10:46:49,175 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 10:47:52,906 : 21834 : INFO : Current task c633c8a1-08f5-4eaf-aca8-a985995a6a02  state  Completed 
+2018-03-13 10:48:53,056 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 10:49:00,197 : 21834 : INFO : Current task 9e37b811-cd77-42c4-aa75-a0c9dd514a31  state  Completed 
+2018-03-13 10:49:00,197 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 10:59:00,298 : 21834 : INFO : powering off controller 10
+2018-03-13 10:59:00,393 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 11:00:04,124 : 21834 : INFO : Current task 070c68d8-d997-4727-a7bb-451eb1fe3946  state  Completed 
+2018-03-13 11:01:04,257 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 11:01:11,400 : 21834 : INFO : Current task 21306de3-9320-40f4-8afe-b36e5d980601  state  Completed 
+2018-03-13 11:01:11,401 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 11:11:11,501 : 21834 : INFO : powering off controller 6
+2018-03-13 11:11:11,590 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 11:12:15,318 : 21834 : INFO : Current task a9c17778-180c-44f6-98db-f92803753161  state  Completed 
+2018-03-13 11:13:15,468 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 11:13:22,608 : 21834 : INFO : Current task 39cab2ea-ee1a-4ea9-b127-0400a10e4321  state  Completed 
+2018-03-13 11:13:22,609 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 11:23:22,609 : 21834 : INFO : powering off controller 10
+2018-03-13 11:23:22,695 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 11:24:26,426 : 21834 : INFO : Current task 6d090b99-bd70-49f5-b061-79aead9f14ef  state  Completed 
+2018-03-13 11:25:26,573 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 11:25:33,713 : 21834 : INFO : Current task a4ffcede-4dd9-49e8-aa9f-21f353d96179  state  Completed 
+2018-03-13 11:25:33,713 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 11:35:33,814 : 21834 : INFO : powering off controller 6
+2018-03-13 11:35:33,901 : 21834 : INFO : controller 6 is getting powered Off
+2018-03-13 11:36:37,630 : 21834 : INFO : Current task 1a1eada8-be54-466c-a207-4603ec34eca1  state  Completed 
+2018-03-13 11:37:37,777 : 21834 : INFO : controller 6 is getting powered On
+2018-03-13 11:37:44,917 : 21834 : INFO : Current task 9075537f-6625-44bb-bbfc-6a9beb43b47b  state  Completed 
+2018-03-13 11:37:44,917 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 11:47:45,017 : 21834 : INFO : powering off controller 10
+2018-03-13 11:47:45,109 : 21834 : INFO : controller 10 is getting powered Off
+2018-03-13 11:48:48,839 : 21834 : INFO : Current task 1081231f-f5b3-4df6-809d-7a5825597687  state  Completed 
+2018-03-13 11:49:48,988 : 21834 : INFO : controller 10 is getting powered On
+2018-03-13 11:49:56,128 : 21834 : INFO : Current task d84ad2e0-0d54-484d-bff2-0964a618eaae  state  Completed 
+2018-03-13 11:49:56,128 : 21834 : INFO : next failover will triggered in 10 min
+2018-03-13 11:59:56,228 : 21834 : INFO : Successfully completed this test
+2018-03-15 04:13:48,189 : 31768 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 04:13:55,829 : 31768 : INFO : Current task a0b63b90-dabc-47d6-9d5f-b52b26c3f1bb  state  Completed 
+2018-03-15 04:13:56,251 : 31768 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-03-15 04:14:03,620 : 31768 : INFO : Current task 9072c5e6-a0b6-41fe-9f4a-50caeb5cd214  state  Completed 
+2018-03-15 04:14:03,799 : 31769 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 04:14:11,713 : 31769 : INFO : Current task db3ef14b-efa7-40ca-9056-479517f6f3fe  state  Completed 
+2018-03-15 04:14:12,131 : 31769 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-03-15 04:14:19,482 : 31769 : INFO : Current task f334d8f3-08a5-4a7d-b1cf-db5e45930464  state  Completed 
+2018-03-15 04:14:19,660 : 31770 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 04:14:27,575 : 31770 : INFO : Current task c6969079-9a35-46df-a113-83579389d50b  state  Completed 
+2018-03-15 04:14:27,990 : 31770 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-03-15 04:14:35,334 : 31770 : INFO : Current task ff1642f4-ed9b-4710-966c-adffdff636c9  state  Completed 
+2018-03-15 04:14:35,526 : 31771 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 04:14:43,438 : 31771 : INFO : Current task 8369e30a-3029-4a8a-8d0c-7dd6bb956f23  state  Completed 
+2018-03-15 04:14:43,851 : 31771 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-03-15 04:14:51,205 : 31771 : INFO : Current task ab97e2da-112a-4964-b58d-177b960bda19  state  Completed 
+2018-03-15 04:14:51,381 : 31772 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 04:14:59,288 : 31772 : INFO : Current task df9aa4d7-baa2-4baf-b849-e769a07667ce  state  Completed 
+2018-03-15 04:14:59,700 : 31772 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-03-15 04:15:07,044 : 31772 : INFO : Current task 4fe97bea-82bf-4c73-895b-225f7cd8fb9f  state  Completed 
+2018-03-15 04:15:07,046 : 31761 : INFO : sleeing for 60 sec
+2018-03-15 04:16:07,395 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf954 " 
+2018-03-15 04:16:07,763 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf954 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:07,763 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf954 " 
+2018-03-15 04:16:08,118 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf954 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:08,121 : 31833 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf954 |awk '{print \$1}' " 
+2018-03-15 04:16:08,290 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf955 " 
+2018-03-15 04:16:08,307 : 31833 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf954 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme2n1
+                                           /dev/nvme0n1
+                                           /dev/nvme3n1
+
+
+2018-03-15 04:16:08,307 : 31833 : INFO : Starting FIO load on /dev/mpnvme2n1
+2018-03-15 04:16:08,308 : 31833 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme2n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 04:16:08,648 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf955 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:08,648 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf955 " 
+2018-03-15 04:16:09,005 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf955 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:09,008 : 31947 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf955 |awk '{print \$1}' " 
+2018-03-15 04:16:09,178 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf956 " 
+2018-03-15 04:16:09,203 : 31947 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf955 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme6n1
+                                           /dev/nvme5n1
+                                           /dev/nvme8n1
+
+
+2018-03-15 04:16:09,204 : 31947 : INFO : Starting FIO load on /dev/mpnvme6n1
+2018-03-15 04:16:09,204 : 31947 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme6n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 04:16:09,568 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf956 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:09,569 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf956 " 
+2018-03-15 04:16:09,930 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf956 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:09,933 : 32060 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf956 |awk '{print \$1}' " 
+2018-03-15 04:16:10,101 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf957 " 
+2018-03-15 04:16:10,140 : 32060 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf956 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme11n1
+                                           /dev/nvme12n1
+                                           /dev/nvme9n1
+
+
+2018-03-15 04:16:10,141 : 32060 : INFO : Starting FIO load on /dev/mpnvme11n1
+2018-03-15 04:16:10,141 : 32060 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme11n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 04:16:10,502 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf957 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:10,502 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf957 " 
+2018-03-15 04:16:10,875 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf957 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:10,879 : 32174 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf957 |awk '{print \$1}' " 
+2018-03-15 04:16:11,046 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf958 " 
+2018-03-15 04:16:11,101 : 32174 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf957 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme15n1
+                                           /dev/nvme14n1
+                                           /dev/nvme16n1
+
+
+2018-03-15 04:16:11,102 : 32174 : INFO : Starting FIO load on /dev/mpnvme15n1
+2018-03-15 04:16:11,102 : 32174 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme15n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 04:16:11,546 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf958 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:11,546 : 31761 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf958 " 
+2018-03-15 04:16:11,900 : 31761 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf958 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 04:16:11,902 : 31761 : INFO : Wating for some time to populate the data through FIO
+2018-03-15 04:16:11,903 : 32286 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf958 |awk '{print \$1}' " 
+2018-03-15 04:16:12,135 : 32286 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf958 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme18n1
+                                           /dev/nvme17n1
+                                           /dev/nvme19n1
+
+
+2018-03-15 04:16:12,136 : 32286 : INFO : Starting FIO load on /dev/mpnvme18n1
+2018-03-15 04:16:12,136 : 32286 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme18n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 04:21:12,050 : 31761 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-03-15 04:21:12,051 : 31761 : INFO : powering off controller 6
+2018-03-15 04:21:12,052 : 32357 : INFO : powering off the drive 39
+2018-03-15 04:21:12,157 : 31761 : INFO : controller 6 is getting powered Off
+2018-03-15 04:22:15,894 : 31761 : INFO : Current task f707ed63-3127-467a-b379-b991157b11a4  state  Completed 
+2018-03-15 04:22:22,966 : 32357 : INFO : Current task 4ffaebbf-dd59-407b-8616-3c082779a168  state  Completed 
+2018-03-15 04:22:22,966 : 32357 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-15 04:23:15,989 : 31761 : INFO : controller 6 is getting powered On
+2018-03-15 04:23:23,026 : 32357 : INFO : powering on the drive 39
+2018-03-15 04:23:23,128 : 31761 : INFO : Current task 25ed001c-cbbc-4146-b01d-daa38c0e844a  state  Completed 
+2018-03-15 04:23:23,128 : 31761 : INFO : next failover will triggered in 10 min
+2018-03-15 04:23:30,258 : 32357 : INFO : Current task 0456186e-c400-4cdd-9df1-f32b3ca9d218  state  Completed 
+2018-03-15 04:25:31,352 : 32357 : INFO : waiting for 180 sec
+2018-03-15 04:33:23,229 : 31761 : INFO : powering off controller 10
+2018-03-15 04:33:23,319 : 31761 : INFO : controller 10 is getting powered Off
+2018-03-15 04:34:27,044 : 31761 : INFO : Current task 722e9ba5-ac76-4c70-9162-09b2f84d2893  state  Completed 
+2018-03-15 04:35:27,198 : 31761 : INFO : controller 10 is getting powered On
+2018-03-15 04:35:34,339 : 31761 : INFO : Current task 1b9ad840-7ac3-493c-ac86-b3f21e38383f  state  Completed 
+2018-03-15 04:35:34,339 : 31761 : INFO : next failover will triggered in 10 min
+2018-03-15 04:45:34,440 : 31761 : INFO : powering off controller 6
+2018-03-15 04:45:34,534 : 31761 : INFO : controller 6 is getting powered Off
+2018-03-15 04:46:38,266 : 31761 : INFO : Current task 9cff8c71-cca6-43fc-9cfc-6b5b59b9f8c2  state  Completed 
+2018-03-15 04:47:38,361 : 31761 : INFO : controller 6 is getting powered On
+2018-03-15 04:47:45,505 : 31761 : INFO : Current task 88362bcc-24d4-4297-a38f-1caf199c9b19  state  Completed 
+2018-03-15 04:47:45,506 : 31761 : INFO : next failover will triggered in 10 min
+2018-03-15 04:57:45,559 : 31761 : INFO : powering off controller 10
+2018-03-15 04:57:45,653 : 31761 : INFO : controller 10 is getting powered Off
+2018-03-15 04:58:49,382 : 31761 : INFO : Current task f1b2b038-63fb-4cf7-9748-77af13a90694  state  Completed 
+2018-03-15 06:42:14,469 : 1271 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 06:42:22,854 : 1271 : INFO : Current task 03f8669d-58c1-4a16-a6bc-a811e6587399  state  Completed 
+2018-03-15 06:42:23,262 : 1271 : INFO : Assigning volume V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 06:42:30,695 : 1271 : INFO : Current task 7d12be1e-056a-46e7-8f49-5151e641be1a  state  Completed 
+2018-03-15 06:42:30,697 : 1264 : INFO : sleeing for 60 sec
+2018-03-15 06:42:31,435 : 1264 : INFO : Creating Snapshot : snap1_V_0
+2018-03-15 06:42:39,988 : 1264 : INFO : Current task c5d3d3ee-1a91-4937-b688-ba2acc3b1a90  state  Completed 
+2018-03-15 06:43:10,101 : 1264 : INFO : Creating Clone : C1_snap1_V_0
+2018-03-15 06:43:25,500 : 1264 : INFO : Current task 2176da38-72a1-451f-851c-69bfee0ef030  state  Completed 
+2018-03-15 06:50:04,215 : 1320 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 06:50:12,531 : 1320 : INFO : Current task 3eb6be2f-212f-4110-be1c-b4eb208daedd  state  Completed 
+2018-03-15 06:50:12,938 : 1320 : INFO : Assigning volume V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 06:50:20,355 : 1320 : INFO : Current task 568384e6-4a7f-4c4d-a64d-98c06e8ebcdd  state  Completed 
+2018-03-15 06:50:20,358 : 1313 : INFO : sleeing for 60 sec
+2018-03-15 06:50:20,657 : 1313 : INFO : Creating Snapshot : snap1_V_0
+2018-03-15 06:50:28,796 : 1313 : INFO : Current task 86187aeb-9719-4d07-837a-70606b6ad17b  state  Completed 
+2018-03-15 06:50:58,908 : 1313 : INFO : Creating Clone : C1_snap1_V_0
+2018-03-15 06:51:14,305 : 1313 : INFO : Current task a63078e5-c7e2-48f9-9a4e-8b9befcf1e8a  state  Completed 
+2018-03-15 07:38:48,975 : 1496 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 07:38:50,039 : 1496 : ERROR : Failed to create volume, duplicate volume name : 200
+2018-03-15 07:38:50,042 : 1489 : INFO : sleeing for 60 sec
+2018-03-15 07:38:50,338 : 1489 : INFO : Creating Snapshot : snap1_V_0
+2018-03-15 07:38:50,951 : 1489 : ERROR : Failed to create snapshot, duplicate name : 200
+2018-03-15 07:40:21,805 : 1518 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 07:40:30,131 : 1518 : INFO : Current task cdea6230-6194-4dac-809e-f794ab83694e  state  Completed 
+2018-03-15 07:40:30,537 : 1518 : INFO : Assigning volume V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 07:40:37,956 : 1518 : INFO : Current task 5e3ef379-7f33-4cb0-94e1-5d59958cd06b  state  Completed 
+2018-03-15 07:40:37,958 : 1511 : INFO : sleeing for 60 sec
+2018-03-15 07:40:38,254 : 1511 : INFO : Creating Snapshot : snap1_V_0
+2018-03-15 07:40:46,377 : 1511 : INFO : Current task e18bfe59-95f6-4997-aec8-cff4714947b1  state  Completed 
+2018-03-15 07:41:16,473 : 1511 : INFO : Creating Clone : C1_snap1_V_0
+2018-03-15 07:41:31,844 : 1511 : INFO : Current task 51c79495-8f77-41e9-b4a6-2a7d20c26535  state  Completed 
+2018-03-15 07:42:01,874 : 1511 : INFO : Assigning snap1_V_0 to the controllers
+2018-03-15 07:47:01,926 : 1588 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 07:47:09,712 : 1588 : INFO : Current task 2df539cc-dc91-4386-9dbe-591c0501e2eb  state  Completed 
+2018-03-15 07:47:10,120 : 1588 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-03-15 07:47:17,537 : 1588 : INFO : Current task 5749aa74-8297-4611-8b93-0841bee772f5  state  Completed 
+2018-03-15 07:47:17,539 : 1581 : INFO : sleeing for 60 sec
+2018-03-15 07:48:17,979 : 1581 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf968 " 
+2018-03-15 07:48:18,350 : 1581 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf968 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 07:48:18,350 : 1581 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf968 " 
+2018-03-15 07:48:18,705 : 1581 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf968 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 07:48:18,707 : 1581 : INFO : Wating for some time to populate the data through FIO
+2018-03-15 07:48:18,708 : 1644 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf968 |awk '{print \$1}' " 
+2018-03-15 07:48:18,893 : 1644 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf968 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme1n1
+                                           /dev/nvme0n1
+                                           /dev/nvme2n1
+
+
+2018-03-15 07:48:18,894 : 1644 : INFO : Starting FIO load on /dev/mpnvme1n1
+2018-03-15 07:48:18,894 : 1644 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 07:53:04,381 : 1772 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 07:53:12,695 : 1772 : INFO : Current task 359061f1-9130-4c9e-8c81-1bf479feea31  state  Completed 
+2018-03-15 07:53:13,099 : 1772 : INFO : Assigning volume V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 07:53:20,511 : 1772 : INFO : Current task 9f34c2f8-cb51-49e7-8dcd-03c75723b837  state  Completed 
+2018-03-15 07:53:20,513 : 1765 : INFO : sleeing for 60 sec
+2018-03-15 07:53:20,815 : 1765 : INFO : Creating Snapshot : snap1_V_0
+2018-03-15 07:53:28,954 : 1765 : INFO : Current task 7dede403-ab66-4edb-96b7-0257cc3b37b0  state  Completed 
+2018-03-15 07:53:59,049 : 1765 : INFO : Creating Clone : C1_snap1_V_0
+2018-03-15 07:54:14,415 : 1765 : INFO : Current task da643d67-92d1-4648-8be6-8a7210ba81a7  state  Completed 
+2018-03-15 07:54:44,445 : 1765 : INFO : Assigning snap1_V_0 to the controllers
+2018-03-15 07:54:44,788 : 1765 : INFO : Assigning volume snap1_V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 07:54:52,204 : 1765 : INFO : Current task dab7478a-7bf8-4a60-b3ac-c24716eee2d9  state  Completed 
+2018-03-15 07:54:58,211 : 1765 : INFO : Assigning C1_snap1_V_0 to the controllers
+2018-03-15 07:54:58,553 : 1765 : INFO : Assigning volume C1_snap1_V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 07:55:05,997 : 1765 : INFO : Current task c4ce95ad-2146-4814-8276-8017f19175c7  state  Completed 
+2018-03-15 07:55:16,007 : 1765 : INFO : Connecting C1_snap1_V_0 to the host-172.25.26.215
+2018-03-15 07:55:16,269 : 1765 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.6 -s 4420 -n GB00002604bbf971 " 
+2018-03-15 07:55:16,645 : 1765 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.6 -s 4420 -n GB00002604bbf971 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 07:55:16,646 : 1765 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.7 -s 4420 -n GB00002604bbf971 " 
+2018-03-15 07:55:17,002 : 1765 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.7 -s 4420 -n GB00002604bbf971 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 08:36:02,619 : 1923 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 08:39:19,611 : 1956 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 08:58:46,827 : 1979 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '300'}
+2018-03-15 08:58:55,131 : 1979 : INFO : Current task e76137b8-535d-485d-89f8-ca5887ed43d2  state  Completed 
+2018-03-15 08:58:55,535 : 1979 : INFO : Assigning volume V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 08:59:02,945 : 1979 : INFO : Current task 1ee37a20-3a3a-47b9-bbf7-9bf1a8089b39  state  Completed 
+2018-03-15 08:59:02,947 : 1972 : INFO : sleeing for 60 sec
+2018-03-15 08:59:03,243 : 1972 : INFO : Creating Snapshot : snap1_V_0
+2018-03-15 08:59:11,347 : 1972 : INFO : Current task 1bcee651-46cf-416e-8d9f-a7d9e01f9b68  state  Completed 
+2018-03-15 08:59:41,458 : 1972 : INFO : Creating Clone : C1_snap1_V_0
+2018-03-15 08:59:56,868 : 1972 : INFO : Current task ea8a74a0-01c0-41a3-8c9a-0fedc680f15c  state  Completed 
+2018-03-15 09:00:26,898 : 1972 : INFO : Assigning snap1_V_0 to the controllers
+2018-03-15 09:00:27,254 : 1972 : INFO : Assigning volume snap1_V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 09:00:34,670 : 1972 : INFO : Current task 1168a182-59c4-4d1d-94be-cc9aa9fa99d3  state  Completed 
+2018-03-15 09:00:40,677 : 1972 : INFO : Assigning C1_snap1_V_0 to the controllers
+2018-03-15 09:00:41,029 : 1972 : INFO : Assigning volume C1_snap1_V_0 to ip 192.168.6.6,192.168.7.7
+2018-03-15 09:00:48,453 : 1972 : INFO : Current task fcae7883-462a-492a-8c25-49699b3b0a08  state  Completed 
+2018-03-15 09:00:58,463 : 1972 : INFO : Connecting C1_snap1_V_0 to the host-172.25.26.215
+2018-03-15 09:00:58,716 : 1972 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.6 -s 4420 -n GB00002604bbf975 " 
+2018-03-15 09:00:59,078 : 1972 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.6 -s 4420 -n GB00002604bbf975 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 09:00:59,079 : 1972 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.7 -s 4420 -n GB00002604bbf975 " 
+2018-03-15 09:00:59,434 : 1972 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.7 -s 4420 -n GB00002604bbf975 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-03-15 09:01:59,498 : 2054 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf975 |awk '{print \$1}' " 
+2018-03-15 09:01:59,687 : 2054 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf975 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme1n1
+                                           /dev/nvme0n1
+                                           /dev/nvme2n1
+
+
+2018-03-15 09:01:59,687 : 2054 : INFO : Starting FIO load on /dev/mpnvme1n1
+2018-03-15 09:01:59,688 : 2054 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-03-15 09:23:09,974 : 2239 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 09:23:10,944 : 2239 : ERROR : Failed to create volume, duplicate volume name : 200
+2018-03-15 09:23:11,117 : 2241 : INFO : creating volume V_1 with param {'rw': 85, 'strpsize': '4', 'name': 'V_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 09:23:42,861 : 2249 : INFO : creating volume V_0 with param {'rw': 85, 'strpsize': '4', 'name': 'V_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 09:23:50,644 : 2249 : INFO : Current task 3bb874ba-23f5-400c-9fc1-26b0c9c182a9  state  Completed 
+2018-03-15 09:23:51,048 : 2249 : INFO : Assigning volume V_0 to ip 192.168.6.1,192.168.7.2
+2018-03-15 09:23:58,652 : 2249 : INFO : Current task d1940ed8-295c-43a0-b015-3f6402368b21  state  Completed 
+2018-03-15 09:23:58,823 : 2250 : INFO : creating volume V_1 with param {'rw': 85, 'strpsize': '4', 'name': 'V_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 09:24:07,128 : 2250 : INFO : Current task 0cba9e05-1a71-49d5-ab64-4d84fd510d95  state  Completed 
+2018-03-15 09:24:07,533 : 2250 : INFO : Assigning volume V_1 to ip 192.168.6.1,192.168.7.2
+2018-03-15 09:24:14,947 : 2250 : INFO : Current task 9519be87-6649-4289-9910-2177265c23b0  state  Completed 
+2018-03-15 09:24:15,118 : 2251 : INFO : creating volume V_2 with param {'rw': 85, 'strpsize': '4', 'name': 'V_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 09:24:23,418 : 2251 : INFO : Current task dac73a76-f230-4fc2-9c1d-eff04a838a18  state  Completed 
+2018-03-15 09:24:23,822 : 2251 : INFO : Assigning volume V_2 to ip 192.168.6.1,192.168.7.2
+2018-03-15 09:24:31,233 : 2251 : INFO : Current task 47a13eff-f2f8-4797-922c-0fa5379af906  state  Completed 
+2018-03-15 09:24:31,406 : 2252 : INFO : creating volume V_3 with param {'rw': 85, 'strpsize': '4', 'name': 'V_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'be1fa1f4-143f-4849-9c50-f13053c2a832', 'size': '300'}
+2018-03-15 09:24:39,711 : 2252 : INFO : Current task acbffdbb-2aed-4384-a7e2-20a5899c6939  state  Completed 
+2018-03-15 09:24:40,118 : 2252 : INFO : Assigning volume V_3 to ip 192.168.6.1,192.168.7.2
+2018-03-15 09:24:47,540 : 2252 : INFO : Current task 167560dd-1ce7-43a1-985a-54c656e5483a  state  Completed 
+2018-03-15 09:24:47,542 : 2242 : INFO : sleeing for 60 sec
