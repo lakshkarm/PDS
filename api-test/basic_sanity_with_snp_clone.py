@@ -31,7 +31,7 @@ CTRL_NO1 = 6
 CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 4
+NO_OF_VOLUMES = 2
 HOST_IP = "172.25.26.215"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
@@ -634,7 +634,7 @@ if __name__=='__main__':
 #    for i in range(10):
 #        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
 #
-#    logger.info("Successfully completed this test")
+#    #logger.info("Successfully completed this test")
 
     ## Now taking snaphsots for all the volumes 
     def create_snap_clone(c=None):
@@ -683,4 +683,8 @@ if __name__=='__main__':
         p.start()
     
         
+   #   # now start the FO/FB using cotnroller powerOff/on
+    logger.info("now start the FO/FB using cotnroller powerOff/on")
+    for i in range(10):
+        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2)
 
