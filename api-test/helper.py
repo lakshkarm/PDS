@@ -31,7 +31,7 @@ CTRL_NO1 = 6
 CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 4
+NO_OF_VOLUMES = 2
 HOST_IP = "172.25.26.215"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
@@ -563,7 +563,7 @@ if __name__=='__main__':
      #connect the volume to the host 
         connect_host(CTRL_IPS, HOST_IP, volname)
      #start io on the volumes / # 1 for multipath vol
-        p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,72000,1))
+        p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,7200,1))
         #p.daemon = True
         p.start()
         #p.join()
@@ -596,45 +596,24 @@ if __name__=='__main__':
     device_list =  used_media_in_mg(MG_NAME)    
 
     ## starting rebuild for all the drives one by one
-#    def rebuild_loop(device_list):
-#        rebuild_no = 0
-#        for i in device_list:
-#            drive_poweroff(i)
-#            logger.info("wating for 60 sec to confirm the disk status ")
-#            time.sleep(60)
-#            logging.info("drive got powered off successfully")
-#            drive_poweron(i)
-#            time.sleep(120)
-#            if check_disk_state(str(i),MG_NAME) == "Active":
-#                print "Disk is Active now"
-#                logging.info("starting rebuild")
-#                rebuild_media_grp(MG_NAME)
-#                logger.info("next rebuild will start in 900 sec")
-#                time.sleep(900)
-#                logger.info("Rebuild iteration %s completed "%rebuild_no)
-#            rebuild_no += 1
-#        #sys.exit()
     def rebuild_loop(device_list):
-        for i in range(20):
-            rebuild_no = 0
-            for i in device_list:
-                drive_poweroff(i)
-                logger.info("wating for 60 sec to confirm the disk status ")
-                time.sleep(60)
-                logging.info("drive got powered off successfully")
-                drive_poweron(i)
+        rebuild_no = 0
+        for i in device_list:
+            drive_poweroff(i)
+            logger.info("wating for 60 sec to confirm the disk status ")
+            time.sleep(60)
+            logging.info("drive got powered off successfully")
+            drive_poweron(i)
+            time.sleep(120)
+            if check_disk_state(str(i),MG_NAME) == "Active":
+                print "Disk is Active now"
+                logging.info("starting rebuild")
+                rebuild_media_grp(MG_NAME)
+                logger.info("next rebuild will start in 120 sec")
                 time.sleep(120)
-                if check_disk_state(str(i),MG_NAME) == "Active":
-                    print "Disk is Active now"
-                    logging.info("starting rebuild")
-                    rebuild_media_grp(MG_NAME)
-                    logger.info("next rebuild will start in 180 sec")
-                    time.sleep(180)
-                    logger.info("Rebuild iteration %s completed "%rebuild_no)
-                rebuild_no += 1
-            logger.info("Rebuild completed for all 9 drives")
-            time.sleep(300)
-
+                logger.info("Rebuild iteration %s completed "%rebuild_no)
+            rebuild_no += 1
+        #sys.exit()
     def ctrl_poweroff_on(ctrl_no1,crtl_no2):
         ctrls = locals() ## locals() retruns dict for function local variables 
         for i in ctrls:
@@ -700,12 +679,12 @@ if __name__=='__main__':
     time.sleep(60)
     ##Now start IO load on the clones devices as well
     for clone_name in clone_list:
-        p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,72000,1))
+        p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,7200,1))
         p.start()
-     
+    
         
    #   # now start the FO/FB using cotnroller powerOff/on
-#    logger.info("now start the FO/FB using cotnroller powerOff/on")
-#    for i in range(10):
-#        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2)
+    logger.info("now start the FO/FB using cotnroller powerOff/on")
+    for i in range(10):
+        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2)
 
