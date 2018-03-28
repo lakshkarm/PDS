@@ -27,11 +27,9 @@ CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
 CTRL_1_IP = "192.168.6.1"
 CTRL_2_IP = "192.168.7.2"
-CTRL_NO1 = 6
-CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 2
+NO_OF_VOLUMES = 5
 HOST_IP = "172.25.26.215"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
@@ -112,10 +110,7 @@ def call_api(api_url, method, req_data=None):
 
     r = requests.request(method, api_url, headers=header, data=json.dumps(req_data),
                          cookies={"JSESSIONID": jsession}, verify=False)
-    
-    #logger.info('aaaaaaaaaaaaaaaaaaaa%s'%dir(r))
-    #logger.info(vars(r))
-    assert(r.status_code ==200)
+    #assert(r.status_code ==200)
     return json.loads(r.text), str(r.status_code)
 
 
@@ -320,17 +315,15 @@ def create_snapshot(snap_name, vol_name):
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
     wait_till_task_completes(taskid)
 
-def create_clone1(clone_name, snap_name, reservation):
+def create_clone(clone_name, snap_name, reservation):
     url = "https://%s/api/v1.0/storage/snapshots/create"%CHASSIS_IP
-    print clone_name, snap_name, reservation
-    print get_object_id('volume',snap_name)
     data =  {
         "name": clone_name,
         "type": "Clone",
         "parent_id": get_object_id('volume',snap_name),
         "reservation":str(reservation)
     }
-    logger.info('Creating clone snapshot %s clone %s %s'%(snap_name,clone_name,data))
+    logger.info('Creating clone snapshot %s clone %s'%(snap_name,clone_name))
     stdout , retcode = call_api(url,'POST', data)
     error_check(stdout , retcode)
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
@@ -377,11 +370,8 @@ def create_vol(size, stripe , name, reservation, md_grp, flavor):
 
 def error_check(stdout, retcode):
     if (stdout['error'] != 0):
-        #print stdout,retcode
-        error = stdout["error_msg"]
-        logger.error("%s : %s"%(error,retcode))
-        assert(stdout['error'] == 0)
-        
+        print stdout,retcode
+    #assert(stdout['error'] == 0)
 
 def connect_host(ctrl_ip, host, vol_name):
     for ip in ctrl_ip.split(','):
@@ -488,8 +478,6 @@ def ctrl_poweroff(ctrl_slot):
             }
     stdout,retcode = call_api(url,'POST',data)
     logger.info("controller %s is getting powered Off"%ctrl_slot)
-    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-    wait_till_task_completes(taskid)
     #print json.dumps(stdout,indent=4)
 
 def ctrl_poweron(ctrl_slot):
@@ -499,77 +487,58 @@ def ctrl_poweron(ctrl_slot):
             }
     stdout,retcode = call_api(url,'POST',data)
     logger.info("controller %s is getting powered On"%ctrl_slot)
-    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-    wait_till_task_completes(taskid)
     #print json.dumps(stdout,indent=4)
 
 
-def create_copy(pid,copy_type,name,resr=0):
-    url = "https://%s/api/v1.0/storage/snapshots/create"%(CHASSIS_IP)
-    if copy_type not in ('Snapshot', 'Clone'):
-        print "ERROR! Unknow copy type"
-        return(1)
-    logger.info("Creating %s : %s"%(copy_type,name))
-    if copy_type == "Snapshot":
-        data = {
-                "name": name,
-                "parent_id": pid,
-                "reservation": 0,
-                "type": "Snapshot"
-                }
-        stdout,retcode = call_api(url,'POST',data)
-        try:
-            error_check(stdout, retcode)
-        except AssertionError:
-            logger.error("stopping the code execution " )
-            sys.exit()
-        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        wait_till_task_completes(taskid)
-    else:
-        data = {
-                "name": name,
-                "parent_id": pid,
-                "reservation": str(resr),
-                "type": "Clone"
-                }
-        stdout,retcode = call_api(url,'POST',data)
-        error_check(stdout, retcode)
-        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        wait_till_task_completes(taskid)
+#get_chassis_info()
+#get_mediaGroup_info()
+#create_mg("RAID-6 (7+2)",4,"mg123")
+#delete_mg("mg123")
 
-def get_existing_vols():
-    url = "https://%s/api/v1.0/storage/volumes"%(CHASSIS_IP)
-    stdout,retcode = call_api(url,'GET')
-    #print json.dumps(stdout,indent=4)
-    vol_list = []
-    for i in stdout:
-        if "name" in i.keys():
-            key = i["name"]
-            j = key.encode('ascii')
-            vol_list.append(j)
-    return vol_list
-    
-def used_media_in_mg(mgname):
-    device_list = dict()
-    stdout,retcode = check_media_on_chassis()
-    try:
-        for disk_dict in stdout:
-            if disk_dict['mediaGrpName'] == mgname:
-                key = disk_dict['slot']
-                j = key.encode('ascii')
-                s = disk_dict['displayPresenceState']
-                value = s.encode('ascii')
-                device_list[j] = value
-    except KeyError:
-        pass
-    return (device_list)
-
-def check_disk_state(disk_no,mg):
-    md_state_dict = used_media_in_mg(mg)
-    return(md_state_dict[disk_no])
-
-         
+#create_vol('100', '4','vol1', str(100), MG_NAME, 'INSANE')
 
 if __name__=='__main__':
-    #print get_existing_vols() 
-    pass
+    
+    #collecting media used in that MG 
+    ## collecting the slot if for the disks used in MG , And check its "Active" status
+    def used_media_in_mg(mgname):
+        device_list = dict()
+        stdout,retcode = check_media_on_chassis()
+        try:
+            for disk_dict in stdout:
+                if disk_dict['mediaGrpName'] == mgname:
+                    key = disk_dict['slot']
+                    j = key.encode('ascii')
+                    s = disk_dict['displayPresenceState']
+                    value = s.encode('ascii')
+                    device_list[j] = value
+        except KeyError:
+            pass
+        return (device_list)
+
+    ## Sending disk status 
+    def check_disk_state(disk_no,mg):
+        md_state_dict = used_media_in_mg(mg)
+        return(md_state_dict[disk_no])
+
+    device_list =  used_media_in_mg(MG_NAME)    
+    print device_list
+
+    ## starting rebuild for all the drives one by one
+    rebuild_no = 0
+    for i in device_list:
+        drive_poweroff(i)
+        logger.info("wating for 60 sec to confirm the disk status ")
+        time.sleep(60)
+        logging.info("drive got powered off successfully")
+        drive_poweron(i)
+        time.sleep(120)
+        if check_disk_state(str(i),MG_NAME) == "Active":
+            print "Disk is Active now"
+            logging.info("starting rebuild")
+            rebuild_media_grp(MG_NAME)
+            logger.info("next rebuild will start in 120 sec")
+            time.sleep(120)
+            logger.info("Rebuild iteration %s completed "%rebuild_no)
+        rebuild_no += 1
+        #sys.exit()

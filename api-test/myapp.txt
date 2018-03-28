@@ -1,67 +1,332 @@
-2018-03-19 07:20:17,220 : 4193 : INFO : creating volume S_0 with param {'rw': 85, 'strpsize': '4', 'name': 'S_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '200'}
-2018-03-19 07:20:26,747 : 4193 : INFO : Current task 222ef166-3a7a-4389-aaac-ab40e1ecc579  state  Completed 
-2018-03-19 07:20:27,151 : 4193 : INFO : Assigning volume S_0 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:20:34,570 : 4193 : INFO : Current task 5ecd13ea-bb20-425b-afac-f4b4e22fa9db  state  Completed 
-2018-03-19 07:20:34,742 : 4194 : INFO : creating volume S_1 with param {'rw': 85, 'strpsize': '4', 'name': 'S_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '200'}
-2018-03-19 07:20:43,067 : 4194 : INFO : Current task 87a7986c-932c-4972-96cb-dfaf47d04f81  state  Completed 
-2018-03-19 07:20:43,486 : 4194 : INFO : Assigning volume S_1 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:20:50,921 : 4194 : INFO : Current task 5e575691-d995-4b56-97b8-b4e5ac16ff5a  state  Completed 
-2018-03-19 07:20:51,092 : 4196 : INFO : creating volume S_2 with param {'rw': 85, 'strpsize': '4', 'name': 'S_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '200'}
-2018-03-19 07:20:59,508 : 4196 : INFO : Current task 3a505488-fc49-46e5-b0ee-d11bf80b785c  state  Completed 
-2018-03-19 07:20:59,911 : 4196 : INFO : Assigning volume S_2 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:21:07,328 : 4196 : INFO : Current task 79cbf170-9b9f-4bc8-a1d0-764b41e66592  state  Completed 
-2018-03-19 07:21:07,498 : 4197 : INFO : creating volume S_3 with param {'rw': 85, 'strpsize': '4', 'name': 'S_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '200'}
-2018-03-19 07:21:15,858 : 4197 : INFO : Current task cf973049-60ef-405d-8c8e-22f9044b7fc4  state  Completed 
-2018-03-19 07:21:16,266 : 4197 : INFO : Assigning volume S_3 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:21:23,688 : 4197 : INFO : Current task 6593ce0d-40d0-4738-a12b-23c94ae9ea9b  state  Completed 
-2018-03-19 07:21:23,860 : 4198 : INFO : creating volume S_4 with param {'rw': 85, 'strpsize': '4', 'name': 'S_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '200'}
-2018-03-19 07:21:32,182 : 4198 : INFO : Current task c3562583-c544-4de1-b6db-c5cd45b6e463  state  Completed 
-2018-03-19 07:21:32,587 : 4198 : INFO : Assigning volume S_4 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:21:40,009 : 4198 : INFO : Current task 56ba96de-af42-449c-8fef-192d123962db  state  Completed 
-2018-03-19 07:21:40,182 : 4199 : INFO : creating volume S_5 with param {'rw': 85, 'strpsize': '4', 'name': 'S_5', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'9b804639-8e79-47c4-9f61-99b3550decbe', 'size': '200'}
-2018-03-19 07:21:48,522 : 4199 : INFO : Current task 800059bc-0372-411e-97f2-164774ad2f76  state  Completed 
-2018-03-19 07:21:48,934 : 4199 : INFO : Assigning volume S_5 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:21:56,364 : 4199 : INFO : Current task 95264c6e-9180-4447-a3d4-4e1e6dec3981  state  Completed 
-2018-03-19 07:21:56,367 : 4186 : INFO : sleeing for 60 sec
-2018-03-19 07:22:56,724 : 4186 : INFO : Creating Snapshot : snap1_S_0
-2018-03-19 07:23:04,861 : 4186 : INFO : Current task 9cd844e4-4e35-44f7-adb5-b360093b5f8b  state  Completed 
-2018-03-19 07:23:34,958 : 4186 : INFO : Creating Clone : C1_snap1_S_0
-2018-03-19 07:23:50,350 : 4186 : INFO : Current task aaa66a76-49c9-4789-ab33-28a296d868e7  state  Completed 
-2018-03-19 07:24:20,446 : 4186 : INFO : Creating Snapshot : snap1_S_1
-2018-03-19 07:24:28,627 : 4186 : INFO : Current task 1163a020-e5b1-451b-b328-ec3c5ff01a1d  state  Completed 
-2018-03-19 07:24:58,724 : 4186 : INFO : Creating Clone : C1_snap1_S_1
-2018-03-19 07:25:14,101 : 4186 : INFO : Current task 09d96185-3fd6-4936-ad3a-a79061ce1a6b  state  Completed 
-2018-03-19 07:25:44,199 : 4186 : INFO : Creating Snapshot : snap1_S_2
-2018-03-19 07:25:52,368 : 4186 : INFO : Current task bc5bc4b0-6709-4416-b4d1-412c3f31451a  state  Completed 
-2018-03-19 07:26:22,464 : 4186 : INFO : Creating Clone : C1_snap1_S_2
-2018-03-19 07:26:37,837 : 4186 : INFO : Current task c14b2d7b-4eba-4b6f-b519-f7ea08f5e148  state  Completed 
-2018-03-19 07:27:07,933 : 4186 : INFO : Creating Snapshot : snap1_S_3
-2018-03-19 07:27:16,079 : 4186 : INFO : Current task f38b1948-77f2-425a-81d0-06426009de18  state  Completed 
-2018-03-19 07:27:46,175 : 4186 : INFO : Creating Clone : C1_snap1_S_3
-2018-03-19 07:28:01,640 : 4186 : INFO : Current task b95cd0f3-913d-4eb6-92bf-7ee9c465cc5f  state  Completed 
-2018-03-19 07:28:31,736 : 4186 : INFO : Creating Snapshot : snap1_S_4
-2018-03-19 07:28:39,868 : 4186 : INFO : Current task e5391027-562a-42d8-9fb9-ce2aa817b6e3  state  Completed 
-2018-03-19 07:29:09,963 : 4186 : INFO : Creating Clone : C1_snap1_S_4
-2018-03-19 07:29:25,353 : 4186 : INFO : Current task a6e7a48e-e037-43ef-babd-3c199a5d4047  state  Completed 
-2018-03-19 07:29:55,448 : 4186 : INFO : Creating Snapshot : snap1_S_5
-2018-03-19 07:30:03,599 : 4186 : INFO : Current task a17c6ff0-2733-42ee-8a89-1cda2d066220  state  Completed 
-2018-03-19 07:30:33,695 : 4186 : INFO : Creating Clone : C1_snap1_S_5
-2018-03-19 07:30:49,105 : 4186 : INFO : Current task a0cf360c-dffb-4372-a829-c686dacc9dfb  state  Completed 
-2018-03-19 07:31:19,136 : 4186 : INFO : Assigning snap1_S_0 to the controllers
-2018-03-19 07:31:19,478 : 4186 : INFO : Assigning volume snap1_S_0 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:31:26,900 : 4186 : INFO : Current task b6b7a1b5-4242-4f00-ba48-0900fadcf440  state  Completed 
-2018-03-19 07:31:32,906 : 4186 : INFO : Assigning snap1_S_1 to the controllers
-2018-03-19 07:31:33,251 : 4186 : INFO : Assigning volume snap1_S_1 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:31:40,680 : 4186 : INFO : Current task 818d38f9-decb-45ff-b7cf-52ccb3a2e8d8  state  Completed 
-2018-03-19 07:31:46,686 : 4186 : INFO : Assigning snap1_S_2 to the controllers
-2018-03-19 07:31:47,046 : 4186 : INFO : Assigning volume snap1_S_2 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:31:54,480 : 4186 : INFO : Current task 8ef46823-b2da-43cf-abf8-e12c6b7897e0  state  Completed 
-2018-03-19 07:32:00,487 : 4186 : INFO : Assigning snap1_S_3 to the controllers
-2018-03-19 07:32:00,829 : 4186 : INFO : Assigning volume snap1_S_3 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:32:08,251 : 4186 : INFO : Current task 44e4a0a9-c366-44a7-9467-f438fea8cf46  state  Completed 
-2018-03-19 07:32:14,258 : 4186 : INFO : Assigning snap1_S_4 to the controllers
-2018-03-19 07:32:14,604 : 4186 : INFO : Assigning volume snap1_S_4 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:32:22,037 : 4186 : INFO : Current task e894cfdc-db4c-49ac-b5d7-df3c623c7ee7  state  Completed 
-2018-03-19 07:32:28,043 : 4186 : INFO : Assigning snap1_S_5 to the controllers
-2018-03-19 07:32:28,387 : 4186 : INFO : Assigning volume snap1_S_5 to ip 192.168.6.6,192.168.7.7
-2018-03-19 07:32:28,656 : 4186 : ERROR : Invalid network list, failed to assign snapshot : 200
+2018-03-27 04:03:29,250 : 20740 : INFO : powering off the drive 39
+2018-03-27 04:03:43,565 : 20740 : INFO : Current task a59afc50-ae4a-4aab-94f2-3d84c688730b  state  Completed 
+2018-03-27 04:03:43,566 : 20740 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 04:04:43,626 : 20740 : INFO : powering on the drive 39
+2018-03-27 04:04:50,866 : 20740 : INFO : Current task c3c6f2f6-d854-43a9-9276-06eb63d481cb  state  Completed 
+2018-03-27 04:06:52,006 : 20740 : INFO : waiting for 180 sec
+2018-03-27 04:09:52,177 : 20740 : INFO : Current task e2dffc84-717e-4f37-ae4a-14f2e742cc08  state  Completed 
+2018-03-27 04:09:52,177 : 20740 : INFO : next rebuild will start in 120 sec
+2018-03-27 04:11:52,277 : 20740 : INFO : Rebuild iteration 0 completed 
+2018-03-27 04:11:52,278 : 20740 : INFO : powering off the drive 38
+2018-03-27 04:12:06,606 : 20740 : INFO : Current task d74a579a-83cd-49a2-87e0-b8930d7b7f5c  state  Completed 
+2018-03-27 04:12:06,607 : 20740 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 04:13:06,668 : 20740 : INFO : powering on the drive 38
+2018-03-27 04:13:13,908 : 20740 : INFO : Current task b40bc7a6-2255-4282-baa0-afe199b3e1ae  state  Completed 
+2018-03-27 04:15:15,015 : 20740 : INFO : waiting for 180 sec
+2018-03-27 06:15:52,607 : 20740 : INFO : Current task 144abc04-aac7-4632-8882-7d55fcd31023  state  Completed 
+2018-03-27 06:15:52,607 : 20740 : INFO : next rebuild will start in 120 sec
+2018-03-27 06:17:52,611 : 20740 : INFO : Rebuild iteration 1 completed 
+2018-03-27 06:17:52,612 : 20740 : INFO : powering off the drive 37
+2018-03-27 06:18:06,953 : 20740 : INFO : Current task f73daa9f-6386-4386-8223-0aef8ca860c0  state  Completed 
+2018-03-27 06:18:06,953 : 20740 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 06:47:59,625 : 24862 : INFO : powering off the drive 39
+2018-03-27 06:48:13,937 : 24862 : INFO : Current task be76a0e8-9251-438e-b17a-388112642c6a  state  Completed 
+2018-03-27 06:48:13,937 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 06:49:13,994 : 24862 : INFO : powering on the drive 39
+2018-03-27 06:49:21,231 : 24862 : INFO : Current task 1e7457b5-e33a-4c60-bd82-f16e22813f65  state  Completed 
+2018-03-27 06:51:22,398 : 24862 : INFO : waiting for 180 sec
+2018-03-27 08:46:54,878 : 24862 : INFO : Current task 7b87cd97-1e67-4fce-bab8-dcf1c6a246ca  state  Completed 
+2018-03-27 08:46:54,878 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 08:48:54,882 : 24862 : INFO : Rebuild iteration 0 completed 
+2018-03-27 08:48:54,883 : 24862 : INFO : powering off the drive 38
+2018-03-27 08:49:09,218 : 24862 : INFO : Current task 390e55a7-d4e1-4afc-a451-0a725a4e560e  state  Completed 
+2018-03-27 08:49:09,219 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 08:50:09,279 : 24862 : INFO : powering on the drive 38
+2018-03-27 08:50:16,517 : 24862 : INFO : Current task 55987904-e744-45ea-8e52-89e498875500  state  Completed 
+2018-03-27 08:52:17,632 : 24862 : INFO : waiting for 180 sec
+2018-03-27 08:55:17,803 : 24862 : INFO : Current task 77001e68-fde3-4fc2-884d-458b0b3a061f  state  Completed 
+2018-03-27 08:55:17,803 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 08:57:17,808 : 24862 : INFO : Rebuild iteration 1 completed 
+2018-03-27 08:57:17,809 : 24862 : INFO : powering off the drive 37
+2018-03-27 08:57:33,344 : 24862 : INFO : Current task 7507aaa3-e92f-4de3-bf3b-f0777ed4bf77  state  Completed 
+2018-03-27 08:57:33,344 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 08:58:33,405 : 24862 : INFO : powering on the drive 37
+2018-03-27 08:58:40,641 : 24862 : INFO : Current task 8e930dea-3197-40e0-bb0d-47d5c1e6f1b0  state  Completed 
+2018-03-27 09:00:41,812 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:00:56,832 : 24862 : INFO : Current task ed706e02-c9e1-4c1c-9b53-85ac420f5894  state  Completed 
+2018-03-27 11:00:56,833 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:02:56,835 : 24862 : INFO : Rebuild iteration 2 completed 
+2018-03-27 11:02:56,836 : 24862 : INFO : powering off the drive 44
+2018-03-27 11:03:11,150 : 24862 : INFO : Current task 9cfba805-7f6b-41b8-908f-70e311683ad2  state  Completed 
+2018-03-27 11:03:11,150 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 11:04:11,210 : 24862 : INFO : powering on the drive 44
+2018-03-27 11:04:18,461 : 24862 : INFO : Current task 647d0afb-a671-4fdf-ac1e-082fa6e015c7  state  Completed 
+2018-03-27 11:06:19,588 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:09:26,817 : 24862 : INFO : Current task 8e803b5e-c136-41eb-84a1-49d7a4ebf6ca  state  Completed 
+2018-03-27 11:09:26,817 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:11:26,820 : 24862 : INFO : Rebuild iteration 3 completed 
+2018-03-27 11:11:26,821 : 24862 : INFO : powering off the drive 45
+2018-03-27 11:11:42,379 : 24862 : INFO : Current task 8717e3b5-bee8-4731-955d-abf86127014a  state  Completed 
+2018-03-27 11:11:42,380 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 11:12:42,440 : 24862 : INFO : powering on the drive 45
+2018-03-27 11:12:50,934 : 24862 : INFO : Current task 13949148-77e1-42f2-a7c0-30b5f936364b  state  Completed 
+2018-03-27 11:14:52,120 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:17:52,301 : 24862 : INFO : Current task a947a544-a9d4-4772-892f-9a3741600520  state  Completed 
+2018-03-27 11:17:52,302 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:19:52,304 : 24862 : INFO : Rebuild iteration 4 completed 
+2018-03-27 11:19:52,305 : 24862 : INFO : powering off the drive 42
+2018-03-27 11:20:07,895 : 24862 : INFO : Current task 436e777d-ab3d-48ec-8b50-b0c53845e2c7  state  Completed 
+2018-03-27 11:20:07,896 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 11:21:07,956 : 24862 : INFO : powering on the drive 42
+2018-03-27 11:21:15,222 : 24862 : INFO : Current task 6db8c3fc-6f6d-4ac0-a13d-95ca30efcc95  state  Completed 
+2018-03-27 11:23:16,365 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:26:23,635 : 24862 : INFO : Current task 3190d8db-2927-40ca-84d2-1c4cf98b9d8e  state  Completed 
+2018-03-27 11:26:23,636 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:28:23,736 : 24862 : INFO : Rebuild iteration 5 completed 
+2018-03-27 11:28:23,737 : 24862 : INFO : powering off the drive 43
+2018-03-27 11:28:38,073 : 24862 : INFO : Current task 675b9904-dd2f-4ef9-8baa-7cc54644ef39  state  Completed 
+2018-03-27 11:28:38,073 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 11:29:38,134 : 24862 : INFO : powering on the drive 43
+2018-03-27 11:29:45,390 : 24862 : INFO : Current task 4f4e8ff2-6283-411f-a7a2-825bf88e90ed  state  Completed 
+2018-03-27 11:31:46,484 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:34:46,654 : 24862 : INFO : Current task 0dbb6c62-fa53-40e4-9e1d-2192b0f422d3  state  Completed 
+2018-03-27 11:34:46,655 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:36:46,658 : 24862 : INFO : Rebuild iteration 6 completed 
+2018-03-27 11:36:46,659 : 24862 : INFO : powering off the drive 40
+2018-03-27 11:37:02,301 : 24862 : INFO : Current task ef1365b3-c4be-4a37-b50e-f84df1f8e1f2  state  Completed 
+2018-03-27 11:37:02,301 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 11:38:02,362 : 24862 : INFO : powering on the drive 40
+2018-03-27 11:38:09,627 : 24862 : INFO : Current task e0462ea0-0f6a-450e-b1e6-5f7a577f0c94  state  Completed 
+2018-03-27 11:40:10,818 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:43:11,005 : 24862 : INFO : Current task 45a902b3-87f4-4b3d-9747-5189acb8d62f  state  Completed 
+2018-03-27 11:43:11,006 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:45:11,008 : 24862 : INFO : Rebuild iteration 7 completed 
+2018-03-27 11:45:11,009 : 24862 : INFO : powering off the drive 41
+2018-03-27 11:45:25,363 : 24862 : INFO : Current task 3bb62fa4-d2a3-4cb7-b228-bcb3c5704315  state  Completed 
+2018-03-27 11:45:25,364 : 24862 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-27 11:46:25,424 : 24862 : INFO : powering on the drive 41
+2018-03-27 11:46:32,685 : 24862 : INFO : Current task 3d91991a-96e8-458e-8904-370bb645e3dc  state  Completed 
+2018-03-27 11:48:33,900 : 24862 : INFO : waiting for 180 sec
+2018-03-27 11:51:34,087 : 24862 : INFO : Current task efae4eb1-65fc-4780-9c98-1fcfd5bba44f  state  Completed 
+2018-03-27 11:51:34,087 : 24862 : INFO : next rebuild will start in 120 sec
+2018-03-27 11:53:34,091 : 24862 : INFO : Rebuild iteration 8 completed 
+2018-03-28 06:10:37,870 : 32044 : INFO : powering off the drive 39
+2018-03-28 06:10:52,178 : 32044 : INFO : Current task f027e27c-7b49-4ea2-9882-a2901519483a  state  Completed 
+2018-03-28 06:10:52,179 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 06:11:52,239 : 32044 : INFO : powering on the drive 39
+2018-03-28 06:11:59,478 : 32044 : INFO : Current task b9bb041a-6800-45f5-994c-7e875c2130c4  state  Completed 
+2018-03-28 06:14:00,711 : 32044 : INFO : waiting for 180 sec
+2018-03-28 06:17:00,795 : 32044 : INFO : Current task 4f3d5c4f-726a-4989-9e52-186b4213f810  state  Completed 
+2018-03-28 06:17:00,795 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 06:19:00,798 : 32044 : INFO : Rebuild iteration 0 completed 
+2018-03-28 06:19:00,799 : 32044 : INFO : powering off the drive 38
+2018-03-28 06:19:15,111 : 32044 : INFO : Current task 1c9bdaaa-f70a-41d8-b222-1149f1bc5ce6  state  Completed 
+2018-03-28 06:19:15,111 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 06:20:15,168 : 32044 : INFO : powering on the drive 38
+2018-03-28 06:20:22,435 : 32044 : INFO : Current task 4c95efbe-f0d2-47be-816f-7ff359333779  state  Completed 
+2018-03-28 06:22:23,524 : 32044 : INFO : waiting for 180 sec
+2018-03-28 06:25:23,659 : 32044 : INFO : Current task eb6013b3-d655-4871-8798-794c4e0a5ec5  state  Completed 
+2018-03-28 06:25:23,659 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 06:27:23,712 : 32044 : INFO : Rebuild iteration 1 completed 
+2018-03-28 06:27:23,713 : 32044 : INFO : powering off the drive 37
+2018-03-28 06:27:39,100 : 32044 : INFO : Current task 66c29b8a-3346-4155-88d7-f87be9fb0200  state  Completed 
+2018-03-28 06:27:39,101 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 06:28:39,161 : 32044 : INFO : powering on the drive 37
+2018-03-28 06:28:46,419 : 32044 : INFO : Current task eb75d982-dde6-4646-968a-99017b3aaa3b  state  Completed 
+2018-03-28 06:30:47,600 : 32044 : INFO : waiting for 180 sec
+2018-03-28 06:33:47,786 : 32044 : INFO : Current task 72e74a5e-224f-483a-9a16-908cf4139efc  state  Completed 
+2018-03-28 06:33:47,786 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 06:35:47,790 : 32044 : INFO : Rebuild iteration 2 completed 
+2018-03-28 06:35:47,791 : 32044 : INFO : powering off the drive 44
+2018-03-28 06:36:02,125 : 32044 : INFO : Current task 5a42113b-dbef-4359-a5f0-2df34fbfedd0  state  Completed 
+2018-03-28 06:36:02,126 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 06:37:02,150 : 32044 : INFO : powering on the drive 44
+2018-03-28 06:37:09,388 : 32044 : INFO : Current task 0f2bf95c-b8b3-4a36-a7a8-18fd840a979c  state  Completed 
+2018-03-28 06:39:10,544 : 32044 : INFO : waiting for 180 sec
+2018-03-28 06:42:10,707 : 32044 : INFO : Current task c03c78ac-0de9-440e-b861-7b267ed0808d  state  Completed 
+2018-03-28 06:42:10,708 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 06:44:10,808 : 32044 : INFO : Rebuild iteration 3 completed 
+2018-03-28 06:44:10,809 : 32044 : INFO : powering off the drive 45
+2018-03-28 06:44:26,147 : 32044 : INFO : Current task 1e224f3e-a9af-43b6-bbd9-78e89d2bc465  state  Completed 
+2018-03-28 06:44:26,148 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 06:45:26,208 : 32044 : INFO : powering on the drive 45
+2018-03-28 06:45:33,458 : 32044 : INFO : Current task 9db79104-6e64-4221-a364-c98d44d4ad4f  state  Completed 
+2018-03-28 06:47:34,709 : 32044 : INFO : waiting for 180 sec
+2018-03-28 06:50:34,890 : 32044 : INFO : Current task c19f6d51-ee97-4400-b80d-99b8f7866689  state  Completed 
+2018-03-28 06:50:34,891 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 06:52:34,894 : 32044 : INFO : Rebuild iteration 4 completed 
+2018-03-28 06:52:34,895 : 32044 : INFO : powering off the drive 42
+2018-03-28 06:52:49,232 : 32044 : INFO : Current task 82affe05-1119-4da6-8859-64b8ce15f62f  state  Completed 
+2018-03-28 06:52:49,233 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 06:53:49,288 : 32044 : INFO : powering on the drive 42
+2018-03-28 06:53:56,540 : 32044 : INFO : Current task b59a8ec9-aa43-492d-998b-2705c29d8d90  state  Completed 
+2018-03-28 06:55:57,685 : 32044 : INFO : waiting for 180 sec
+2018-03-28 06:58:57,849 : 32044 : INFO : Current task 1d9b212d-651c-40bd-ae25-85d80f4fb38f  state  Completed 
+2018-03-28 06:58:57,850 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:00:57,853 : 32044 : INFO : Rebuild iteration 5 completed 
+2018-03-28 07:00:57,854 : 32044 : INFO : powering off the drive 43
+2018-03-28 07:01:12,165 : 32044 : INFO : Current task c2c2db3e-20a8-4184-8235-8cd65c2cc655  state  Completed 
+2018-03-28 07:01:12,165 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:02:12,225 : 32044 : INFO : powering on the drive 43
+2018-03-28 07:02:19,458 : 32044 : INFO : Current task 0b43aa5c-7df4-4b04-9257-5e109b203775  state  Completed 
+2018-03-28 07:04:20,615 : 32044 : INFO : waiting for 180 sec
+2018-03-28 07:07:20,694 : 32044 : INFO : Current task 1d097994-e739-4426-a99e-e589025db220  state  Completed 
+2018-03-28 07:07:20,695 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:09:20,754 : 32044 : INFO : Rebuild iteration 6 completed 
+2018-03-28 07:09:20,755 : 32044 : INFO : powering off the drive 40
+2018-03-28 07:09:36,029 : 32044 : INFO : Current task 0f245ac5-d0f6-4b5d-87b6-bce047f9024e  state  Completed 
+2018-03-28 07:09:36,029 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:10:36,089 : 32044 : INFO : powering on the drive 40
+2018-03-28 07:10:43,329 : 32044 : INFO : Current task c4639ae9-be7f-4a05-8cf9-d7c38f3a5410  state  Completed 
+2018-03-28 07:12:44,494 : 32044 : INFO : waiting for 180 sec
+2018-03-28 07:15:44,573 : 32044 : INFO : Current task 13d88c0d-e0b8-4ec7-ae6b-c9d81a5c3d27  state  Completed 
+2018-03-28 07:15:44,573 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:17:44,577 : 32044 : INFO : Rebuild iteration 7 completed 
+2018-03-28 07:17:44,578 : 32044 : INFO : powering off the drive 41
+2018-03-28 07:17:58,910 : 32044 : INFO : Current task 8edc468e-97b7-489a-8e4f-1d89e96d1034  state  Completed 
+2018-03-28 07:17:58,911 : 32044 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:18:58,946 : 32044 : INFO : powering on the drive 41
+2018-03-28 07:19:06,179 : 32044 : INFO : Current task aabe9a2a-eac2-499d-97cf-d7187ba8f791  state  Completed 
+2018-03-28 07:21:07,275 : 32044 : INFO : waiting for 180 sec
+2018-03-28 07:24:07,441 : 32044 : INFO : Current task 289e05fe-4b2a-4398-b4ab-ea57f594cd0d  state  Completed 
+2018-03-28 07:24:07,442 : 32044 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:26:07,542 : 32044 : INFO : Rebuild iteration 8 completed 
+2018-03-28 07:31:53,930 : 32641 : INFO : powering off the drive 39
+2018-03-28 07:32:08,277 : 32641 : INFO : Current task 614f6c0b-6b00-4029-8f59-9fe3e35def35  state  Completed 
+2018-03-28 07:32:08,277 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:33:08,337 : 32641 : INFO : powering on the drive 39
+2018-03-28 07:33:15,567 : 32641 : INFO : Current task ac1bc26b-3c60-4f43-8e8a-72475b7fa5ea  state  Completed 
+2018-03-28 07:35:16,825 : 32641 : INFO : waiting for 180 sec
+2018-03-28 07:38:16,990 : 32641 : INFO : Current task 8e33b264-a69d-4403-9c19-0ba9ea632fc0  state  Completed 
+2018-03-28 07:38:16,990 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:40:16,993 : 32641 : INFO : Rebuild iteration 0 completed 
+2018-03-28 07:40:16,994 : 32641 : INFO : powering off the drive 38
+2018-03-28 07:40:31,321 : 32641 : INFO : Current task c0a519fa-688f-4658-90cf-ac17397cbd8e  state  Completed 
+2018-03-28 07:40:31,322 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:41:31,381 : 32641 : INFO : powering on the drive 38
+2018-03-28 07:41:38,621 : 32641 : INFO : Current task 213ef31d-bf45-4b05-8e3a-508610725745  state  Completed 
+2018-03-28 07:43:39,719 : 32641 : INFO : waiting for 180 sec
+2018-03-28 07:46:39,802 : 32641 : INFO : Current task 96c5add4-ec07-48dd-9c8c-302152cc439c  state  Completed 
+2018-03-28 07:46:39,803 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:48:39,830 : 32641 : INFO : Rebuild iteration 1 completed 
+2018-03-28 07:48:39,831 : 32641 : INFO : powering off the drive 37
+2018-03-28 07:48:54,141 : 32641 : INFO : Current task 80888542-2d21-4355-a842-1754d5685c08  state  Completed 
+2018-03-28 07:48:54,142 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:49:54,161 : 32641 : INFO : powering on the drive 37
+2018-03-28 07:50:01,400 : 32641 : INFO : Current task 581139c7-4520-45d1-bde8-5b470b3bd2b0  state  Completed 
+2018-03-28 07:52:02,512 : 32641 : INFO : waiting for 180 sec
+2018-03-28 07:55:02,592 : 32641 : INFO : Current task ba09b3c5-284b-409a-ab8e-0371ba911a18  state  Completed 
+2018-03-28 07:55:02,592 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 07:57:02,690 : 32641 : INFO : Rebuild iteration 2 completed 
+2018-03-28 07:57:02,690 : 32641 : INFO : powering off the drive 44
+2018-03-28 07:57:17,007 : 32641 : INFO : Current task aabe6c99-c05d-44fe-b3b5-4c52af6adbb9  state  Completed 
+2018-03-28 07:57:17,008 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 07:58:17,068 : 32641 : INFO : powering on the drive 44
+2018-03-28 07:58:24,316 : 32641 : INFO : Current task 3b9be01a-29f0-4416-bfeb-59f5e72e5c15  state  Completed 
+2018-03-28 08:00:25,501 : 32641 : INFO : waiting for 180 sec
+2018-03-28 08:03:25,632 : 32641 : INFO : Current task e81e1fc1-0d25-49d2-82bc-3cdb07564ec2  state  Completed 
+2018-03-28 08:03:25,632 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 08:05:25,635 : 32641 : INFO : Rebuild iteration 3 completed 
+2018-03-28 08:05:25,636 : 32641 : INFO : powering off the drive 45
+2018-03-28 08:05:39,964 : 32641 : INFO : Current task 2c8a0dbc-6794-49b1-b8b1-632cd4963531  state  Completed 
+2018-03-28 08:05:39,964 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 08:06:39,977 : 32641 : INFO : powering on the drive 45
+2018-03-28 08:06:47,222 : 32641 : INFO : Current task 6ec61a4e-038f-48c0-9693-b1a988c4be79  state  Completed 
+2018-03-28 08:08:48,359 : 32641 : INFO : waiting for 180 sec
+2018-03-28 08:11:48,500 : 32641 : INFO : Current task 29b702e0-4277-4584-af61-c98a13977963  state  Completed 
+2018-03-28 08:11:48,500 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 08:13:48,579 : 32641 : INFO : Rebuild iteration 4 completed 
+2018-03-28 08:13:48,580 : 32641 : INFO : powering off the drive 42
+2018-03-28 08:13:56,787 : 32641 : INFO : Current task f7317d49-48eb-420a-8dc7-9b9fa73b24d9  state  Completed 
+2018-03-28 08:13:56,788 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 08:14:56,848 : 32641 : INFO : powering on the drive 42
+2018-03-28 08:15:04,081 : 32641 : INFO : Current task c5f1b5e9-d736-4d70-8b5d-8a306c167d13  state  Completed 
+2018-03-28 08:17:05,333 : 32641 : INFO : waiting for 180 sec
+2018-03-28 08:20:05,520 : 32641 : INFO : Current task 590be3bb-5eed-41d7-910a-07f008ba1088  state  Completed 
+2018-03-28 08:20:05,521 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 08:22:05,621 : 32641 : INFO : Rebuild iteration 5 completed 
+2018-03-28 08:22:05,622 : 32641 : INFO : powering off the drive 43
+2018-03-28 08:22:19,942 : 32641 : INFO : Current task c56d5b23-cf65-47d3-a1ae-1e34d3d3b6db  state  Completed 
+2018-03-28 08:22:19,943 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 08:23:19,999 : 32641 : INFO : powering on the drive 43
+2018-03-28 08:23:27,239 : 32641 : INFO : Current task 43d0a450-7915-4213-9c4e-9fc1de3f2e5b  state  Completed 
+2018-03-28 08:25:28,392 : 32641 : INFO : waiting for 180 sec
+2018-03-28 08:28:28,538 : 32641 : INFO : Current task f7d6e1aa-faa5-42f7-8fd4-33d236d9fdc8  state  Completed 
+2018-03-28 08:28:28,538 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 08:30:28,614 : 32641 : INFO : Rebuild iteration 6 completed 
+2018-03-28 08:30:28,614 : 32641 : INFO : powering off the drive 40
+2018-03-28 08:30:44,203 : 32641 : INFO : Current task 88cd270f-eea7-4d56-b7ab-ebd5e288f15c  state  Completed 
+2018-03-28 08:30:44,203 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 08:31:44,242 : 32641 : INFO : powering on the drive 40
+2018-03-28 08:31:51,481 : 32641 : INFO : Current task 96747003-a75e-434f-a157-5b2aebd5f16d  state  Completed 
+2018-03-28 08:33:52,673 : 32641 : INFO : waiting for 180 sec
+2018-03-28 08:36:52,833 : 32641 : INFO : Current task d59f6d6b-b255-4071-ae26-6d07a6a18c35  state  Completed 
+2018-03-28 08:36:52,833 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 08:38:52,918 : 32641 : INFO : Rebuild iteration 7 completed 
+2018-03-28 08:38:52,919 : 32641 : INFO : powering off the drive 41
+2018-03-28 08:39:07,234 : 32641 : INFO : Current task b5891a4d-565f-4c21-af07-eb39ebf34de2  state  Completed 
+2018-03-28 08:39:07,235 : 32641 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-28 08:40:07,282 : 32641 : INFO : powering on the drive 41
+2018-03-28 08:40:14,517 : 32641 : INFO : Current task 3c0af9f3-33fc-4e5e-b5c6-4e1e768b1390  state  Completed 
+2018-03-28 08:42:15,699 : 32641 : INFO : waiting for 180 sec
+2018-03-28 08:45:15,793 : 32641 : INFO : Current task 00014236-58a9-4576-924b-70b4aa3cd2ac  state  Completed 
+2018-03-28 08:45:15,794 : 32641 : INFO : next rebuild will start in 120 sec
+2018-03-28 08:47:15,796 : 32641 : INFO : Rebuild iteration 8 completed 
+2018-03-28 09:49:46,149 : 1144 : INFO : Creating Snapshot : snap1_m_datavol1
+2018-03-28 09:49:46,149 : 1144 : INFO : Creating Snapshot : snap1_m_datavol1
+2018-03-28 09:49:53,931 : 1144 : INFO : Current task 95686d96-e506-4a78-8390-0c79ff2c8f62  state  Completed 
+2018-03-28 09:49:53,931 : 1144 : INFO : Current task 95686d96-e506-4a78-8390-0c79ff2c8f62  state  Completed 
+2018-03-28 09:50:24,026 : 1144 : INFO : Creating Snapshot : snap1_m_datavol2
+2018-03-28 09:50:24,026 : 1144 : INFO : Creating Snapshot : snap1_m_datavol2
+2018-03-28 09:50:31,781 : 1144 : INFO : Current task 03cb7248-2e12-44c0-bd71-fda4e5ae85dc  state  Completed 
+2018-03-28 09:50:31,781 : 1144 : INFO : Current task 03cb7248-2e12-44c0-bd71-fda4e5ae85dc  state  Completed 
+2018-03-28 09:51:01,876 : 1144 : INFO : Creating Snapshot : snap1_m_datavol3
+2018-03-28 09:51:01,876 : 1144 : INFO : Creating Snapshot : snap1_m_datavol3
+2018-03-28 09:51:09,629 : 1144 : INFO : Current task 0b6fce50-ec1d-4a58-8a44-bcf5c6427e2f  state  Completed 
+2018-03-28 09:51:09,629 : 1144 : INFO : Current task 0b6fce50-ec1d-4a58-8a44-bcf5c6427e2f  state  Completed 
+2018-03-28 09:51:39,724 : 1144 : INFO : Creating Snapshot : snap1_m_datavol4
+2018-03-28 09:51:39,724 : 1144 : INFO : Creating Snapshot : snap1_m_datavol4
+2018-03-28 09:51:47,519 : 1144 : INFO : Current task 1afca04d-6ada-4c05-bdfe-0827a3728b9a  state  Completed 
+2018-03-28 09:51:47,519 : 1144 : INFO : Current task 1afca04d-6ada-4c05-bdfe-0827a3728b9a  state  Completed 
+2018-03-28 09:52:17,618 : 1144 : INFO : Creating Snapshot : snap1_S2-vol1
+2018-03-28 09:52:17,618 : 1144 : INFO : Creating Snapshot : snap1_S2-vol1
+2018-03-28 09:52:25,358 : 1144 : INFO : Current task 3cd31d9e-5309-4252-9f26-6311772ded59  state  Completed 
+2018-03-28 09:52:25,358 : 1144 : INFO : Current task 3cd31d9e-5309-4252-9f26-6311772ded59  state  Completed 
+2018-03-28 09:52:55,454 : 1144 : INFO : Creating Snapshot : snap1_S2-vol2
+2018-03-28 09:52:55,454 : 1144 : INFO : Creating Snapshot : snap1_S2-vol2
+2018-03-28 09:53:03,204 : 1144 : INFO : Current task be15f853-03d7-4bf6-b589-6909e3a7a481  state  Completed 
+2018-03-28 09:53:03,204 : 1144 : INFO : Current task be15f853-03d7-4bf6-b589-6909e3a7a481  state  Completed 
+2018-03-28 10:01:36,199 : 1186 : INFO : Creating Snapshot : snap1_m_datavol1
+2018-03-28 10:01:36,199 : 1186 : INFO : Creating Snapshot : snap1_m_datavol1
+2018-03-28 10:01:43,951 : 1186 : INFO : Current task 2763365c-3431-4ab9-a39b-a547cffea882  state  Completed 
+2018-03-28 10:01:43,951 : 1186 : INFO : Current task 2763365c-3431-4ab9-a39b-a547cffea882  state  Completed 
+2018-03-28 10:02:14,046 : 1186 : INFO : Creating Clone : C1_snap1_m_datavol1
+2018-03-28 10:02:14,046 : 1186 : INFO : Creating Clone : C1_snap1_m_datavol1
+2018-03-28 10:02:14,321 : 1186 : ERROR : Failed to create clone, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:02:14,321 : 1186 : ERROR : Failed to create clone, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:12:56,039 : 1275 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:12:56,039 : 1275 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:12:56,318 : 1275 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:12:56,318 : 1275 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:17:46,691 : 1295 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:17:46,691 : 1295 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:17:46,970 : 1295 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:17:46,970 : 1295 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:18:40,920 : 1308 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:18:40,920 : 1308 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:18:41,202 : 1308 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:18:41,202 : 1308 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:26:19,444 : 1325 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:26:19,444 : 1325 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:26:19,740 : 1325 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:26:19,740 : 1325 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:26:19,740 : 1325 : ERROR : stopping the code execution : 
+2018-03-28 10:26:19,740 : 1325 : ERROR : stopping the code execution : 
+2018-03-28 10:28:11,605 : 1333 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:28:11,605 : 1333 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:28:11,903 : 1333 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:28:11,903 : 1333 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:28:11,903 : 1333 : ERROR : stopping the code execution 
+2018-03-28 10:28:11,903 : 1333 : ERROR : stopping the code execution 
+2018-03-28 10:31:31,476 : 1351 : INFO : Creating Snapshot : snap11111111111111_mv1
+2018-03-28 10:31:31,768 : 1351 : ERROR : Failed to create snapshot, invalid name. It has to start with a character [A-Z, a-z] and allowed characters are [a-z, A-Z, 0-9, -, _] and maximum allowed size is 16 : 200
+2018-03-28 10:31:31,768 : 1351 : ERROR : stopping the code execution 
+2018-03-28 10:32:40,861 : 1361 : INFO : Creating Snapshot : snap1_mv1
+2018-03-28 10:32:48,609 : 1361 : INFO : Current task 25e8782d-3c30-4a13-a6bd-344c6a080f21  state  Completed 
+2018-03-28 10:33:18,704 : 1361 : INFO : Creating Clone : C1_snap1_mv1
+2018-03-28 10:33:33,624 : 1361 : INFO : Current task 3ba4f379-ea03-4361-b6ea-45493a28f212  state  Completed 
+2018-03-28 10:34:03,719 : 1361 : INFO : Creating Snapshot : snap1_mv2
+2018-03-28 10:34:11,466 : 1361 : INFO : Current task 0f720d69-1455-4378-ba55-adf16a9443d7  state  Completed 
+2018-03-28 10:34:41,560 : 1361 : INFO : Creating Clone : C1_snap1_mv2
+2018-03-28 10:34:56,483 : 1361 : INFO : Current task cfd635e3-5919-4ea5-971f-e2ba578a3984  state  Completed 
+2018-03-28 10:35:26,578 : 1361 : INFO : Creating Snapshot : snap1_mv3
