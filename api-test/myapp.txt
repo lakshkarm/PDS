@@ -330,3 +330,56 @@
 2018-03-28 10:34:41,560 : 1361 : INFO : Creating Clone : C1_snap1_mv2
 2018-03-28 10:34:56,483 : 1361 : INFO : Current task cfd635e3-5919-4ea5-971f-e2ba578a3984  state  Completed 
 2018-03-28 10:35:26,578 : 1361 : INFO : Creating Snapshot : snap1_mv3
+2018-03-28 10:35:34,325 : 1361 : INFO : Current task 00fdaa33-37dc-42c8-bb8b-488bbbf661bd  state  Completed 
+2018-03-28 10:36:04,421 : 1361 : INFO : Creating Clone : C1_snap1_mv3
+2018-03-28 10:36:19,803 : 1361 : INFO : Current task 86ab2fef-0763-4a9e-a69a-398fe0ec653b  state  Completed 
+2018-03-28 10:36:49,898 : 1361 : INFO : Creating Snapshot : snap1_mv4
+2018-03-28 10:36:57,638 : 1361 : INFO : Current task e99cdc33-5f8b-41b4-8459-dff2a2f29ebf  state  Completed 
+2018-03-28 10:37:27,733 : 1361 : INFO : Creating Clone : C1_snap1_mv4
+2018-03-28 10:37:42,693 : 1361 : INFO : Current task cf12e9ea-914f-41d5-8d52-806f61ab9452  state  Completed 
+2018-03-28 10:38:12,787 : 1361 : INFO : Creating Snapshot : snap1_S2-v1
+2018-03-28 10:38:20,529 : 1361 : INFO : Current task aff12769-6b1f-4b5b-bb68-72b0517edf90  state  Completed 
+2018-03-28 10:38:50,622 : 1361 : INFO : Creating Clone : C1_snap1_S2-v1
+2018-03-28 10:39:05,554 : 1361 : INFO : Current task 1041ab65-1b41-4680-91df-0a5f9a220b95  state  Completed 
+2018-03-28 10:39:35,648 : 1361 : INFO : Creating Snapshot : snap1_S2-v2
+2018-03-28 10:39:43,396 : 1361 : INFO : Current task 08e68c74-0a82-4f63-9f37-e08e280ed558  state  Failed is FAILED 
+2018-03-28 10:40:13,492 : 1361 : INFO : Creating Clone : C1_snap1_S2-v2
+2018-03-28 10:40:13,999 : 1361 : ERROR : Failed to create clone. Parent snapshot is not ready. : 200
+2018-03-29 06:59:22,406 : 23890 : INFO : Creating Snapshot : snap1_S2-vol0
+2018-03-29 06:59:30,160 : 23890 : INFO : Current task daad4e06-1cac-40b5-92ea-397eb68e6cca  state  Completed 
+2018-03-29 07:00:00,257 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol0
+2018-03-29 07:00:15,220 : 23890 : INFO : Current task 0d7e77e0-44e6-441a-a900-feec2edc324d  state  Completed 
+2018-03-29 07:00:45,319 : 23890 : INFO : Creating Snapshot : snap1_S2-vol1
+2018-03-29 07:00:53,059 : 23890 : INFO : Current task 624c5def-63c6-4677-9e3b-55b2f357c24c  state  Completed 
+2018-03-29 07:01:23,158 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol1
+2018-03-29 07:01:38,076 : 23890 : INFO : Current task d9f6c20f-1dcc-444f-902d-0c59d935ff8f  state  Completed 
+2018-03-29 07:02:08,173 : 23890 : INFO : Creating Snapshot : snap1_S2-vol2
+2018-03-29 07:02:15,958 : 23890 : INFO : Current task 9191c34b-6753-43a0-81eb-8a3dcd204b60  state  Completed 
+2018-03-29 07:02:46,056 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol2
+2018-03-29 07:03:00,992 : 23890 : INFO : Current task c932c1d0-60da-40e4-84bb-eaeffd37b6ca  state  Completed 
+2018-03-29 07:03:31,087 : 23890 : INFO : Creating Snapshot : snap1_S2-vol3
+2018-03-29 07:03:38,840 : 23890 : INFO : Current task 9999dbf9-6d57-4d45-84b1-f1e5bef3b417  state  Completed 
+2018-03-29 07:04:08,936 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol3
+2018-03-29 07:04:23,874 : 23890 : INFO : Current task ed5e2f65-9d59-47ba-9a95-18f0e0c2509f  state  Completed 
+2018-03-29 07:04:53,971 : 23890 : INFO : Creating Snapshot : snap1_S2-vol4
+2018-03-29 07:05:01,734 : 23890 : INFO : Current task c9e0ee3e-abbc-416c-8c9f-d1d3129c00d3  state  Completed 
+2018-03-29 07:05:31,831 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol4
+2018-03-29 07:05:46,779 : 23890 : INFO : Current task a94ece5e-2557-4e3f-8e28-8ef000cca943  state  Completed 
+2018-03-29 07:06:16,862 : 23890 : INFO : Creating Snapshot : snap1_S2-vol5
+2018-03-29 07:06:24,609 : 23890 : INFO : Current task c3dca1f4-1c5c-4370-96a4-5bb6d2642845  state  Completed 
+2018-03-29 07:06:54,706 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol5
+2018-03-29 07:07:09,627 : 23890 : INFO : Current task 7ec56396-5c68-41c4-82f0-7b780b4427de  state  Completed 
+2018-03-29 07:07:39,724 : 23890 : INFO : Creating Snapshot : snap1_S2-vol6
+2018-03-29 07:07:47,479 : 23890 : INFO : Current task 786a8549-11d5-4622-af07-b6c431162192  state  Completed 
+2018-03-29 07:08:17,575 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol6
+2018-03-29 07:08:32,495 : 23890 : INFO : Current task 24865e2f-16b3-4713-815e-c71940533db2  state  Completed 
+2018-03-29 07:09:02,591 : 23890 : INFO : Creating Snapshot : snap1_S2-vol7
+2018-03-29 07:09:10,347 : 23890 : INFO : Current task c7f6f79b-8aca-46fa-885b-f1b0f832f582  state  Completed 
+2018-03-29 07:09:40,443 : 23890 : INFO : Creating Clone : C1_snap1_S2-vol7
+2018-03-29 07:09:55,373 : 23890 : INFO : Current task cf739ff4-c3dd-48fb-ab82-f513d9bef0f9  state  Completed 
+2018-03-29 08:59:36,215 : 24816 : INFO : powering off the drive 39
+2018-03-29 08:59:50,527 : 24816 : INFO : Current task 4bd8711d-f3f5-4e74-af53-e6eb54a52d70  state  Completed 
+2018-03-29 08:59:50,528 : 24816 : INFO : wating for 60 sec to confirm the disk status 
+2018-03-29 09:00:50,588 : 24816 : INFO : powering on the drive 39
+2018-03-29 09:00:57,834 : 24816 : INFO : Current task 47590af9-5563-4fc3-b127-97bc50a0ec06  state  Completed 
+2018-03-29 09:02:58,943 : 24816 : INFO : waiting for 180 sec
