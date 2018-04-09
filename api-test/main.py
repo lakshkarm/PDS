@@ -1,22 +1,20 @@
 import helper
-import time,argparse,sys
+import time,argparse,sys,multiprocessing,json
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 #parser = argparse.ArgumentParser()
 parser.add_argument('-r','--rebuild',dest='rebuild',type=int,action='store',default=0,choices=[0,1,2], 
                     help='you can chose 1 for 1-drive or 2  2-drive rebuild along with this flag')
-
 parser.add_argument('-s', action='store_true', default=False, dest='rand', help='Random flag')
 parser.add_argument('-c','--copy',dest='copy',type=int,action='store',choices=[1,2,3],
                     help="use this option to create snap/clone 1=snapshot ,2 snap&clone both ,3-create both and assgined/connect")
-
-
-
+parser.add_argument('-o','--create',dest='create',action='store_true',default=False,help='Use this flag to create mg or volumes')
 args = parser.parse_args()
 print args
 
 MG_NAME = "manishmg1"
-CTRL_1_IP = "192.168.6.1"
+NO_OF_VOLUMES = 16
+CTRL_1_IP = "192.168.23.5"
 CTRL_2_IP = "192.168.7.2"
 
 
@@ -103,7 +101,24 @@ elif args.copy == 3:
     #logger.info("Connecting %s to the host-%s"%(clone_name,HOST_IP))
     #connect_host(CTRL_IPS, HOST_IP, clone_name)
 
-    
+if args.create:
+    	vol_list = []
+        def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
+	    helper.create_vol(size, stripe , name, reservation, md_grp, flavor)
+	    #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
+	    helper.assign(name,IP1,IP2)
+    	def multiproc(no):
+		volname= 'ML_TV'
+		for i in range(no):
+		    vol = volname+"_"+str(i)
+		    #p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
+		    p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
+		    p.start()
+		    p.join()
+		    vol_list.append(vol)
+	## starting volume creation
+	multiproc(NO_OF_VOLUMES)
+	
 
 '''
 if args.interval:
