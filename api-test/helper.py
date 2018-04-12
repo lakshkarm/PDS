@@ -22,17 +22,19 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.9'
+CHASSIS_IP = '172.25.26.15'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
-CTRL_1_IP = "192.168.6.1"
+DOMAIN_NAME = 'localhost'
+DOMAIN_TYPE = 'UNIXPWD'
+CTRL_1_IP = "192.168.23.5"
 CTRL_2_IP = "192.168.7.2"
-CTRL_NO1 = 6
-CTRL_NO2 = 10
-ZONE = 3
+CTRL_NO1 = 2
+CTRL_NO2 = 3
+ZONE = 1
 MG_NAME = "manishmg1"
 NO_OF_VOLUMES = 2
-HOST_IP = "172.25.26.215"
+HOST_IP = "172.25.26.70"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
 id_dict = {}
@@ -92,14 +94,18 @@ def run(cmd, hostname=None, password=None, logcmd=1):
 
 def log_in():
     s = requests.session()
-    r = s.post("https://" + CHASSIS_IP + "/api/v1.0/auth/login?password=" + CHASSIS_USER + "&username=" + CHASSIS_PASS,
-               {"Accept": "application/json"}, verify=False)
+## in case there is only one domain available 
+    #r = s.post("https://" + CHASSIS_IP + "/api/v1.0/auth/login?password=" + CHASSIS_USER + "&username=" + CHASSIS_PASS,
+    #           {"Accept": "application/json"}, verify=False)
+## in case if multiple doamin available 
+    r = s.post("https://" + CHASSIS_IP + "/api/v1.0/auth/login?username=" + CHASSIS_USER + "&password=" + CHASSIS_PASS + "&domain_name=" + DOMAIN_NAME + "&domain_type="       +DOMAIN_TYPE,{"Accept": "application/json"}, verify=False)
+    print r.status_code
     if(r.status_code!=200):
         print("LOGIN FAILED")
         assert(r.status_code!=0)
     jid = r.cookies["JSESSIONID"]
     xrf = r.cookies["XSRF-TOKEN"]
-    #print jid,xrf
+    print jid,xrf
     return jid, xrf
 
 def call_api(api_url, method, req_data=None):

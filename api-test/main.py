@@ -3,8 +3,8 @@ import time,argparse,sys,multiprocessing,json
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 #parser = argparse.ArgumentParser()
-parser.add_argument('-r','--rebuild',dest='rebuild',type=int,action='store',default=0,choices=[0,1,2], 
-                    help='you can chose 1 for 1-drive or 2  2-drive rebuild along with this flag')
+#parser.add_argument('-r','--rebuild',dest='rebuild',type=int,action='store',default=0,choices=[0,1,2], 
+#                    help='you can chose 1 for 1-drive or 2  2-drive rebuild along with this flag')
 parser.add_argument('-s', action='store_true', default=False, dest='rand', help='Random flag')
 parser.add_argument('-c','--copy',dest='copy',type=int,action='store',choices=[1,2,3],
                     help="use this option to create snap/clone 1=snapshot ,2 snap&clone both ,3-create both and assgined/connect")
@@ -17,7 +17,7 @@ NO_OF_VOLUMES = 16
 CTRL_1_IP = "192.168.23.5"
 CTRL_2_IP = "192.168.7.2"
 
-
+'''
 if args.rebuild == 1:
     print("starting one drive rebuld")
     device_list =  helper.used_media_in_mg(MG_NAME)
@@ -43,7 +43,7 @@ elif args.rebuild == 2:
 else:
     print("Rebuild type is not choosen")
 
-
+'''
 ### some functions 
 def create_snap_clone(c=None):
     vol_list = helper.get_existing_vols()
@@ -76,7 +76,7 @@ def create_snap_clone(c=None):
             count+=1
         return(snap_list)
 
-snap_list,clone_list = create_snap_clone(1)
+#snap_list,clone_list = create_snap_clone(1)
 
 #####
 
