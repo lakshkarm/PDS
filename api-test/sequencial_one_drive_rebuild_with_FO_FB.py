@@ -24,17 +24,19 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.9'
+CHASSIS_IP = '172.25.26.15'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
-CTRL_1_IP = "192.168.6.1"
-CTRL_2_IP = "192.168.7.2"
-CTRL_NO1 = 6
-CTRL_NO2 = 10
-ZONE = 3
+DOMAIN_NAME = 'localhost'
+DOMAIN_TYPE = 'UNIXPWD'
+CTRL_1_IP = "192.168.22.5"
+CTRL_2_IP = "192.168.23.5"
+CTRL_NO1 = 2
+CTRL_NO2 = 3
+ZONE = 1
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 1
-HOST_IP = "172.25.26.215"
+NO_OF_VOLUMES = 5
+HOST_IP = "172.25.26.70"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
 id_dict = {}
@@ -94,8 +96,10 @@ def run(cmd, hostname=None, password=None, logcmd=1):
 
 def log_in():
     s = requests.session()
-    r = s.post("https://" + CHASSIS_IP + "/api/v1.0/auth/login?password=" + CHASSIS_USER + "&username=" + CHASSIS_PASS,
-               {"Accept": "application/json"}, verify=False)
+ #    r = s.post("https://" + CHASSIS_IP + "/api/v1.0/auth/login?password=" + CHASSIS_USER + "&username=" + CHASSIS_PASS,
+ #               {"Accept": "application/json"}, verify=False)
+    r = s.post("https://" + CHASSIS_IP + "/api/v1.0/auth/login?username=" + CHASSIS_USER + "&password=" + CHASSIS_PASS + "&domain_name=" + DOMAIN_NAME + "&domain_type="       +DOMAIN_TYPE,{"Accept": "application/json"}, verify=False)
+
     if(r.status_code!=200):
         print("LOGIN FAILED")
         assert(r.status_code!=0)
@@ -621,6 +625,7 @@ if __name__=='__main__':
     #vol= 'ML_TV'
     #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
     #assign(vol,'192.168.6.1','192.168.7.2')
+    '''
     vol_list = []  
     def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
         create_vol(size, stripe , name, reservation, md_grp, flavor)
@@ -655,6 +660,7 @@ if __name__=='__main__':
     time.sleep(300)
     #collecting media used in that MG 
     ## collecting the slot if for the disks used in MG , And check its "Active" status
+    '''
     def used_media_in_mg(mgname):
         device_list = dict()
         stdout,retcode = check_media_on_chassis()
@@ -674,7 +680,6 @@ if __name__=='__main__':
     def check_disk_state(disk_no,mg):
         md_state_dict = used_media_in_mg(mg)
         return(md_state_dict[disk_no])
-
     device_list =  used_media_in_mg(MG_NAME)    
 
     ## starting rebuild for all the drives one by one
@@ -689,7 +694,7 @@ if __name__=='__main__':
             time.sleep(120)
             if check_disk_state(str(i),MG_NAME) == "Active":
                 print "Disk is Active now"
-                logging.info("starting rebuild")
+                logging.info("starting rebuild for following drive : %s"%i)
                 rebuild_media_grp(MG_NAME)
                 logger.info("next rebuild will start in 120 sec")
                 time.sleep(120)
@@ -714,6 +719,7 @@ if __name__=='__main__':
     # now start the FO/FB using cotnroller powerOff/on
     logger.info("now start the FO/FB using cotnroller powerOff/on")
     for i in range(10):
+        time.sleep(90)
         ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
 
     logger.info("Successfully completed this test")

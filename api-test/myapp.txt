@@ -449,3 +449,200 @@
 2018-04-09 23:28:21,742 : 2225 : INFO : Current task 6b7eaa13-9bd1-4ba0-a838-d8e1b38dfa65  state  Completed 
 2018-04-09 23:28:21,924 : 2225 : INFO : Assigning volume ML_TV_15 to ip 192.168.23.5
 2018-04-09 23:28:29,259 : 2225 : INFO : Current task ad0d3ab2-0f2a-4582-a7fb-a58bce939fca  state  Completed 
+2018-04-12 00:46:59,677 : 15074 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-12 00:47:07,954 : 15074 : INFO : Current task 0e38ed9e-f1fa-4883-9dd3-5fd1e98b40b5  state  Completed 
+2018-04-12 00:47:08,235 : 15074 : INFO : Assigning volume ML_TV_0 to ip 192.168.22.5,192.168.23.5
+2018-04-12 00:47:15,600 : 15074 : INFO : Current task e364657c-e38f-4b77-9877-7e42419c2e1d  state  Completed 
+2018-04-12 00:47:15,730 : 15075 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-12 00:47:23,991 : 15075 : INFO : Current task 2741a6cb-9b4f-45cb-92cb-6c414d353f9e  state  Completed 
+2018-04-12 00:47:24,268 : 15075 : INFO : Assigning volume ML_TV_1 to ip 192.168.22.5,192.168.23.5
+2018-04-12 00:47:31,623 : 15075 : INFO : Current task b36897a2-41e6-41a6-8974-6c4ed8d76336  state  Completed 
+2018-04-12 00:47:31,784 : 15076 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-12 00:47:39,978 : 15076 : INFO : Current task 6372c1f8-91a5-48e4-ac77-df8bd3b14b4a  state  Completed 
+2018-04-12 00:47:40,259 : 15076 : INFO : Assigning volume ML_TV_2 to ip 192.168.22.5,192.168.23.5
+2018-04-12 00:47:47,618 : 15076 : INFO : Current task ebbdb16a-36ec-458b-950c-b7fe1ee73e5c  state  Completed 
+2018-04-12 00:47:47,746 : 15077 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-12 00:47:55,929 : 15077 : INFO : Current task f9fa52f7-9ca5-4651-a919-40784c7d271f  state  Completed 
+2018-04-12 00:47:56,207 : 15077 : INFO : Assigning volume ML_TV_3 to ip 192.168.22.5,192.168.23.5
+2018-04-12 00:48:03,549 : 15077 : INFO : Current task 5fffdf00-b202-4ff7-9fc7-ee4273208c53  state  Completed 
+2018-04-12 00:48:03,676 : 15079 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-12 00:48:11,894 : 15079 : INFO : Current task 5260df48-e757-4f58-8a9c-6eab54aeeeb6  state  Completed 
+2018-04-12 00:48:12,178 : 15079 : INFO : Assigning volume ML_TV_4 to ip 192.168.22.5,192.168.23.5
+2018-04-12 00:48:19,513 : 15079 : INFO : Current task d66cc36b-0492-4e89-94f2-561cb01fd327  state  Completed 
+2018-04-12 02:27:55,310 : 15682 : INFO : powering off the drive 1
+2018-04-12 03:05:09,100 : 16011 : INFO : controller 2 is getting powered Off
+2018-04-12 03:09:07,680 : 16107 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-12 03:09:07,681 : 16107 : INFO : powering off controller 2
+2018-04-12 03:09:07,681 : 16114 : INFO : powering off the drive 1
+2018-04-12 03:09:07,731 : 16107 : INFO : controller 2 is getting powered Off
+2018-04-12 04:03:49,132 : 16478 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-12 04:03:49,132 : 16478 : INFO : powering off controller 2
+2018-04-12 04:03:49,133 : 16485 : INFO : powering off the drive 1
+2018-04-12 04:03:49,199 : 16478 : INFO : controller 2 is getting powered Off
+2018-04-12 04:19:53,933 : 16706 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-12 04:19:53,934 : 16713 : INFO : powering off the drive 1
+2018-04-12 04:20:08,146 : 16713 : INFO : Current task 808163e3-d347-420f-891a-758b9017c82e  state  Completed 
+2018-04-12 04:20:08,146 : 16713 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-12 04:21:08,165 : 16713 : INFO : powering on the drive 1
+2018-04-12 04:21:15,322 : 16713 : INFO : Current task 158f8123-fbac-4f56-b6a4-ff3e147affa7  state  Completed 
+2018-04-12 04:21:24,023 : 16706 : INFO : powering off controller 2
+2018-04-12 04:21:24,087 : 16706 : INFO : controller 2 is getting powered Off
+2018-04-12 04:22:27,818 : 16706 : INFO : Current task 3a66b5ac-0de6-469c-85ec-1ecdc9c15672  state  Completed 
+2018-04-12 04:23:16,637 : 16713 : INFO : waiting for 180 sec
+2018-04-12 04:23:27,941 : 16706 : INFO : controller 2 is getting powered On
+2018-04-12 04:23:35,042 : 16706 : INFO : Current task 63337e61-3980-4814-8c0d-5faa57480fa4  state  Completed 
+2018-04-12 04:23:35,042 : 16706 : INFO : next failover will triggered in 10 min
+2018-04-12 04:33:35,142 : 16706 : INFO : powering off controller 3
+2018-04-12 04:33:35,209 : 16706 : INFO : controller 3 is getting powered Off
+2018-04-12 04:34:38,690 : 16706 : INFO : Current task 93331c72-c478-42dc-b086-a9b1f31791e2  state  Completed 
+2018-04-12 04:35:38,816 : 16706 : INFO : controller 3 is getting powered On
+2018-04-12 04:35:45,914 : 16706 : INFO : Current task db10f319-98e5-419a-bebe-21ede9e19fa4  state  Completed 
+2018-04-12 04:35:45,914 : 16706 : INFO : next failover will triggered in 10 min
+2018-04-12 04:47:16,077 : 16706 : INFO : powering off controller 2
+2018-04-12 04:47:16,143 : 16706 : INFO : controller 2 is getting powered Off
+2018-04-12 04:48:19,628 : 16706 : INFO : Current task 25c71c76-5339-4199-b079-6b30b069cce6  state  Completed 
+2018-04-12 04:49:19,757 : 16706 : INFO : controller 2 is getting powered On
+2018-04-12 04:49:26,849 : 16706 : INFO : Current task 454ec614-f693-43f2-bb02-99e7cad4c903  state  Completed 
+2018-04-12 04:49:26,849 : 16706 : INFO : next failover will triggered in 10 min
+2018-04-12 04:59:26,949 : 16706 : INFO : powering off controller 3
+2018-04-12 04:59:27,010 : 16706 : INFO : controller 3 is getting powered Off
+2018-04-12 05:00:30,515 : 16706 : INFO : Current task 25313485-22c4-4aab-b3b3-81c39f3e2805  state  Completed 
+2018-04-12 05:01:30,640 : 16706 : INFO : controller 3 is getting powered On
+2018-04-12 05:01:37,730 : 16706 : INFO : Current task 6473eceb-f41d-4971-ab0f-8affe13867e1  state  Completed 
+2018-04-12 05:01:37,731 : 16706 : INFO : next failover will triggered in 10 min
+2018-04-12 05:13:07,921 : 16706 : INFO : powering off controller 2
+2018-04-12 05:13:07,994 : 16706 : INFO : controller 2 is getting powered Off
+2018-04-12 05:14:11,482 : 16706 : INFO : Current task 9cb0c0cc-21c7-4392-b198-d12ddc14c434  state  Completed 
+2018-04-12 05:15:11,604 : 16706 : INFO : controller 2 is getting powered On
+2018-04-12 05:15:18,696 : 16706 : INFO : Current task 11a0e5e1-0d3a-402b-91b1-39b30e582a79  state  Completed 
+2018-04-12 05:15:18,697 : 16706 : INFO : next failover will triggered in 10 min
+2018-04-12 05:25:18,723 : 16706 : INFO : powering off controller 3
+2018-04-12 05:25:18,787 : 16706 : INFO : controller 3 is getting powered Off
+2018-04-12 05:41:29,556 : 18957 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-12 05:41:29,557 : 18964 : INFO : powering off the drive 1
+2018-04-12 05:41:44,981 : 18964 : INFO : Current task 1c8b4e63-eb22-4221-b173-2fd49408b9f8  state  Completed 
+2018-04-12 05:41:44,981 : 18964 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-12 05:42:45,042 : 18964 : INFO : powering on the drive 1
+2018-04-12 05:42:52,194 : 18964 : INFO : Current task f2fef6f7-0314-4b7d-ada1-d72b865108dd  state  Completed 
+2018-04-12 05:42:59,647 : 18957 : INFO : powering off controller 2
+2018-04-12 05:42:59,716 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 05:44:03,193 : 18957 : INFO : Current task e0b1437e-f93a-43e3-9de8-ffaf56b203b5  state  Completed 
+2018-04-12 05:44:53,444 : 18964 : INFO : waiting for 180 sec
+2018-04-12 05:45:03,291 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 05:45:10,381 : 18957 : INFO : Current task f909dcab-9d97-485c-9b8b-ac2956b47bd3  state  Completed 
+2018-04-12 05:45:10,381 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 05:55:10,481 : 18957 : INFO : powering off controller 3
+2018-04-12 05:55:10,552 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 05:56:14,033 : 18957 : INFO : Current task f2704cca-f15e-4c62-a45c-83a5b5953578  state  Completed 
+2018-04-12 05:57:14,160 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 05:57:21,250 : 18957 : INFO : Current task 6f6d27b3-e84a-43e3-933e-2dab700172dc  state  Completed 
+2018-04-12 05:57:21,250 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 06:08:51,440 : 18957 : INFO : powering off controller 2
+2018-04-12 06:08:51,507 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 06:09:54,983 : 18957 : INFO : Current task 91b85cd5-1063-4120-bfb0-741f8f9e2413  state  Completed 
+2018-04-12 06:10:55,110 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 06:11:02,200 : 18957 : INFO : Current task d6d7f5b6-0fb5-42c6-ae82-7b806e42a341  state  Completed 
+2018-04-12 06:11:02,200 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 06:21:02,301 : 18957 : INFO : powering off controller 3
+2018-04-12 06:21:02,370 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 06:22:05,846 : 18957 : INFO : Current task 814028e1-2a87-4f96-a87d-b8aab39a9e0c  state  Completed 
+2018-04-12 06:23:05,970 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 06:23:13,060 : 18957 : INFO : Current task f89755c1-8e88-46e8-862c-648580b5850f  state  Completed 
+2018-04-12 06:23:13,060 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 06:34:43,250 : 18957 : INFO : powering off controller 2
+2018-04-12 06:34:43,317 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 06:35:46,798 : 18957 : INFO : Current task c634432c-8a33-4a26-a09f-5218482e84bb  state  Completed 
+2018-04-12 06:36:46,922 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 06:36:54,013 : 18957 : INFO : Current task 4ba60019-8659-4453-9ea3-ebb97a23c291  state  Completed 
+2018-04-12 06:36:54,014 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 06:46:54,114 : 18957 : INFO : powering off controller 3
+2018-04-12 06:46:54,181 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 06:47:57,659 : 18957 : INFO : Current task de5a19fb-f3d5-432e-8c55-e642afee762f  state  Completed 
+2018-04-12 06:48:57,784 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 06:49:04,874 : 18957 : INFO : Current task 0dea5fac-c152-4a14-a0c0-56b5961450f8  state  Completed 
+2018-04-12 06:49:04,874 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 07:00:35,064 : 18957 : INFO : powering off controller 2
+2018-04-12 07:00:35,130 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 07:01:38,609 : 18957 : INFO : Current task 64ab317b-8ce9-4ce2-90ee-0879975182e4  state  Completed 
+2018-04-12 07:02:38,733 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 07:02:45,821 : 18957 : INFO : Current task 6a03d2ce-f792-4372-9c4f-a278c78d3ce7  state  Completed 
+2018-04-12 07:02:45,822 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 07:12:45,922 : 18957 : INFO : powering off controller 3
+2018-04-12 07:12:45,987 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 07:13:49,467 : 18957 : INFO : Current task bea8a6c9-8cd4-4e58-8c5c-fb940a63c64e  state  Completed 
+2018-04-12 07:14:49,591 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 07:14:56,681 : 18957 : INFO : Current task 9c6b1f1f-83e1-4091-85cd-2247e5a5ce02  state  Completed 
+2018-04-12 07:14:56,682 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 07:26:26,872 : 18957 : INFO : powering off controller 2
+2018-04-12 07:26:26,939 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 07:27:30,415 : 18957 : INFO : Current task 7116b62f-fbc4-4de4-98d1-1590538b3125  state  Completed 
+2018-04-12 07:28:30,537 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 07:28:37,627 : 18957 : INFO : Current task 03403ab6-9b27-4051-89bf-afb7701cdf71  state  Completed 
+2018-04-12 07:28:37,627 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 07:38:37,727 : 18957 : INFO : powering off controller 3
+2018-04-12 07:38:37,792 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 07:39:41,268 : 18957 : INFO : Current task fd9797d4-73cc-490e-925b-521a820fa003  state  Completed 
+2018-04-12 07:40:41,392 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 07:40:48,483 : 18957 : INFO : Current task ab4da0b5-3d4f-4871-bb35-b7d2526ef227  state  Completed 
+2018-04-12 07:40:48,483 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 07:52:18,673 : 18957 : INFO : powering off controller 2
+2018-04-12 07:52:18,738 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 07:53:22,215 : 18957 : INFO : Current task 7fdce85d-db60-40f8-bbad-89753aba0abc  state  Completed 
+2018-04-12 07:54:22,339 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 07:54:29,428 : 18957 : INFO : Current task f4910cb5-4bd0-4864-9376-a554bba8a10b  state  Completed 
+2018-04-12 07:54:29,428 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 08:04:29,528 : 18957 : INFO : powering off controller 3
+2018-04-12 08:04:29,594 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 08:05:33,077 : 18957 : INFO : Current task 41b30268-d434-4e2e-bf7e-5e40ee917809  state  Completed 
+2018-04-12 08:06:33,203 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 08:06:40,293 : 18957 : INFO : Current task fbad3f8e-d38f-4488-8855-6891c33b6b25  state  Completed 
+2018-04-12 08:06:40,293 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 08:18:10,483 : 18957 : INFO : powering off controller 2
+2018-04-12 08:18:10,549 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 08:19:14,025 : 18957 : INFO : Current task a394c0b5-39a3-4944-99ba-9c2fc01f9917  state  Completed 
+2018-04-12 08:20:14,159 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 08:20:21,251 : 18957 : INFO : Current task 835bc6ee-65a8-4c3c-9906-dc449c21fb30  state  Completed 
+2018-04-12 08:20:21,251 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 08:30:21,351 : 18957 : INFO : powering off controller 3
+2018-04-12 08:30:21,419 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 08:31:24,897 : 18957 : INFO : Current task e1e06ad3-d0c8-44a0-aad6-ab06d7981597  state  Completed 
+2018-04-12 08:32:25,022 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 08:32:32,111 : 18957 : INFO : Current task c9f65305-ae9c-425c-b6ac-c25ae1b9dbdf  state  Completed 
+2018-04-12 08:32:32,111 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 08:44:02,301 : 18957 : INFO : powering off controller 2
+2018-04-12 08:44:02,366 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 08:45:05,840 : 18957 : INFO : Current task 3cd31b7c-ec73-4b5a-8412-fbc8bce13426  state  Completed 
+2018-04-12 08:46:05,940 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 08:46:13,031 : 18957 : INFO : Current task f166d464-2b6b-4bd1-b90d-030de2d224cc  state  Completed 
+2018-04-12 08:46:13,031 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 08:56:13,131 : 18957 : INFO : powering off controller 3
+2018-04-12 08:56:13,197 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 08:57:16,676 : 18957 : INFO : Current task a6560a01-aa0b-4b43-8f0c-1ec525356316  state  Completed 
+2018-04-12 08:58:16,801 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 08:58:23,891 : 18957 : INFO : Current task cdb40bd6-16d3-43e5-a633-809925c92587  state  Completed 
+2018-04-12 08:58:23,892 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 09:09:54,082 : 18957 : INFO : powering off controller 2
+2018-04-12 09:09:54,146 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 09:10:57,622 : 18957 : INFO : Current task 59f5ad41-9e7e-4c59-8b40-5675c2d4d65e  state  Completed 
+2018-04-12 09:11:57,746 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 09:12:04,834 : 18957 : INFO : Current task 0543558b-f71a-4185-b6e3-30377e0070be  state  Completed 
+2018-04-12 09:12:04,835 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 09:22:04,935 : 18957 : INFO : powering off controller 3
+2018-04-12 09:22:05,001 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 09:23:08,478 : 18957 : INFO : Current task 6ce60995-ea1c-4d52-9f4f-ca70204508d5  state  Completed 
+2018-04-12 09:24:08,603 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 09:24:15,693 : 18957 : INFO : Current task c572171a-9f28-48f9-84c3-16991c1f68aa  state  Completed 
+2018-04-12 09:24:15,693 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 09:35:45,883 : 18957 : INFO : powering off controller 2
+2018-04-12 09:35:45,952 : 18957 : INFO : controller 2 is getting powered Off
+2018-04-12 09:36:49,431 : 18957 : INFO : Current task 7b9083a7-9b96-49fb-95d0-ad2db32ed230  state  Completed 
+2018-04-12 09:37:49,553 : 18957 : INFO : controller 2 is getting powered On
+2018-04-12 09:37:56,642 : 18957 : INFO : Current task 01bb6c7e-d42a-48ad-86b9-48c1c9ec3ce1  state  Completed 
+2018-04-12 09:37:56,642 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 09:47:56,742 : 18957 : INFO : powering off controller 3
+2018-04-12 09:47:56,808 : 18957 : INFO : controller 3 is getting powered Off
+2018-04-12 09:49:00,282 : 18957 : INFO : Current task dae7512a-9543-42a0-a8a7-c1ec65dff6f6  state  Completed 
+2018-04-12 09:50:00,408 : 18957 : INFO : controller 3 is getting powered On
+2018-04-12 09:50:07,498 : 18957 : INFO : Current task fa669747-312a-43a3-8c6c-788d5fae443d  state  Completed 
+2018-04-12 09:50:07,499 : 18957 : INFO : next failover will triggered in 10 min
+2018-04-12 10:00:07,599 : 18957 : INFO : Successfully completed this test
