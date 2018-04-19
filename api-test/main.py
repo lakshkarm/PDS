@@ -15,55 +15,13 @@ args = parser.parse_args()
 print args
 
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 5
-CTRL_1_IP = "192.168.22.5"
-CTRL_2_IP = "192.168.23.5"
-CTRL_NO1 = 2
-CTRL_NO2 = 3
+NO_OF_VOLUMES = 8
+CTRL_1_IP = "192.168.6.1"
+CTRL_2_IP = "192.168.7.2"
+CTRL_NO1 = 6
+CTRL_NO2 = 10
 
-
-if args.failover:
-    def ctrl_poweroff_on(ctrl_no1,crtl_no2):
-        ctrls = locals() ## locals() retruns dict for function local variables
-        for i in ctrls:
-            slot = ctrls[i]
-            #logger.info("powering off controller %s"%slot)
-            print("powering off controller %s"%slot)
-            helper.ctrl_poweroff(slot)
-            time.sleep(60)
-            helper.ctrl_poweron(slot)
-            #logger.info("next failover will triggered in 10 min")
-            print("next failover will triggered in 10 min")
-            time.sleep(600)
-    for i in range(10):
-        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2)
-
-if args.rebuild == 1:
-    print("starting one drive rebuld")
-    device_list =  helper.used_media_in_mg(MG_NAME)
-    print device_list
-    rebuild_no = 0
-    for i in device_list:
-        helper.drive_poweroff(i)
-        logger.info("wating for 60 sec to confirm the disk status ")
-        time.sleep(60)
-        logging.info("drive got powered off successfully")
-        helper.drive_poweron(i)
-        time.sleep(120)
-        if check_disk_state(str(i),MG_NAME) == "Active":
-            print "Disk is Active now"
-            logging.info("starting rebuild")
-            helper.rebuild_media_grp(MG_NAME)
-            logger.info("next rebuild will start in 120 sec")
-            time.sleep(120)
-            logger.info("Rebuild iteration %s completed "%rebuild_no)
-        rebuild_no += 1
-elif args.rebuild == 2:
-    print("2 drive rebuld function not yet implemented")
-else:
-    print("Rebuild type is not choosen")
-
-### some functions 
+### some needed functions
 def create_snap_clone(c=None):
     vol_list = helper.get_existing_vols()
     print vol_list
@@ -97,8 +55,61 @@ def create_snap_clone(c=None):
 
 #snap_list,clone_list = create_snap_clone(1)
 
-#####
+'''
+if args.failover:
+    def ctrl_poweroff_on(ctrl_no1,crtl_no2):
+        ctrls = locals() ## locals() retruns dict for function local variables
+        for i in ctrls:
+            slot = ctrls[i]
+            #logger.info("powering off controller %s"%slot)
+            print("powering off controller %s"%slot)
+            helper.ctrl_poweroff(slot)
+            time.sleep(60)
+            helper.ctrl_poweron(slot)
+            #logger.info("next failover will triggered in 10 min")
+            print("next failover will triggered in 10 min")
+            time.sleep(600)
+    for i in range(10):
+        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2)
+elif args.rebuild == 1 and args.failover:
+    p = []
+    p.append(multiprocessing.Process(target=power_on_drives, args=(d1,)))
+    p.append(multiprocessing.Process(target=power_on_drives, args=(d1,)))
+    for j in range(0,len(p)):
+        p[j].start()
+    for j in range(0,len(p)):
+        if p[j].is_alive():
+                p[j].join()
 
+
+
+if args.rebuild == 1:
+    print("starting one drive rebuld")
+    device_list =  helper.used_media_in_mg(MG_NAME)
+    print device_list
+    rebuild_no = 0
+    for i in device_list:
+        helper.drive_poweroff(i)
+        logger.info("wating for 60 sec to confirm the disk status ")
+        time.sleep(60)
+        logging.info("drive got powered off successfully")
+        helper.drive_poweron(i)
+        time.sleep(120)
+        if check_disk_state(str(i),MG_NAME) == "Active":
+            print "Disk is Active now"
+            logging.info("starting rebuild")
+            helper.rebuild_media_grp(MG_NAME)
+            logger.info("next rebuild will start in 120 sec")
+            time.sleep(120)
+            logger.info("Rebuild iteration %s completed "%rebuild_no)
+        rebuild_no += 1
+elif args.rebuild == 2:
+    print("2 drive rebuld function not yet implemented")
+else:
+    print("Rebuild type is not choosen")
+
+#####
+'''
 if args.copy == 1:
     print("only snapshots will be taken now ")
     snap_list = create_snap_clone()
@@ -123,20 +134,20 @@ elif args.copy == 3:
 if args.create:
     	vol_list = []
         def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
-	    helper.create_vol(size, stripe , name, reservation, md_grp, flavor)
-	    #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
-	    helper.assign(name,IP1,IP2)
+	        helper.create_vol(size, stripe , name, reservation, md_grp, flavor)
+	        helper.assign(name,IP1,IP2)
+
     	def multiproc(no):
-		volname= 'ML_TV'
-		for i in range(no):
-		    vol = volname+"_"+str(i)
-		    p = multiprocessing.Process(target=create_assign_vol,args=('300', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
-		    #p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
-		    p.start()
-		    p.join()
-		    vol_list.append(vol)
-	## starting volume creation
-	multiproc(NO_OF_VOLUMES)
+            volname= 'ML_TV'
+            for i in range(no):
+                vol = volname+"_"+str(i)
+                p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
+                #p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
+                p.start()
+                p.join()
+                vol_list.append(vol)
+## starting volume creation
+multiproc(NO_OF_VOLUMES)
 	
 
  #if args.interval:
@@ -167,6 +178,6 @@ def create_snap_clone(c=None):
             snap_list.append(snap_name)
             count+=1
 
-#create_snap_clone()
+#create_snap_clone(1)
 
 

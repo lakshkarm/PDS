@@ -22,19 +22,19 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.15'
+CHASSIS_IP = '172.25.26.9'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
 DOMAIN_NAME = 'localhost'
 DOMAIN_TYPE = 'UNIXPWD'
-CTRL_1_IP = "192.168.23.5"
+CTRL_1_IP = "192.168.6.1"
 CTRL_2_IP = "192.168.7.2"
-CTRL_NO1 = 2
-CTRL_NO2 = 3
-ZONE = 1
+CTRL_NO1 = 6
+CTRL_NO2 = 10
+ZONE = 3
 MG_NAME = "manishmg1"
 NO_OF_VOLUMES = 2
-HOST_IP = "172.25.26.70"
+HOST_IP = "172.25.26.215"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
 id_dict = {}
@@ -258,38 +258,44 @@ def get_volume_nqn(vol_name):
 
 def assign(vol_name, ip1,ip2=None):
     url = "https://%s/api/v1.0/storage/volumes/%s/assign"%(CHASSIS_IP,get_object_id('volume', vol_name))
-    if ip1 and ip2:
-        port1 = get_port_id_volume(vol_name, ip1)
-        port2 = get_port_id_volume(vol_name, ip2)
-        data = {
-                "protocol": 1,
-                "nwlist": [],
-                "controllers": [],
-                "ports": [port1,port2],
-                "controller_id": -1,
-                "hostnqn":[]
-                }
-        logger.info('Assigning volume %s to ip %s,%s'%(vol_name, ip1,ip2))
-        stdout,retcode =  call_api(url,'POST', data)
-        error_check(stdout , retcode)
-        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        wait_till_task_completes(taskid)
-    else:
-        port = get_port_id_volume(vol_name, ip1)
-        data = {
+    try:
+        if ip1 and ip2:
+            port1 = get_port_id_volume(vol_name, ip1)
+            port2 = get_port_id_volume(vol_name, ip2)
+            data = {
                     "protocol": 1,
                     "nwlist": [],
                     "controllers": [],
-                    "ports": [port],
+                    "ports": [port1,port2],
                     "controller_id": -1,
                     "hostnqn":[]
-              }   
-        logger.info('Assigning volume %s to ip %s'%(vol_name, ip1))
-        stdout,retcode =  call_api(url,'POST', data)
-        #assert(stdout['error'] == 0)
-        error_check(stdout , retcode)
-        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        wait_till_task_completes(taskid)
+                    }
+            logger.info('Assigning volume %s to ip %s,%s'%(vol_name, ip1,ip2))
+            stdout,retcode =  call_api(url,'POST', data)
+            error_check(stdout , retcode)
+            taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+            wait_till_task_completes(taskid)
+    except ValueError as e:
+        logger.error("Opps!! looks controllers are not up | NO IP assigned | NOT in Active state : (%s)"%e)        
+    else:
+        try:
+            port = get_port_id_volume(vol_name, ip1)
+            data = {
+                        "protocol": 1,
+                        "nwlist": [],
+                        "controllers": [],
+                        "ports": [port],
+                        "controller_id": -1,
+                        "hostnqn":[]
+                  }   
+            logger.info('Assigning volume %s to ip %s'%(vol_name, ip1))
+            stdout,retcode =  call_api(url,'POST', data)
+            #assert(stdout['error'] == 0)
+            error_check(stdout , retcode)
+            taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+            wait_till_task_completes(taskid)
+        except ValueError as e:
+            logger.error("Opps!! looks controllers are not up | NO IP assigned | NOT in Active state : (%s)"%e)
 
 def unassign(vol_name):
     url = 'https://%s/api/v1.0/storage/volumes/unassign'%CHASSIS_IP

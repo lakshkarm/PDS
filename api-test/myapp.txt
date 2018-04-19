@@ -646,3 +646,318 @@
 2018-04-12 09:50:07,498 : 18957 : INFO : Current task fa669747-312a-43a3-8c6c-788d5fae443d  state  Completed 
 2018-04-12 09:50:07,499 : 18957 : INFO : next failover will triggered in 10 min
 2018-04-12 10:00:07,599 : 18957 : INFO : Successfully completed this test
+2018-04-13 03:23:06,525 : 3442 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-13 03:23:07,145 : 3442 : ERROR : Failed to create volume, duplicate volume name : 200
+2018-04-13 03:23:07,318 : 3443 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-13 03:23:07,934 : 3443 : ERROR : Failed to create volume, duplicate volume name : 200
+2018-04-13 03:23:08,106 : 3444 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-13 03:23:08,722 : 3444 : ERROR : Failed to create volume, duplicate volume name : 200
+2018-04-13 03:23:08,894 : 3445 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-13 03:23:09,509 : 3445 : ERROR : Failed to create volume, duplicate volume name : 200
+2018-04-13 03:23:09,682 : 3446 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'8c3bc247-3276-45b7-aeaf-fd3f700147cb', 'size': '300'}
+2018-04-13 03:24:25,336 : 3472 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 03:24:32,974 : 3472 : INFO : Current task f3ea19e0-2652-4593-9225-2ace1b11f73e  state  Completed 
+2018-04-13 03:24:33,394 : 3472 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 03:24:33,662 : 3473 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 03:24:41,569 : 3473 : INFO : Current task 0ee15720-da1a-4a78-8665-81e30aa922f4  state  Completed 
+2018-04-13 03:24:41,987 : 3473 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 03:24:42,241 : 3474 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 03:24:50,156 : 3474 : INFO : Current task 03c60e50-1ca1-45f2-951d-4d9d802f599d  state  Completed 
+2018-04-13 03:24:50,574 : 3474 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-13 03:24:50,831 : 3475 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 03:24:58,732 : 3475 : INFO : Current task 97ea2df2-3137-4de8-ac9e-ccb852528540  state  Completed 
+2018-04-13 03:24:59,153 : 3475 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-13 03:24:59,411 : 3476 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 03:25:07,326 : 3476 : INFO : Current task c25b8c72-fd1a-457d-bf76-35f658a69462  state  Completed 
+2018-04-13 03:25:07,745 : 3476 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-13 04:35:04,333 : 3704 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 04:35:11,950 : 3704 : INFO : Current task b5f4d117-d15a-4c88-95c3-9851ed6879b3  state  Completed 
+2018-04-13 04:35:12,365 : 3704 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 04:35:12,439 : 3704 : ERROR : Opps!! looks controllers are not up | NO IP assigned | NOT in Active state : (No JSON object could be decoded)
+2018-04-13 05:58:21,640 : 3914 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 05:58:29,257 : 3914 : INFO : Current task a2749ec6-7e9d-4409-9490-2070fb85abd0  state  Completed 
+2018-04-13 05:58:29,666 : 3914 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 05:58:29,742 : 3914 : ERROR : Opps!! looks controllers are not up | NO IP assigned | NOT in Active state : (No JSON object could be decoded)
+2018-04-13 05:58:29,917 : 3915 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 05:58:37,815 : 3915 : INFO : Current task 3467c3d0-4c12-49e5-9e2e-0702562a3ab0  state  Completed 
+2018-04-13 05:58:38,231 : 3915 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 05:58:38,306 : 3915 : ERROR : Opps!! looks controllers are not up | NO IP assigned | NOT in Active state : (No JSON object could be decoded)
+2018-04-13 05:58:38,499 : 3916 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 05:58:46,403 : 3916 : INFO : Current task 506b08f5-5b21-4232-9be6-30efcf204ed1  state  Completed 
+2018-04-13 05:58:46,814 : 3916 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-13 05:58:46,888 : 3916 : ERROR : Opps!! looks controllers are not up | NO IP assigned | NOT in Active state : (No JSON object could be decoded)
+2018-04-13 05:58:47,062 : 3917 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:04:01,453 : 3964 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:04:09,094 : 3964 : INFO : Current task 1cd61e61-32ef-4a36-b147-fcdc514abb64  state  Completed 
+2018-04-13 06:04:09,507 : 3964 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:04:16,858 : 3964 : INFO : Current task 5dcb0546-0b4e-4999-967c-eb634632d5b8  state  Completed 
+2018-04-13 06:04:16,997 : 3964 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-13 06:04:17,181 : 3964 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:04:17,355 : 3965 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:04:25,274 : 3965 : INFO : Current task 6051f12d-ad58-452c-b30a-46ef286580e9  state  Completed 
+2018-04-13 06:04:25,686 : 3965 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:04:33,029 : 3965 : INFO : Current task c491caef-3fbe-4fc5-a8c8-ef0758490c41  state  Completed 
+2018-04-13 06:04:33,171 : 3965 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1
+2018-04-13 06:04:33,363 : 3965 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:04:33,537 : 3966 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:04:41,484 : 3966 : INFO : Current task 0221e00e-234a-4e8b-955d-dfb3123fef19  state  Completed 
+2018-04-13 06:04:41,902 : 3966 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:04:49,247 : 3966 : INFO : Current task 8f81c8e4-79bb-47fc-a9b3-a2536c4d585f  state  Completed 
+2018-04-13 06:04:49,388 : 3966 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1
+2018-04-13 06:04:49,577 : 3966 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:04:49,749 : 3967 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:04:57,701 : 3967 : INFO : Current task 9aef587a-3530-4f88-a239-08874fbc8eb8  state  Completed 
+2018-04-13 06:04:58,107 : 3967 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:05:05,446 : 3967 : INFO : Current task 46165c89-88cf-4f19-beb9-603230ef01a1  state  Completed 
+2018-04-13 06:05:05,586 : 3967 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1
+2018-04-13 06:05:05,767 : 3967 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:05:05,940 : 3968 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:05:13,843 : 3968 : INFO : Current task 0c68e955-0d90-4dae-89c0-000efa6dea1e  state  Completed 
+2018-04-13 06:05:14,258 : 3968 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:05:21,602 : 3968 : INFO : Current task b10430f5-209e-4bdd-a2ed-2ef29711bcd4  state  Completed 
+2018-04-13 06:05:21,743 : 3968 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1
+2018-04-13 06:05:21,933 : 3968 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:17:43,087 : 4007 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:26:44,362 : 4113 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:30:29,577 : 4155 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:30:37,221 : 4155 : INFO : Current task 6accd032-120a-43ba-9eea-f30bd60240dc  state  Completed 
+2018-04-13 06:30:37,634 : 4155 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:30:44,970 : 4155 : INFO : Current task 767dd51f-d746-46d7-bec2-950fad93f67d  state  Completed 
+2018-04-13 06:30:45,109 : 4155 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-13 06:30:45,296 : 4155 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:30:45,471 : 4157 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:30:53,431 : 4157 : INFO : Current task d2bab0d1-e4ac-4199-9355-4536937d73b1  state  Completed 
+2018-04-13 06:30:53,837 : 4157 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:34:07,131 : 4175 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:34:14,746 : 4175 : INFO : Current task df8b8753-a981-4309-8f4e-f0f4732f64fe  state  Completed 
+2018-04-13 06:34:15,155 : 4175 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:34:22,506 : 4175 : INFO : Current task e109d421-8457-40aa-8bbb-1074c00fe3e6  state  Completed 
+2018-04-13 06:34:22,647 : 4175 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-13 06:34:23,002 : 4176 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:34:30,918 : 4176 : INFO : Current task f6044ea4-2900-48e6-97d3-637a1e7bc663  state  Completed 
+2018-04-13 06:34:31,325 : 4176 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:34:38,662 : 4176 : INFO : Current task 7dc76eb0-2cfc-470b-9978-5ace9bbd92bc  state  Completed 
+2018-04-13 06:34:38,800 : 4176 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1
+2018-04-13 06:34:39,153 : 4177 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:36:00,364 : 4186 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:36:07,975 : 4186 : INFO : Current task 0f816c38-216e-4de8-be70-82d31b020b40  state  Completed 
+2018-04-13 06:36:08,381 : 4186 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:36:15,717 : 4186 : INFO : Current task f414b6cc-67c6-4136-8b25-58be5a641880  state  Completed 
+2018-04-13 06:36:15,855 : 4186 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-13 06:36:16,044 : 4186 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:36:16,217 : 4187 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:36:24,116 : 4187 : INFO : Current task a1badd6a-b762-4af3-854e-6879ecb49f80  state  Completed 
+2018-04-13 06:36:24,529 : 4187 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:44:09,853 : 4215 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:44:17,489 : 4215 : INFO : Current task 045c9238-e960-4f9b-9da1-cb3439e96699  state  Completed 
+2018-04-13 06:44:17,896 : 4215 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:44:24,174 : 4215 : INFO : Current task 8e19348c-cd6e-4b4e-9774-9099315ff76c  state  Completed 
+2018-04-13 06:44:24,316 : 4215 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-13 06:44:24,502 : 4215 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:44:24,676 : 4216 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:52:13,324 : 4290 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:52:20,951 : 4290 : INFO : Current task 05b13b77-f00b-4bc6-844a-24cbe5965a00  state  Completed 
+2018-04-13 06:52:21,362 : 4290 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:52:28,699 : 4290 : INFO : Current task 7ae3d17d-822a-4761-8e8c-5c0b317adbbd  state  Completed 
+2018-04-13 06:52:28,841 : 4290 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-13 06:52:29,020 : 4290 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:52:29,192 : 4291 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:52:37,093 : 4291 : INFO : Current task 82bdf9cf-872c-4e2f-9660-838deb6fb45b  state  Completed 
+2018-04-13 06:52:37,499 : 4291 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:52:44,837 : 4291 : INFO : Current task dc1a50ca-18b4-48df-acc7-89c9721908d4  state  Completed 
+2018-04-13 06:52:44,977 : 4291 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1
+2018-04-13 06:52:45,159 : 4291 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:52:45,332 : 4292 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:52:53,226 : 4292 : INFO : Current task 13bbf85a-6175-47ce-9a2a-c1fa573fc0bb  state  Completed 
+2018-04-13 06:52:53,634 : 4292 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:53:00,981 : 4292 : INFO : Current task b1fcf403-c58d-4ad1-a69d-efade2994cd3  state  Completed 
+2018-04-13 06:53:01,124 : 4292 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1
+2018-04-13 06:53:01,306 : 4292 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:53:01,484 : 4294 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:53:09,385 : 4294 : INFO : Current task 83847b52-a1f5-4c32-a2f3-abad248aeee3  state  Completed 
+2018-04-13 06:53:09,797 : 4294 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:53:17,133 : 4294 : INFO : Current task a515c433-201f-4222-865f-0ba8004b86a5  state  Completed 
+2018-04-13 06:53:17,272 : 4294 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1
+2018-04-13 06:53:17,454 : 4294 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-13 06:53:17,627 : 4295 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'5b57eee1-fa0f-4835-8511-1ffda10e0eaf', 'size': '300'}
+2018-04-13 06:53:25,554 : 4295 : INFO : Current task dea04e4b-ebaf-4c68-a815-2f3ef24addf7  state  Completed 
+2018-04-13 06:53:25,963 : 4295 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-13 06:53:33,305 : 4295 : INFO : Current task 0171a5e1-bbd8-4d69-91a4-875512cd7129  state  Completed 
+2018-04-13 06:53:33,448 : 4295 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1
+2018-04-13 06:53:33,635 : 4295 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:49:18,974 : 4254 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:49:26,611 : 4254 : INFO : Current task b2a77579-a8e0-4938-bfb6-f8c345428454  state  Completed 
+2018-04-17 04:49:27,033 : 4254 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:49:34,389 : 4254 : INFO : Current task 616b91f2-02f9-4230-9eff-683aac294f11  state  Completed 
+2018-04-17 04:49:34,534 : 4254 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-17 04:49:34,723 : 4254 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:49:34,896 : 4255 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:49:42,903 : 4255 : INFO : Current task 8c802970-d848-4e64-a8fb-2d64b3880e13  state  Completed 
+2018-04-17 04:49:43,322 : 4255 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:49:50,672 : 4255 : INFO : Current task 70c9a66e-676f-4235-9084-469d13271263  state  Completed 
+2018-04-17 04:49:50,814 : 4255 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1
+2018-04-17 04:49:51,018 : 4255 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:49:51,189 : 4256 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:49:59,202 : 4256 : INFO : Current task da2023dd-526e-410c-b113-275106078287  state  Completed 
+2018-04-17 04:49:59,623 : 4256 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:50:06,967 : 4256 : INFO : Current task 4447ffd1-66d7-4faf-a3a2-3b45ac91327e  state  Completed 
+2018-04-17 04:50:07,110 : 4256 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1
+2018-04-17 04:50:07,296 : 4256 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:50:07,468 : 4262 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:50:15,378 : 4262 : INFO : Current task ff64c7de-5434-409b-9b5b-a4e4f73050c1  state  Completed 
+2018-04-17 04:50:15,791 : 4262 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:50:23,155 : 4262 : INFO : Current task d28c5c71-a4b3-4577-b14d-211f494f1952  state  Completed 
+2018-04-17 04:50:23,295 : 4262 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1
+2018-04-17 04:50:23,486 : 4262 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:50:23,657 : 4263 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:50:31,565 : 4263 : INFO : Current task ac89d5b9-f8b4-42bc-bd9f-42094e6b9204  state  Completed 
+2018-04-17 04:50:31,986 : 4263 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:50:39,339 : 4263 : INFO : Current task 930a03d6-d705-4b2e-b3f1-087001b523eb  state  Completed 
+2018-04-17 04:50:39,480 : 4263 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1
+2018-04-17 04:50:39,665 : 4263 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:50:39,835 : 4264 : INFO : creating volume ML_TV_5 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_5', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:50:47,749 : 4264 : INFO : Current task 0442c50e-fe9c-49c3-ae89-821f3230cd7d  state  Completed 
+2018-04-17 04:50:48,160 : 4264 : INFO : Assigning volume ML_TV_5 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:50:55,500 : 4264 : INFO : Current task 9a246691-be4a-43ca-a757-20a67cc22ff6  state  Completed 
+2018-04-17 04:50:55,641 : 4264 : INFO : Assigning volume ML_TV_5 to ip 192.168.6.1
+2018-04-17 04:50:55,829 : 4264 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:50:56,002 : 4265 : INFO : creating volume ML_TV_6 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_6', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:51:03,908 : 4265 : INFO : Current task b45ced2c-ce46-4a46-8c44-0ba3d3ac6790  state  Completed 
+2018-04-17 04:51:04,324 : 4265 : INFO : Assigning volume ML_TV_6 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:51:11,673 : 4265 : INFO : Current task 1219586c-92fe-4ef3-8b27-8498a4a5f794  state  Completed 
+2018-04-17 04:51:11,815 : 4265 : INFO : Assigning volume ML_TV_6 to ip 192.168.6.1
+2018-04-17 04:51:11,999 : 4265 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 04:51:12,168 : 4266 : INFO : creating volume ML_TV_7 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_7', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'adbeb7f9-1410-4469-a93d-431d6474d043', 'size': '120'}
+2018-04-17 04:51:20,174 : 4266 : INFO : Current task 58b1dc2d-4783-4899-aebc-ee4958f4cef1  state  Completed 
+2018-04-17 04:51:20,586 : 4266 : INFO : Assigning volume ML_TV_7 to ip 192.168.6.1,192.168.7.2
+2018-04-17 04:51:27,943 : 4266 : INFO : Current task f49b4c6e-f310-42d0-93e1-b208a632585b  state  Completed 
+2018-04-17 04:51:28,084 : 4266 : INFO : Assigning volume ML_TV_7 to ip 192.168.6.1
+2018-04-17 04:51:28,287 : 4266 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-17 06:11:36,416 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-17 06:11:44,183 : 5383 : INFO : Current task 3a5af2ac-4873-4067-bdd6-cb9bce94ffcb  state  Completed 
+2018-04-17 06:11:44,248 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-17 06:11:52,015 : 5383 : INFO : Current task a1492d61-a40c-4a9f-aa54-e49d9a952006  state  Completed 
+2018-04-17 06:11:52,080 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-17 06:11:59,828 : 5383 : INFO : Current task c21deb63-957f-4854-aef9-50e45a54deaa  state  Completed 
+2018-04-17 06:11:59,894 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-17 06:12:07,707 : 5383 : INFO : Current task 96f24215-c6fa-4c74-906c-75bb7d4d4494  state  Completed 
+2018-04-17 06:12:07,780 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-17 06:12:15,519 : 5383 : INFO : Current task b944e7e9-d6dc-4367-9ffd-f886171142f2  state  Completed 
+2018-04-17 06:12:15,584 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_5
+2018-04-17 06:12:23,349 : 5383 : INFO : Current task dca8c264-5448-4de9-a42c-ce67ff2bd44d  state  Completed 
+2018-04-17 06:12:23,414 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_6
+2018-04-17 06:12:31,169 : 5383 : INFO : Current task 4499659f-93a4-4383-bdcb-d7ce450ed1d7  state  Completed 
+2018-04-17 06:12:31,234 : 5383 : INFO : Creating Snapshot : snap1_ML_TV_7
+2018-04-17 06:12:38,974 : 5383 : INFO : Current task 76b50ba9-040c-44b4-83e4-38878b30ce96  state  Completed 
+2018-04-17 06:27:06,607 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-17 06:27:14,346 : 5470 : INFO : Current task c6ed9b81-0764-47a5-8b1f-0c41bb1d0e67  state  Completed 
+2018-04-17 06:27:44,570 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_0
+2018-04-17 06:27:59,571 : 5470 : INFO : Current task 4bff0e2c-2db9-4e1b-9da3-2b173383420d  state  Completed 
+2018-04-17 06:28:29,683 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-17 06:28:37,540 : 5470 : INFO : Current task d18bc201-c564-4c39-8e53-d7d58a29ae21  state  Completed 
+2018-04-17 06:29:07,757 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_1
+2018-04-17 06:29:22,658 : 5470 : INFO : Current task 11e99524-3454-498c-b63d-bb7b6546067e  state  Completed 
+2018-04-17 06:29:52,754 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-17 06:30:00,587 : 5470 : INFO : Current task ff46b3fe-645b-4f2d-9ca2-08fda3d0cc35  state  Completed 
+2018-04-17 06:30:30,778 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_2
+2018-04-17 06:30:45,680 : 5470 : INFO : Current task 210add32-8d84-44a2-b8c3-d98bf6e16028  state  Completed 
+2018-04-17 06:31:15,792 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-17 06:31:23,576 : 5470 : INFO : Current task 9feb3373-7fe2-48db-9f42-432688bb1dc4  state  Completed 
+2018-04-17 06:31:53,786 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_3
+2018-04-17 06:32:08,720 : 5470 : INFO : Current task 1577beec-e606-4209-9ced-793beb79b32e  state  Completed 
+2018-04-17 06:32:38,817 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-17 06:32:46,579 : 5470 : INFO : Current task 31682ecf-03a0-47f2-ba34-8c1a16932c0a  state  Completed 
+2018-04-17 06:33:16,802 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_4
+2018-04-17 06:33:31,793 : 5470 : INFO : Current task caa0bb8f-7f6e-4789-b2ef-5c1afa26e5ee  state  Completed 
+2018-04-17 06:34:01,888 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_5
+2018-04-17 06:34:09,635 : 5470 : INFO : Current task f7dd1d6d-a474-4886-a2a7-0cf0618757f4  state  Completed 
+2018-04-17 06:34:39,843 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_5
+2018-04-17 06:34:54,749 : 5470 : INFO : Current task ffed565a-2fba-4268-b1f3-fcc35ecea7e9  state  Completed 
+2018-04-17 06:35:24,862 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_6
+2018-04-17 06:35:32,612 : 5470 : INFO : Current task 49feaaf1-20ce-44c2-a12e-9edfa7b5ca63  state  Completed 
+2018-04-17 06:36:02,823 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_6
+2018-04-17 06:36:17,768 : 5470 : INFO : Current task eecedfad-81b2-4b34-8ac9-2bdc3842b014  state  Completed 
+2018-04-17 06:36:47,881 : 5470 : INFO : Creating Snapshot : snap1_ML_TV_7
+2018-04-17 06:36:55,700 : 5470 : INFO : Current task 4356a013-7231-4bd7-98c2-164c1aae6f46  state  Completed 
+2018-04-17 06:37:25,907 : 5470 : INFO : Creating Clone : C1_snap1_ML_TV_7
+2018-04-17 06:37:40,869 : 5470 : INFO : Current task 97796977-6645-4c3b-9381-36e1e9ef37ce  state  Completed 
+2018-04-18 06:46:06,904 : 11611 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:46:14,539 : 11611 : INFO : Current task 5a00f35a-10d2-45a3-9ead-8fdae6b82879  state  Completed 
+2018-04-18 06:46:14,966 : 11611 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:46:22,336 : 11611 : INFO : Current task a85ced72-8dda-4dde-8051-791f770ec249  state  Completed 
+2018-04-18 06:46:22,481 : 11611 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-18 06:46:22,681 : 11611 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:46:22,858 : 11612 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:46:30,773 : 11612 : INFO : Current task d0fc4980-1f86-466c-8966-7750156da079  state  Completed 
+2018-04-18 06:46:31,189 : 11612 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:46:38,532 : 11612 : INFO : Current task c121b987-4d1b-4b30-9247-41d8edd31cff  state  Completed 
+2018-04-18 06:46:38,673 : 11612 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1
+2018-04-18 06:46:38,859 : 11612 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:46:39,034 : 11613 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:46:46,937 : 11613 : INFO : Current task ac02b2a1-4838-4e2e-9fa2-dd7f49609dd2  state  Completed 
+2018-04-18 06:46:47,349 : 11613 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:46:54,697 : 11613 : INFO : Current task 7ce6b541-9270-47ac-9c41-4a1b60af26cd  state  Completed 
+2018-04-18 06:46:54,840 : 11613 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1
+2018-04-18 06:46:55,024 : 11613 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:46:55,195 : 11614 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:47:03,148 : 11614 : INFO : Current task cb3792fb-4d1a-4bff-bc0b-14f3df173b96  state  Completed 
+2018-04-18 06:47:03,560 : 11614 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:47:10,902 : 11614 : INFO : Current task 3ef64164-ad28-4902-9007-d1c87afadacf  state  Completed 
+2018-04-18 06:47:11,042 : 11614 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1
+2018-04-18 06:47:11,238 : 11614 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:47:11,417 : 11615 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:47:19,324 : 11615 : INFO : Current task 20fa3aae-155f-4a1b-a947-1e466f11d896  state  Completed 
+2018-04-18 06:47:19,738 : 11615 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:47:27,091 : 11615 : INFO : Current task 33ebe2ef-cde9-4728-84be-091103bb5a77  state  Completed 
+2018-04-18 06:47:27,236 : 11615 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1
+2018-04-18 06:47:27,421 : 11615 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:47:27,592 : 11616 : INFO : creating volume ML_TV_5 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_5', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:47:35,505 : 11616 : INFO : Current task 485f743e-c5fa-4ff2-ab61-ab7a9d2658fe  state  Completed 
+2018-04-18 06:47:35,917 : 11616 : INFO : Assigning volume ML_TV_5 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:47:43,271 : 11616 : INFO : Current task 5f66abeb-7992-4a6e-9b1a-0275146efbe6  state  Completed 
+2018-04-18 06:47:43,412 : 11616 : INFO : Assigning volume ML_TV_5 to ip 192.168.6.1
+2018-04-18 06:47:43,597 : 11616 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:47:43,772 : 11617 : INFO : creating volume ML_TV_6 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_6', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:47:51,690 : 11617 : INFO : Current task 7bd30b11-e733-48fa-a9ab-8b56ce7ef5d7  state  Completed 
+2018-04-18 06:47:52,101 : 11617 : INFO : Assigning volume ML_TV_6 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:47:59,461 : 11617 : INFO : Current task 4230b10c-91b2-491f-b2cc-a0778dabd64a  state  Completed 
+2018-04-18 06:47:59,605 : 11617 : INFO : Assigning volume ML_TV_6 to ip 192.168.6.1
+2018-04-18 06:47:59,790 : 11617 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 06:47:59,961 : 11618 : INFO : creating volume ML_TV_7 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_7', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'02d4d1a8-398b-4ad1-b604-9ee1fe4a7b8f', 'size': '120'}
+2018-04-18 06:48:07,903 : 11618 : INFO : Current task a2be1a83-884a-4859-831e-ff8a4ab22818  state  Completed 
+2018-04-18 06:48:08,313 : 11618 : INFO : Assigning volume ML_TV_7 to ip 192.168.6.1,192.168.7.2
+2018-04-18 06:48:15,654 : 11618 : INFO : Current task cda08a72-f083-4906-b919-13a9622bf2d0  state  Completed 
+2018-04-18 06:48:15,795 : 11618 : INFO : Assigning volume ML_TV_7 to ip 192.168.6.1
+2018-04-18 06:48:15,981 : 11618 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-18 07:42:13,530 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-18 07:42:21,271 : 12093 : INFO : Current task ebdedb10-3ca6-4fcd-87c6-5385c55e5edc  state  Completed 
+2018-04-18 07:42:51,462 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_0
+2018-04-18 07:43:06,402 : 12093 : INFO : Current task c358db8a-8506-480e-8d39-87958d40474b  state  Completed 
+2018-04-18 07:43:36,499 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-18 07:43:44,261 : 12093 : INFO : Current task 58f70dbe-5646-4c36-ad38-3f9739737e50  state  Completed 
+2018-04-18 07:44:14,473 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_1
+2018-04-18 07:44:29,433 : 12093 : INFO : Current task d9ae454a-e7d2-45fd-a2db-3fb36fd8a4c7  state  Completed 
+2018-04-18 07:44:59,546 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-18 07:45:07,329 : 12093 : INFO : Current task 00f84a37-6243-47da-b15e-e07a865078c9  state  Completed 
+2018-04-18 07:45:37,529 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_2
+2018-04-18 07:45:52,509 : 12093 : INFO : Current task 62e44cf9-df62-439a-b767-eee9537ce4f3  state  Completed 
+2018-04-18 07:46:22,623 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-18 07:46:30,391 : 12093 : INFO : Current task a9048375-14e3-47c7-9fe5-e931e282bc70  state  Completed 
+2018-04-18 07:47:00,586 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_3
+2018-04-18 07:47:15,538 : 12093 : INFO : Current task 2398071b-5ec2-4896-924e-338d80537631  state  Completed 
+2018-04-18 07:47:45,651 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-18 07:47:53,412 : 12093 : INFO : Current task 6808d98a-85c1-48a7-a1de-569d73aa0f0a  state  Completed 
+2018-04-18 07:48:23,615 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_4
+2018-04-18 07:48:38,549 : 12093 : INFO : Current task f0a0ac84-6a13-4442-8e7e-932681b93151  state  Completed 
+2018-04-18 07:49:08,661 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_5
+2018-04-18 07:49:16,420 : 12093 : INFO : Current task f8e2222e-81a7-4f38-9767-1ec7512d1e1c  state  Completed 
+2018-04-18 07:49:46,640 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_5
+2018-04-18 07:50:01,604 : 12093 : INFO : Current task d69e85ca-df5f-4413-835d-312b5dae8eb4  state  Completed 
+2018-04-18 07:50:31,717 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_6
+2018-04-18 07:50:39,490 : 12093 : INFO : Current task 68d6dae5-a9d5-4487-b475-72c8e45c231a  state  Completed 
+2018-04-18 07:51:09,696 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_6
+2018-04-18 07:51:24,634 : 12093 : INFO : Current task 38494dff-330d-4afe-9091-6dcb21bf12c5  state  Completed 
+2018-04-18 07:51:54,730 : 12093 : INFO : Creating Snapshot : snap1_ML_TV_7
+2018-04-18 07:52:02,515 : 12093 : INFO : Current task 3470e396-6010-4974-8d51-550172eabddd  state  Completed 
+2018-04-18 07:52:32,715 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_7
+2018-04-18 07:52:47,632 : 12093 : INFO : Current task 3222b50c-e9a3-4082-bf48-993b3fb9206f  state  Completed 
