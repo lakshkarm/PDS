@@ -961,3 +961,348 @@
 2018-04-18 07:52:02,515 : 12093 : INFO : Current task 3470e396-6010-4974-8d51-550172eabddd  state  Completed 
 2018-04-18 07:52:32,715 : 12093 : INFO : Creating Clone : C1_snap1_ML_TV_7
 2018-04-18 07:52:47,632 : 12093 : INFO : Current task 3222b50c-e9a3-4082-bf48-993b3fb9206f  state  Completed 
+2018-04-20 04:34:01,105 : 6857 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '120'}
+2018-04-20 04:34:08,761 : 6857 : INFO : Current task e93626c7-394d-4bcf-aedb-927e9c4b1e7b  state  Completed 
+2018-04-20 04:34:09,187 : 6857 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-20 04:34:16,541 : 6857 : INFO : Current task f0af869f-7065-4570-a403-a2bf04cf81a1  state  Completed 
+2018-04-20 04:34:16,686 : 6857 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1
+2018-04-20 04:34:16,876 : 6857 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-20 04:34:16,953 : 6858 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '120'}
+2018-04-20 04:34:24,871 : 6858 : INFO : Current task 18465328-6568-44b8-8a55-7cae30818cec  state  Completed 
+2018-04-20 04:34:25,287 : 6858 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-20 04:34:32,635 : 6858 : INFO : Current task c4657327-1de6-4b00-b9d2-c6a9675e5014  state  Completed 
+2018-04-20 04:34:32,780 : 6858 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1
+2018-04-20 04:34:32,967 : 6858 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-20 04:34:33,043 : 6859 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '120'}
+2018-04-20 04:34:40,953 : 6859 : INFO : Current task f0db6433-6dbd-4326-9f8f-cad4983ce8dd  state  Completed 
+2018-04-20 04:34:41,368 : 6859 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-20 04:34:48,716 : 6859 : INFO : Current task dc2f46f0-dbfe-4e6f-a304-419005456a81  state  Completed 
+2018-04-20 04:34:48,857 : 6859 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1
+2018-04-20 04:34:49,046 : 6859 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-20 04:34:49,122 : 6860 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '120'}
+2018-04-20 04:34:57,036 : 6860 : INFO : Current task b18a9659-4793-4ad3-8acc-45bce64aa5c6  state  Completed 
+2018-04-20 04:34:57,450 : 6860 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-20 04:35:04,794 : 6860 : INFO : Current task 1c401e3f-3540-4bcb-8d43-10bc8a022f64  state  Completed 
+2018-04-20 04:35:04,938 : 6860 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1
+2018-04-20 04:35:05,131 : 6860 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-20 04:35:05,209 : 6861 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '120'}
+2018-04-20 04:35:13,178 : 6861 : INFO : Current task 6197cb44-c8dd-4ceb-8c1c-844c111feafc  state  Completed 
+2018-04-20 04:35:13,591 : 6861 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-20 04:35:20,934 : 6861 : INFO : Current task e78a1aa4-2a45-408e-b404-cd1f1e60e39f  state  Completed 
+2018-04-20 04:35:21,075 : 6861 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1
+2018-04-20 04:35:21,261 : 6861 : ERROR : Volume not ready for assign, failed to assign volume : 200
+2018-04-20 04:39:13,860 : 6921 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-20 04:39:21,612 : 6921 : INFO : Current task 5b0aee9a-59dd-413b-a3a9-f3cfb43ed19d  state  Completed 
+2018-04-20 04:39:51,813 : 6921 : INFO : Creating Clone : C1_snap1_ML_TV_0
+2018-04-20 04:40:06,733 : 6921 : INFO : Current task 9c39f185-2c65-4b22-9de4-b144a062ecec  state  Completed 
+2018-04-20 04:40:36,829 : 6921 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-20 04:40:44,595 : 6921 : INFO : Current task 2b8f7dd7-cdd2-4afd-8140-6ad0558661f8  state  Completed 
+2018-04-20 04:41:14,807 : 6921 : INFO : Creating Clone : C1_snap1_ML_TV_1
+2018-04-20 04:41:29,802 : 6921 : INFO : Current task f80e8d5a-2227-4935-9cb0-94f7cd569978  state  Completed 
+2018-04-20 04:41:59,900 : 6921 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-20 04:42:07,638 : 6921 : INFO : Current task 49eea1b4-eff7-4ca0-8214-cad81fe9fcbd  state  Completed 
+2018-04-20 04:42:37,859 : 6921 : INFO : Creating Clone : C1_snap1_ML_TV_2
+2018-04-20 04:42:52,821 : 6921 : INFO : Current task 29ba9ce5-3787-4351-af17-59734f72aa1e  state  Completed 
+2018-04-20 04:43:22,934 : 6921 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-20 04:43:30,719 : 6921 : INFO : Current task ca6230cc-8504-4da9-937b-7bc3f3e35283  state  Completed 
+2018-04-20 04:44:00,929 : 6921 : INFO : Creating Clone : C1_snap1_ML_TV_3
+2018-04-20 04:44:15,879 : 6921 : INFO : Current task 3bb4c6f0-257e-4a03-9dc6-35321468c097  state  Completed 
+2018-04-20 04:44:45,992 : 6921 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-20 04:44:53,744 : 6921 : INFO : Current task 2cb52e08-750d-4e3c-8fbb-b53871d8c7ff  state  Completed 
+2018-04-20 04:45:23,937 : 6921 : INFO : Creating Clone : C1_snap1_ML_TV_4
+2018-04-20 04:45:38,846 : 6921 : INFO : Current task a0109414-c03a-4be2-bcdb-2d6fe6bd6f55  state  Completed 
+2018-04-20 04:48:27,807 : 6933 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-20 04:48:35,538 : 6933 : INFO : Current task 93bb648d-91e6-4c38-a03f-a4c8a2e4ea4c  state  Completed 
+2018-04-20 04:49:05,634 : 6933 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-20 04:49:13,385 : 6933 : INFO : Current task bc47c5cb-57b1-41c2-8244-eaa85847a83e  state  Completed 
+2018-04-20 04:49:43,481 : 6933 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-20 04:49:51,281 : 6933 : INFO : Current task 63fadc1b-9143-4af7-b92c-e5b33f02d491  state  Completed 
+2018-04-20 04:50:21,377 : 6933 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-20 04:50:29,131 : 6933 : INFO : Current task 97801d90-4322-40ea-92e4-39ffe748be75  state  Completed 
+2018-04-20 04:50:59,245 : 6933 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-20 04:51:06,986 : 6933 : INFO : Current task 6a2d5dd9-ad31-4996-9531-80539b930458  state  Completed 
+2018-04-20 04:55:19,824 : 6945 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-20 04:55:27,578 : 6945 : INFO : Current task 2902a679-af9a-4acf-9920-5e66a0f5ef4f  state  Completed 
+2018-04-20 04:55:57,691 : 6945 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-20 04:56:05,433 : 6945 : INFO : Current task 8fbadd36-ffde-471b-90ff-457594971a01  state  Completed 
+2018-04-20 04:56:35,546 : 6945 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-20 04:56:43,334 : 6945 : INFO : Current task 04e88c96-5eda-47e3-82c6-b61c7f3f9a50  state  Completed 
+2018-04-20 04:57:13,446 : 6945 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-20 04:57:21,229 : 6945 : INFO : Current task a980fd9c-9ded-4dfa-b227-87d2af6fa799  state  Completed 
+2018-04-20 04:57:51,340 : 6945 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-20 04:57:59,106 : 6945 : INFO : Current task 0b7a9dbe-1079-437e-8ad9-f653a0d7bc55  state  Completed 
+2018-04-20 04:59:22,112 : 6952 : INFO : Creating Snapshot : snap1_ML_TV_0
+2018-04-20 04:59:29,881 : 6952 : INFO : Current task 47a4c207-3061-49c3-bb03-103dcfd8940f  state  Completed 
+2018-04-20 04:59:59,977 : 6952 : INFO : Creating Snapshot : snap1_ML_TV_1
+2018-04-20 05:00:07,759 : 6952 : INFO : Current task 31c5a10e-b80a-4cb9-896a-bd04a2d50248  state  Completed 
+2018-04-20 05:00:37,854 : 6952 : INFO : Creating Snapshot : snap1_ML_TV_2
+2018-04-20 05:00:45,626 : 6952 : INFO : Current task 5a5f384b-7105-4a04-b473-89c41439f75d  state  Completed 
+2018-04-20 05:01:15,723 : 6952 : INFO : Creating Snapshot : snap1_ML_TV_3
+2018-04-20 05:01:23,490 : 6952 : INFO : Current task 12c93c2b-97d5-4ca6-8b3c-6f13bb31c8ba  state  Completed 
+2018-04-20 05:01:53,588 : 6952 : INFO : Creating Snapshot : snap1_ML_TV_4
+2018-04-20 05:02:01,318 : 6952 : INFO : Current task f013a734-d883-4a7e-891c-4a59b2ad2176  state  Completed 
+2018-04-20 05:11:17,726 : 7063 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '300'}
+2018-04-20 05:11:25,346 : 7063 : INFO : Current task e531dda6-0ea3-4260-a654-4351e6092454  state  Completed 
+2018-04-20 05:11:25,758 : 7063 : INFO : Assigning volume ML_TV_0 to ip 192.168.6.1,192.168.7.2
+2018-04-20 05:11:33,096 : 7063 : INFO : Current task 492bb11c-f707-4c6e-b61f-00f0e1eacdad  state  Completed 
+2018-04-20 05:11:33,270 : 7064 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '300'}
+2018-04-20 05:11:41,235 : 7064 : INFO : Current task fd941ed0-b1ec-442e-998a-d4bef8053115  state  Completed 
+2018-04-20 05:11:41,646 : 7064 : INFO : Assigning volume ML_TV_1 to ip 192.168.6.1,192.168.7.2
+2018-04-20 05:11:48,994 : 7064 : INFO : Current task efc4ac5e-1cab-4b38-8041-1a2306affb68  state  Completed 
+2018-04-20 05:11:49,167 : 7065 : INFO : creating volume ML_TV_2 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_2', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '300'}
+2018-04-20 05:11:57,083 : 7065 : INFO : Current task 814d1f9a-e386-4f58-9076-96938fb01741  state  Completed 
+2018-04-20 05:11:57,492 : 7065 : INFO : Assigning volume ML_TV_2 to ip 192.168.6.1,192.168.7.2
+2018-04-20 05:12:04,829 : 7065 : INFO : Current task 070eec49-d207-47b0-b2f3-decf431776f2  state  Completed 
+2018-04-20 05:12:05,002 : 7066 : INFO : creating volume ML_TV_3 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_3', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '300'}
+2018-04-20 05:12:12,920 : 7066 : INFO : Current task 32ac60ae-e81e-40e1-8c11-11f060a24706  state  Completed 
+2018-04-20 05:12:13,328 : 7066 : INFO : Assigning volume ML_TV_3 to ip 192.168.6.1,192.168.7.2
+2018-04-20 05:12:20,668 : 7066 : INFO : Current task 29f33a42-5484-4bdf-a10d-94e8b741e5e9  state  Completed 
+2018-04-20 05:12:20,853 : 7067 : INFO : creating volume ML_TV_4 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_4', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'f11b303d-a6b3-49c5-a57f-0514ef194f67', 'size': '300'}
+2018-04-20 05:12:28,777 : 7067 : INFO : Current task b5ae6e99-5be2-4b28-b972-e6cd9c7e260f  state  Completed 
+2018-04-20 05:12:29,187 : 7067 : INFO : Assigning volume ML_TV_4 to ip 192.168.6.1,192.168.7.2
+2018-04-20 05:12:36,538 : 7067 : INFO : Current task 9a003dea-5836-4894-abab-25ccdaec8a4b  state  Completed 
+2018-04-20 05:12:36,540 : 7056 : INFO : sleeing for 60 sec
+2018-04-20 05:13:36,866 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf931 " 
+2018-04-20 05:13:37,253 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf931 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:37,254 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf931 " 
+2018-04-20 05:13:37,609 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf931 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:37,612 : 7169 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf931 |awk '{print \$1}' " 
+2018-04-20 05:13:37,781 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf932 " 
+2018-04-20 05:13:37,798 : 7169 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf931 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme1n1
+                                           /dev/nvme0n1
+                                           /dev/nvme2n1
+
+
+2018-04-20 05:13:37,798 : 7169 : INFO : Starting FIO load on /dev/mpnvme1n1
+2018-04-20 05:13:37,799 : 7169 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme1n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-04-20 05:13:38,138 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf932 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:38,139 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf932 " 
+2018-04-20 05:13:38,499 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf932 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:38,502 : 7283 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf932 |awk '{print \$1}' " 
+2018-04-20 05:13:38,670 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf933 " 
+2018-04-20 05:13:38,701 : 7283 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf932 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme4n1
+                                           /dev/nvme3n1
+                                           /dev/nvme5n1
+
+
+2018-04-20 05:13:38,701 : 7283 : INFO : Starting FIO load on /dev/mpnvme4n1
+2018-04-20 05:13:38,701 : 7283 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme4n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-04-20 05:13:39,148 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf933 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:39,149 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf933 " 
+2018-04-20 05:13:39,541 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf933 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:39,544 : 7397 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf933 |awk '{print \$1}' " 
+2018-04-20 05:13:39,712 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf934 " 
+2018-04-20 05:13:39,754 : 7397 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf933 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme7n1
+                                           /dev/nvme6n1
+                                           /dev/nvme8n1
+
+
+2018-04-20 05:13:39,754 : 7397 : INFO : Starting FIO load on /dev/mpnvme7n1
+2018-04-20 05:13:39,755 : 7397 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme7n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-04-20 05:13:40,451 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf934 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:40,451 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf934 " 
+2018-04-20 05:13:40,807 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf934 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:40,810 : 7510 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf934 |awk '{print \$1}' " 
+2018-04-20 05:13:40,979 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf935 " 
+2018-04-20 05:13:41,028 : 7510 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf934 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme10n1
+                                           /dev/nvme11n1
+                                           /dev/nvme9n1
+
+
+2018-04-20 05:13:41,029 : 7510 : INFO : Starting FIO load on /dev/mpnvme10n1
+2018-04-20 05:13:41,029 : 7510 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme10n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-04-20 05:13:41,537 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.6.1 -s 4420 -n GB00002604bbf935 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:41,538 : 7056 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf935 " 
+2018-04-20 05:13:41,889 : 7056 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme connect -t rdma  -a 192.168.7.2 -s 4420 -n GB00002604bbf935 "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+
+
+2018-04-20 05:13:41,891 : 7056 : INFO : Wating for some time to populate the data through FIO
+2018-04-20 05:13:41,892 : 7624 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf935 |awk '{print \$1}' " 
+2018-04-20 05:13:42,121 : 7624 : INFO : Done with Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " /usr/sbin/nvme list |grep GB00002604bbf935 |awk '{print \$1}' "  
+                                    EXIT_CODE - 0
+                                    STDOUT 
+                                           /dev/mpnvme13n1
+                                           /dev/nvme12n1
+                                           /dev/nvme14n1
+
+
+2018-04-20 05:13:42,122 : 7624 : INFO : Starting FIO load on /dev/mpnvme13n1
+2018-04-20 05:13:42,122 : 7624 : INFO : Executing Command /usr/bin/sshpass -p test ssh root@172.25.26.215  -o StrictHostKeyChecking=no  " fio --ioengine=libaio --invalidate=1 --iodepth=64 --verify_dump=0 --error_dump=1 --exitall_on_error=1 --direct=1 --atomic=1 --group_reporting --do_verify=0 --time_based --size=80%  --random_generator=tausworthe64 --offset=0 --bs=8k --rw=write --name=1 --filename=/dev/mpnvme13n1 --verify_pattern=0x1 --time_based=1 --runtime=7200 " 
+2018-04-20 05:18:42,125 : 7056 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-20 05:18:42,126 : 7692 : INFO : powering off the drive 39
+2018-04-20 05:18:56,445 : 7692 : INFO : Current task 1479186a-d99e-4b62-a84c-b89c162365a2  state  Completed 
+2018-04-20 05:18:56,446 : 7692 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-20 05:19:56,506 : 7692 : INFO : powering on the drive 39
+2018-04-20 05:20:03,736 : 7692 : INFO : Current task 2b8c86b6-fbe6-4b3e-94ce-0e28b96535cd  state  Completed 
+2018-04-20 05:20:12,215 : 7056 : INFO : powering off controller 6
+2018-04-20 05:20:12,311 : 7056 : INFO : controller 6 is getting powered Off
+2018-04-20 05:21:16,055 : 7056 : INFO : Current task dc75dc3d-141c-49b4-857c-cce1713fe74e  state  Completed 
+2018-04-20 05:22:04,988 : 7692 : INFO : waiting for 180 sec
+2018-04-20 05:22:16,211 : 7056 : INFO : controller 6 is getting powered On
+2018-04-20 05:22:23,354 : 7056 : INFO : Current task c63be5c8-7d05-4757-9ac3-e137cdc02c06  state  Completed 
+2018-04-20 05:22:23,354 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 05:32:23,455 : 7056 : INFO : powering off controller 10
+2018-04-20 05:32:23,546 : 7056 : INFO : controller 10 is getting powered Off
+2018-04-20 05:33:27,295 : 7056 : INFO : Current task 578490d7-a684-4d32-bb11-76b25ecc3d08  state  Completed 
+2018-04-20 05:34:27,446 : 7056 : INFO : controller 10 is getting powered On
+2018-04-20 05:34:34,589 : 7056 : INFO : Current task e651c04c-d154-4182-b1bd-5a7bd25eebc7  state  Completed 
+2018-04-20 05:34:34,589 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 05:46:04,780 : 7056 : INFO : powering off controller 6
+2018-04-20 05:46:04,871 : 7056 : INFO : controller 6 is getting powered Off
+2018-04-20 05:47:08,623 : 7056 : INFO : Current task af6fb9bf-4012-49aa-bb76-2beedef00ebb  state  Completed 
+2018-04-20 05:48:08,774 : 7056 : INFO : controller 6 is getting powered On
+2018-04-20 05:48:15,918 : 7056 : INFO : Current task 1e00ea9a-97c5-4430-ac17-5f72bd915dd5  state  Completed 
+2018-04-20 05:48:15,918 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 05:58:16,019 : 7056 : INFO : powering off controller 10
+2018-04-20 05:58:16,113 : 7056 : INFO : controller 10 is getting powered Off
+2018-04-20 05:59:19,846 : 7056 : INFO : Current task ba250d74-8f61-42e7-86bd-7ffb2e213fcc  state  Completed 
+2018-04-20 06:00:19,998 : 7056 : INFO : controller 10 is getting powered On
+2018-04-20 06:00:27,139 : 7056 : INFO : Current task 679b97f1-25bb-4186-8109-87e36ef5f4e7  state  Completed 
+2018-04-20 06:00:27,139 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 06:11:57,329 : 7056 : INFO : powering off controller 6
+2018-04-20 06:11:57,425 : 7056 : INFO : controller 6 is getting powered Off
+2018-04-20 06:13:01,153 : 7056 : INFO : Current task fcee8d3c-4bd4-4a8f-8b02-27c43ca2f354  state  Completed 
+2018-04-20 06:14:01,304 : 7056 : INFO : controller 6 is getting powered On
+2018-04-20 06:14:08,445 : 7056 : INFO : Current task 02ad51cf-3e83-49f0-b993-e70f83eee95d  state  Completed 
+2018-04-20 06:14:08,445 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 06:24:08,546 : 7056 : INFO : powering off controller 10
+2018-04-20 06:24:08,652 : 7056 : INFO : controller 10 is getting powered Off
+2018-04-20 06:25:12,481 : 7056 : INFO : Current task a2805b3d-c4be-4a79-9873-729c9388b50a  state  Completed 
+2018-04-20 06:26:12,643 : 7056 : INFO : controller 10 is getting powered On
+2018-04-20 06:26:19,795 : 7056 : INFO : Current task a47320dd-d4bb-485d-a683-2b14ae7508ee  state  Completed 
+2018-04-20 06:26:19,795 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 06:37:49,986 : 7056 : INFO : powering off controller 6
+2018-04-20 06:37:50,087 : 7056 : INFO : controller 6 is getting powered Off
+2018-04-20 06:38:53,862 : 7056 : INFO : Current task fd0b9733-b431-4ee5-a595-36f920439616  state  Completed 
+2018-04-20 06:39:54,028 : 7056 : INFO : controller 6 is getting powered On
+2018-04-20 06:40:01,179 : 7056 : INFO : Current task 7b4ebdd9-ece4-4b97-84ba-66d4626af87c  state  Completed 
+2018-04-20 06:40:01,179 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 06:50:01,280 : 7056 : INFO : powering off controller 10
+2018-04-20 06:50:01,372 : 7056 : INFO : controller 10 is getting powered Off
+2018-04-20 06:51:05,146 : 7056 : INFO : Current task 3d55e8e4-b7a7-495f-bd11-f4bc03dee951  state  Completed 
+2018-04-20 06:52:05,315 : 7056 : INFO : controller 10 is getting powered On
+2018-04-20 06:52:12,455 : 7056 : INFO : Current task e3078f6e-682b-421e-ac23-bdf7364fdbdb  state  Completed 
+2018-04-20 06:52:12,456 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 07:03:42,648 : 7056 : INFO : powering off controller 6
+2018-04-20 07:03:42,744 : 7056 : INFO : controller 6 is getting powered Off
+2018-04-20 07:04:46,482 : 7056 : INFO : Current task ff10416a-d46a-41fb-90ea-07840dc4b516  state  Completed 
+2018-04-20 07:05:46,635 : 7056 : INFO : controller 6 is getting powered On
+2018-04-20 07:05:53,774 : 7056 : INFO : Current task 35de4eb1-1357-4dac-93ba-6bee2b1c55b9  state  Completed 
+2018-04-20 07:05:53,775 : 7056 : INFO : next failover will triggered in 10 min
+2018-04-20 07:19:01,727 : 8645 : INFO : No or devices used in mg are : {'39': 'Active', '38': 'Active', '37': 'Active', '44': 'Active', '45': 'Active', '42': 'Active', '43': 'Active', '40': 'Active', '41': 'Active'}
+2018-04-20 07:19:01,729 : 8645 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-20 07:19:01,730 : 8652 : INFO : powering off the drive 39
+2018-04-20 07:19:16,042 : 8652 : INFO : Current task f7aa77ea-f67f-45a1-b22d-577e1e638634  state  Completed 
+2018-04-20 07:19:16,042 : 8652 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-20 07:20:16,102 : 8652 : INFO : powering on the drive 39
+2018-04-20 07:20:23,334 : 8652 : INFO : Current task 3606e8e8-c12d-493b-8cde-3667633a432a  state  Completed 
+2018-04-20 07:20:31,820 : 8645 : INFO : powering off controller 6
+2018-04-20 07:20:31,912 : 8645 : INFO : controller 6 is getting powered Off
+2018-04-20 07:21:35,699 : 8645 : INFO : Current task 7236f0eb-6277-4c9f-80b8-334e8d95d96c  state  Completed 
+2018-04-20 07:22:24,468 : 8652 : INFO : waiting for 180 sec
+2018-04-20 07:22:35,852 : 8645 : INFO : controller 6 is getting powered On
+2018-04-20 07:22:42,994 : 8645 : INFO : Current task 7d0bfece-5e03-47bb-a40e-bb229894e0c8  state  Completed 
+2018-04-20 07:22:42,995 : 8645 : INFO : next failover will triggered in 10 min
+2018-04-20 07:47:34,357 : 8714 : INFO : No or devices used in mg are : {'39': 'Active', '38': 'Active', '37': 'Active', '44': 'Active', '45': 'Active', '42': 'Active', '43': 'Active', '40': 'Active', '41': 'Active'}
+2018-04-20 07:47:34,359 : 8714 : INFO : now start the FO/FB using cotnroller powerOff/on
+2018-04-20 07:47:34,360 : 8721 : INFO : powering off the drive 39
+2018-04-20 07:47:49,837 : 8721 : INFO : Current task 6bfb676e-a974-4b99-9b61-e55404695029  state  Completed 
+2018-04-20 07:47:49,838 : 8721 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-20 07:48:49,898 : 8721 : INFO : powering on the drive 39
+2018-04-20 07:48:57,127 : 8721 : INFO : Current task 86de9c65-7301-4f27-9641-146ea1143767  state  Completed 
+2018-04-20 07:49:04,450 : 8714 : INFO : powering off controller 6
+2018-04-20 07:49:04,540 : 8714 : INFO : controller 6 is getting powered Off
+2018-04-20 07:50:08,305 : 8714 : INFO : Current task cc632f3a-cec7-4804-9af9-542546e3452b  state  Completed 
+2018-04-20 07:50:58,237 : 8721 : INFO : waiting for 180 sec
+2018-04-20 07:51:08,472 : 8714 : INFO : controller 6 is getting powered On
+2018-04-20 07:51:15,625 : 8714 : INFO : Current task 295bb59e-65fb-461f-bb4f-15ebbe0b6fb8  state  Completed 
+2018-04-20 07:51:15,625 : 8714 : INFO : next failover will triggered in 10 min
+2018-04-20 07:54:47,914 : 8721 : INFO : Current task e87827e6-beaf-4e05-96e4-68a6f1a0fde4  state  Completed 
+2018-04-20 07:54:47,915 : 8721 : INFO : next rebuild will start in 120 sec
+2018-04-20 07:56:47,918 : 8721 : INFO : Rebuild iteration 0 completed 
+2018-04-20 07:56:47,919 : 8721 : INFO : powering off the drive 38
+2018-04-20 07:57:03,422 : 8721 : INFO : Current task 5760aac6-fbe0-4aa1-a061-dcb59501430e  state  Completed 
+2018-04-20 07:57:03,423 : 8721 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-20 07:58:03,483 : 8721 : INFO : powering on the drive 38
+2018-04-20 07:58:10,713 : 8721 : INFO : Current task 3e0d9475-beca-4707-826e-a81b4d12c0a9  state  Completed 
+2018-04-20 08:00:11,827 : 8721 : INFO : waiting for 180 sec
+2018-04-20 08:01:15,725 : 8714 : INFO : powering off controller 10
+2018-04-20 08:01:15,839 : 8714 : INFO : controller 10 is getting powered Off
+2018-04-20 08:02:19,658 : 8714 : INFO : Current task c7f8619e-57b0-4b5c-b1d7-8ea172bbc1ab  state  Completed 
+2018-04-20 08:03:19,808 : 8714 : INFO : controller 10 is getting powered On
+2018-04-20 08:03:26,947 : 8714 : INFO : Current task 89c9faaf-e784-43ad-9b57-057aa32882aa  state  Completed 
+2018-04-20 08:03:26,947 : 8714 : INFO : next failover will triggered in 10 min
+2018-04-20 08:05:40,556 : 8721 : INFO : Current task 6137a01d-1d6b-4da1-af97-7d8e5f07a2bf  state  Completed 
+2018-04-20 08:05:40,556 : 8721 : INFO : next rebuild will start in 120 sec
+2018-04-20 08:07:40,559 : 8721 : INFO : Rebuild iteration 1 completed 
+2018-04-20 08:07:40,560 : 8721 : INFO : powering off the drive 37
+2018-04-20 08:07:54,862 : 8721 : INFO : Current task 75298eb4-cb68-4686-abce-1313be3db606  state  Completed 
+2018-04-20 08:07:54,862 : 8721 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-20 08:08:54,923 : 8721 : INFO : powering on the drive 37
+2018-04-20 08:09:02,152 : 8721 : INFO : Current task 5b76fbe4-a27e-40f3-bb25-451a9bd34d3f  state  Completed 
+2018-04-20 08:11:03,256 : 8721 : INFO : waiting for 180 sec
+2018-04-20 08:14:03,424 : 8721 : INFO : Current task c30c528c-e0fd-4536-a5c7-54d3e96e0ba4  state  Completed 
+2018-04-20 08:14:03,425 : 8721 : INFO : next rebuild will start in 120 sec
+2018-04-20 08:14:57,138 : 8714 : INFO : powering off controller 6
+2018-04-20 08:14:57,231 : 8714 : INFO : controller 6 is getting powered Off
+2018-04-20 08:16:00,980 : 8714 : INFO : Current task cb5a445c-6c5d-4fae-8cb8-c1cfee24dcea  state  Completed 
+2018-04-20 08:16:03,428 : 8721 : INFO : Rebuild iteration 2 completed 
+2018-04-20 08:16:03,429 : 8721 : INFO : powering off the drive 44
+2018-04-20 08:16:18,981 : 8721 : INFO : Current task aacfbb0b-2597-46fb-af65-7359e09f995e  state  Completed 
+2018-04-20 08:16:18,981 : 8721 : INFO : wating for 60 sec to confirm the disk status 
+2018-04-20 08:17:01,147 : 8714 : INFO : controller 6 is getting powered On
+2018-04-20 08:17:08,298 : 8714 : INFO : Current task 30d54392-c547-4b0e-96ba-bc013e400e97  state  Completed 
+2018-04-20 08:17:08,299 : 8714 : INFO : next failover will triggered in 10 min
+2018-04-20 08:17:19,042 : 8721 : INFO : powering on the drive 44
+2018-04-20 08:17:26,270 : 8721 : INFO : Current task 1d86ddfd-7c13-4913-b201-c88e1e808ab4  state  Completed 
+2018-04-20 08:19:27,430 : 8721 : INFO : waiting for 180 sec

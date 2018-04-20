@@ -15,7 +15,7 @@ args = parser.parse_args()
 print args
 
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 8
+NO_OF_VOLUMES = 5
 CTRL_1_IP = "192.168.6.1"
 CTRL_2_IP = "192.168.7.2"
 CTRL_NO1 = 6
@@ -132,22 +132,22 @@ elif args.copy == 3:
     #connect_host(CTRL_IPS, HOST_IP, clone_name)
 
 if args.create:
-    	vol_list = []
-        def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
-	        helper.create_vol(size, stripe , name, reservation, md_grp, flavor)
-	        helper.assign(name,IP1,IP2)
+    vol_list = []
+    def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
+        helper.create_vol(size, stripe , name, reservation, md_grp, flavor)
+        helper.assign(name,IP1,IP2)
 
-    	def multiproc(no):
-            volname= 'ML_TV'
-            for i in range(no):
-                vol = volname+"_"+str(i)
-                p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
-                #p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
-                p.start()
-                p.join()
-                vol_list.append(vol)
+    def multiproc(no):
+        volname= 'ML_TV'
+        for i in range(no):
+            vol = volname+"_"+str(i)
+            p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
+            #p = multiprocessing.Process(target=create_assign_vol,args=('120', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
+            p.start()
+            p.join()
+            vol_list.append(vol)
 ## starting volume creation
-multiproc(NO_OF_VOLUMES)
+    multiproc(NO_OF_VOLUMES)
 	
 
  #if args.interval:
@@ -159,25 +159,5 @@ if args.rand:
     print "hello this is random message"
 
 
-def create_snap_clone(c=None):
-    snap_list = []
-    if c == 1:
-        for i in vol_list:
-            count = 1
-            vol_id = helper.get_object_id('volume', i)
-            snap_name = "snap"+str(count)+"_"+str(i)
-            helper.create_copy(vol_id,"Snapshot",snap_name)
-            snap_list.append(snap_name)
-    else:
-        for i in vol_list:
-            count = 1
-            vol_id = helper.get_object_id('volume', i)
-            snap_name = "snap"+str(count)+"_"+str(i)
-            helper.create_copy(vol_id,"Snapshot",snap_name)
-            time.sleep(30)
-            snap_list.append(snap_name)
-            count+=1
-
-#create_snap_clone(1)
 
 

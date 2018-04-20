@@ -24,19 +24,19 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.15'
+CHASSIS_IP = '172.25.26.9'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
 DOMAIN_NAME = 'localhost'
 DOMAIN_TYPE = 'UNIXPWD'
-CTRL_1_IP = "192.168.22.5"
-CTRL_2_IP = "192.168.23.5"
-CTRL_NO1 = 2
-CTRL_NO2 = 3
-ZONE = 1
+CTRL_1_IP = "192.168.6.1"
+CTRL_2_IP = "192.168.7.2"
+CTRL_NO1 = 6
+CTRL_NO2 = 10
+ZONE = 3
 MG_NAME = "manishmg1"
 NO_OF_VOLUMES = 5
-HOST_IP = "172.25.26.70"
+HOST_IP = "172.25.26.215"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
 id_dict = {}
@@ -567,7 +567,7 @@ def rebuild_media_grp(md_grp):
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
     logger.info('waiting for 180 sec')
     time.sleep(180)
-    ret_stat = wait_till_task_completes(taskid,  ' REBUILD ')
+    ret_stat = wait_till_task_completes(taskid)
     if ret_stat == 1 :
         print 'calling recursaviely rebuild '
         rebuild_media_grp(md_grp)
@@ -681,7 +681,8 @@ if __name__=='__main__':
         md_state_dict = used_media_in_mg(mg)
         return(md_state_dict[disk_no])
     device_list =  used_media_in_mg(MG_NAME)    
-
+    
+    logger.info("No or devices used in mg are : %s"%device_list)
     ## starting rebuild for all the drives one by one
     def rebuild_loop(device_list):
         rebuild_no = 0
