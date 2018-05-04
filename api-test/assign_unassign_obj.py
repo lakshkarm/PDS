@@ -622,32 +622,34 @@ def ctrl_poweron(ctrl_slot):
 #create_vol('100', '4','vol1', str(100), MG_NAME, 'INSANE')
 
 if __name__=='__main__':
-    vol_list = []  
-    def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
-        create_vol(size, stripe , name, reservation, md_grp, flavor)
-        #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE') 
-        assign(name,IP1,IP2)
-    
-    def multiproc(no):
-        volname= 'ML_TV'
-        for i in range(no):
-            vol = volname+"_"+str(i)
-            #p = multiprocessing.Process(target=create_assign_vol,args=('300', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
-            p = multiprocessing.Process(target=create_assign_vol,args=('100', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
-            p.start()
-            p.join()
-            vol_list.append(vol)
-   
-    # Starting the test here 
-    multiproc(NO_OF_VOLUMES)
-   ## unassigning and delteing the volumes 
-    for volname in vol_list:
-        unassign(volname)
-	time.sleep(5)
-	logger.info("volument is getting unassigned,sleeping for 5 sec ") 
-    for volname in vol_list:
-	delete_vol(volname)
-	time.sleep(5)
-	logger.info("volument is getting deleted,sleeping for 5 sec ") 
-
-    
+    def create_assign_unassign_delete(iterations):
+		for i in range(iterations):
+			vol_list = []  
+			def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
+				create_vol(size, stripe , name, reservation, md_grp, flavor)
+				#create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE') 
+				assign(name,IP1,IP2)
+			
+			def multiproc(no):
+				volname= 'ML_TV'
+				for i in range(no):
+					vol = volname+"_"+str(i)
+					#p = multiprocessing.Process(target=create_assign_vol,args=('300', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
+					p = multiprocessing.Process(target=create_assign_vol,args=('100', '4',vol, str(70), MG_NAME, 'INSANE',CTRL_1_IP))
+					p.start()
+					p.join()
+					vol_list.append(vol)
+		   
+			# Starting the test here 
+			multiproc(NO_OF_VOLUMES)
+		   ## unassigning and delteing the volumes 
+			for volname in vol_list:
+				unassign(volname)
+			time.sleep(5)
+			logger.info("volument is getting unassigned,sleeping for 5 sec ") 
+			for volname in vol_list:
+				delete_vol(volname)
+				time.sleep(5)
+				logger.info("volument is getting deleted,sleeping for 5 sec ") 
+	
+    create_assign_unassign_delete(2)
