@@ -1306,3 +1306,43 @@
 2018-04-20 08:17:19,042 : 8721 : INFO : powering on the drive 44
 2018-04-20 08:17:26,270 : 8721 : INFO : Current task 1d86ddfd-7c13-4913-b201-c88e1e808ab4  state  Completed 
 2018-04-20 08:19:27,430 : 8721 : INFO : waiting for 180 sec
+2018-05-03 23:21:17,809 : 3370 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'876c7374-5a8d-4d53-8a00-83f801cd6ec2', 'size': '100'}
+2018-05-03 23:21:26,896 : 3370 : INFO : Current task 9771355e-df43-4f35-b403-a30e649d0b43  state  Completed 
+2018-05-03 23:21:27,129 : 3370 : INFO : Assigning volume ML_TV_0 to ip 192.168.81.81
+2018-05-03 23:21:34,602 : 3370 : INFO : Current task 1ada53a0-01b0-4036-831d-83191ac59dea  state  Completed 
+2018-05-03 23:21:34,746 : 3371 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'876c7374-5a8d-4d53-8a00-83f801cd6ec2', 'size': '100'}
+2018-05-03 23:21:43,714 : 3371 : INFO : Current task 59719857-ca10-4dc8-912b-102699a7e003  state  Completed 
+2018-05-03 23:21:43,945 : 3371 : INFO : Assigning volume ML_TV_1 to ip 192.168.81.81
+2018-05-03 23:21:51,433 : 3371 : INFO : Current task 38b95736-2690-40fe-8212-538eb3cb3612  state  Completed 
+2018-05-03 23:21:51,574 : 3363 : INFO : Ussigning volume ML_TV_0 
+2018-05-03 23:21:59,053 : 3363 : INFO : Current task [u'4467445f-1ec9-48a8-ba68-a4607122dd37']  state  Completed 
+2018-05-03 23:22:04,058 : 3363 : INFO : volument is getting unassigned,sleeping for 5 sec 
+2018-05-03 23:22:04,116 : 3363 : INFO : Deleting volume ML_TV_0 
+2018-05-03 23:22:11,604 : 3363 : INFO : Current task [u'42b82d42-515b-41e5-9ff0-9bb2098dcd53']  state  Completed 
+2018-05-03 23:22:16,609 : 3363 : INFO : volument is getting deleted,sleeping for 5 sec 
+2018-05-03 23:22:16,665 : 3363 : INFO : Ussigning volume ML_TV_1 
+2018-05-03 23:22:24,121 : 3363 : INFO : Current task [u'34891329-1980-4cad-9842-dfca0ff8ae81']  state  Completed 
+2018-05-03 23:22:29,126 : 3363 : INFO : volument is getting unassigned,sleeping for 5 sec 
+2018-05-03 23:22:29,183 : 3363 : INFO : Deleting volume ML_TV_1 
+2018-05-03 23:22:36,659 : 3363 : INFO : Current task [u'021115d3-6cac-4523-9006-0c14f0e9bfb6']  state  Completed 
+2018-05-03 23:22:41,664 : 3363 : INFO : volument is getting deleted,sleeping for 5 sec 
+2018-05-03 23:25:47,016 : 3418 : INFO : creating volume ML_TV_0 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_0', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'876c7374-5a8d-4d53-8a00-83f801cd6ec2', 'size': '100'}
+2018-05-03 23:25:56,115 : 3418 : INFO : Current task 19ed1a13-8d0f-4c3e-92f0-532573785438  state  Completed 
+2018-05-03 23:25:56,350 : 3418 : INFO : Assigning volume ML_TV_0 to ip 192.168.81.81
+2018-05-03 23:26:03,828 : 3418 : INFO : Current task 45667e08-2b8e-44b2-8729-d11c0dde9c83  state  Completed 
+2018-05-03 23:26:03,974 : 3419 : INFO : creating volume ML_TV_1 with param {'rw': 85, 'strpsize': '4', 'name': 'ML_TV_1', 'reservation': '70', 'flavor': 'INSANE', 'wl': 'Analytics', 'media_group_id': u'876c7374-5a8d-4d53-8a00-83f801cd6ec2', 'size': '100'}
+2018-05-03 23:26:12,953 : 3419 : INFO : Current task 80b342b7-cdd9-44bc-bf95-fa19f153d4ae  state  Completed 
+2018-05-03 23:26:13,195 : 3419 : INFO : Assigning volume ML_TV_1 to ip 192.168.81.81
+2018-05-03 23:26:20,703 : 3419 : INFO : Current task 24ef6bc4-66be-4e3d-af73-716b7226e624  state  Completed 
+2018-05-03 23:26:20,846 : 3411 : INFO : Ussigning volume ML_TV_0 
+2018-05-03 23:26:28,334 : 3411 : INFO : Current task [u'6035455a-2d19-4713-b473-a5abd203bd31']  state  Completed 
+2018-05-03 23:26:33,339 : 3411 : INFO : volument is getting unassigned,sleeping for 5 sec 
+2018-05-03 23:26:33,406 : 3411 : INFO : Ussigning volume ML_TV_1 
+2018-05-03 23:26:40,893 : 3411 : INFO : Current task [u'a59ad635-fd16-4366-9965-aed0f220dd6f']  state  Completed 
+2018-05-03 23:26:45,898 : 3411 : INFO : volument is getting unassigned,sleeping for 5 sec 
+2018-05-03 23:26:45,971 : 3411 : INFO : Deleting volume ML_TV_0 
+2018-05-03 23:26:53,424 : 3411 : INFO : Current task [u'abb7d3ad-e960-4591-b880-263c28048699']  state  Completed 
+2018-05-03 23:26:58,429 : 3411 : INFO : volument is getting deleted,sleeping for 5 sec 
+2018-05-03 23:26:58,484 : 3411 : INFO : Deleting volume ML_TV_1 
+2018-05-03 23:27:05,943 : 3411 : INFO : Current task [u'2dbad6b9-5b6e-45d4-9255-d8435a1356c1']  state  Completed 
+2018-05-03 23:27:10,948 : 3411 : INFO : volument is getting deleted,sleeping for 5 sec 
