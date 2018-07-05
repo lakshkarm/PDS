@@ -33,7 +33,7 @@ CTRL_NO1 = 6
 CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 8
+NO_OF_VOLUMES = 6
 HOST_IP = "172.25.50.31"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
@@ -612,11 +612,12 @@ def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=N
     assign(name,IP1,IP2)
 def multiproc(no):
     vol_list = []
-    volname= 'ML_TV'
+    #volname= 'ML_TV'
+    volname= 'ML_VOL'
     for i in range(no):
         vol = volname+"_"+str(i)
-        p = multiprocessing.Process(target=create_assign_vol,args=('300', '4',vol, str(10), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
-        #p = multiprocessing.Process(target=create_assign_vol,args=('400', '4',vol, str(10), MG_NAME, 'INSANE',CTRL_1_IP))
+        p = multiprocessing.Process(target=create_assign_vol,args=('200', '4',vol, str(10), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
+        #p = multiprocessing.Process(target=create_assign_vol,args=('100', '4',vol, str(10), MG_NAME, 'INSANE',CTRL_1_IP))
         p.start()
         p.join()
         vol_list.append(vol)
@@ -697,21 +698,19 @@ if __name__=='__main__':
     ## Wating for some time to populate the data through FIO 
     #logger.info("Wating for some time to populate the data through FIO")
     #time.sleep(30)
-    #'''
     #collecting media used in that MG 
     ## collecting the slot if for the disks used in MG , And check its "Active" status
     ## Sending disk status 
     device_list =  used_media_in_mg(MG_NAME)    
     logger.info("Active device from the MediaGroup : %s"%device_list)
-    ## starting rebuild for all the drives one by one
-    ## Now runnigng rebuild loop as a saparate process
+    # starting rebuild for all the drives one by one
+    # Now runnigng rebuild loop as a saparate process
     #p = multiprocessing.Process(target=rebuild_loop , args=(device_list,)) 
     #p.start()
-    ''' 
-    # now start the FO/FB using cotnroller powerOff/on
-    logger.info("now start the FO/FB using cotnroller powerOff/on")
-    for i in range(10):
-        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
-
-    logger.info("Successfully completed this test")
-    '''
+        
+    ## now start the FO/FB using cotnroller powerOff/on
+    #logger.info("now start the FO/FB using cotnroller powerOff/on")
+    #for i in range(10):
+        #ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
+ #
+    #logger.info("Successfully completed this test")

@@ -22,7 +22,7 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.9'
+CHASSIS_IP = '192.168.6.1'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
 CTRL_1_IP = "192.168.6.1"
@@ -557,6 +557,8 @@ if __name__=='__main__':
    
     # Starting the test here 
     multiproc(NO_OF_VOLUMES)
+    
+    '''
     logger.info("sleeing for 60 sec")
     time.sleep(60)
     for volname in vol_list:
@@ -695,17 +697,17 @@ if __name__=='__main__':
         logger.info("Assigning %s to the controllers"%clone_name)
         assign(clone_name,CTRL_1_IP,CTRL_2_IP)
         time.sleep(10)
-        logger.info("Connecting %s to the host-%s"%(clone_name,HOST_IP))
-        connect_host(CTRL_IPS, HOST_IP, clone_name)
-    time.sleep(60)
-    ##Now start IO load on the clones devices as well
-    for clone_name in clone_list:
-        p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,72000,1))
-        p.start()
+        #logger.info("Connecting %s to the host-%s"%(clone_name,HOST_IP))
+        #connect_host(CTRL_IPS, HOST_IP, clone_name)
+    #time.sleep(60)
+     ###Now start IO load on the clones devices as well
+     #for clone_name in clone_list:
+         #p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,7200,1))
+         #p.start()
      
         
    #   # now start the FO/FB using cotnroller powerOff/on
 #    logger.info("now start the FO/FB using cotnroller powerOff/on")
 #    for i in range(10):
 #        ctrl_poweroff_on(CTRL_NO1,CTRL_NO2)
-
+    '''

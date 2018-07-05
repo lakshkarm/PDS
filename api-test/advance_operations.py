@@ -22,17 +22,17 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.9'
+CHASSIS_IP = '172.25.50.21'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
-CTRL_1_IP = "192.168.6.6"
-CTRL_2_IP = "192.168.7.7"
-CTRL_NO1 = 16
-CTRL_NO2 = 20
-ZONE = 4
-MG_NAME = "testmg1"
-NO_OF_VOLUMES = 1
-HOST_IP = "172.25.26.215"
+CTRL_1_IP = "192.168.6.2"
+CTRL_2_IP = "192.168.6.1"
+CTRL_NO1 = 6
+CTRL_NO2 = 10
+ZONE = 3
+MG_NAME = "manishmg1"
+NO_OF_VOLUMES = 4
+HOST_IP = "172.25.50.31"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
 id_dict = {}
@@ -256,11 +256,9 @@ def assign(vol_name, ip1,ip2=None):
         port1 = get_port_id_volume(vol_name, ip1)
         port2 = get_port_id_volume(vol_name, ip2)
         data = {
-                "protocol": 1,
-                "nwlist": [],
-                "controllers": [],
+                "protocol": "rdma",
+                "port_number": 4420,
                 "ports": [port1,port2],
-                "controller_id": -1,
                 "hostnqn":[]
                 }
         logger.info('Assigning volume %s to ip %s,%s'%(vol_name, ip1,ip2))
@@ -271,13 +269,11 @@ def assign(vol_name, ip1,ip2=None):
     else:
         port = get_port_id_volume(vol_name, ip1)
         data = {
-                    "protocol": 1,
-                    "nwlist": [],
-                    "controllers": [],
-                    "ports": [port],
-                    "controller_id": -1,
-                    "hostnqn":[]
-              }   
+                "protocol": "rdma",
+                "port_number": 4420,
+                "ports": [port],
+                "hostnqn":[]
+                }
         logger.info('Assigning volume %s to ip %s'%(vol_name, ip1))
         stdout,retcode =  call_api(url,'POST', data)
         #assert(stdout['error'] == 0)
@@ -534,19 +530,14 @@ def create_copy(pid,copy_type,name,resr=0):
 
 
 if __name__=='__main__':
-    #vol= 'ML_TV'
-    #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
-    #assign(vol,'192.168.6.1','192.168.7.2')
     vol_list = []  
     snap_list = []
     clone_list =[]
     def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
         create_vol(size, stripe , name, reservation, md_grp, flavor)
-        #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE') 
         assign(name,IP1,IP2)
     
     def multiproc(no):
-        #volname= 'ML_TV'
         volname= 'V'
         for i in range(no):
             vol = volname+"_"+str(i)
@@ -563,14 +554,14 @@ if __name__=='__main__':
      #connect the volume to the host 
         connect_host(CTRL_IPS, HOST_IP, volname)
      #start io on the volumes / # 1 for multipath vol
-        p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,7200,1))
+        #p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,7200,1))
         #p.daemon = True
-        p.start()
+        #p.start()
         #p.join()
     
     ## Wating for some time to populate the data through FIO 
     logger.info("Wating for some time to populate the data through FIO")
-    time.sleep(300)
+    time.sleep(3)
     ##collecting media used in that MG 
     ## collecting the slot if for the disks used in MG , And check its "Active" status
     def used_media_in_mg(mgname):
@@ -626,8 +617,8 @@ if __name__=='__main__':
             time.sleep(600)
         
     ## Now runnigng rebuild loop as a saparate process
-    p = multiprocessing.Process(target=rebuild_loop , args=(device_list,)) 
-    p.start()
+    #p = multiprocessing.Process(target=rebuild_loop , args=(device_list,)) 
+    #p.start()
    
 #   # now start the FO/FB using cotnroller powerOff/on
 #    logger.info("now start the FO/FB using cotnroller powerOff/on")
@@ -673,14 +664,17 @@ if __name__=='__main__':
     for clone_name in clone_list:
         logger.info("Assigning %s to the controllers"%clone_name)
         assign(clone_name,CTRL_1_IP,CTRL_2_IP)
-        time.sleep(10)
-        logger.info("Connecting %s to the host-%s"%(clone_name,HOST_IP))
-        connect_host(CTRL_IPS, HOST_IP, clone_name)
-    time.sleep(60)
+        #time.sleep(10)
+        #logger.info("Connecting %s to the host-%s"%(clone_name,HOST_IP))
+        #connect_host(CTRL_IPS, HOST_IP, clone_name)
+    #time.sleep(60)
     ##Now start IO load on the clones devices as well
-    for clone_name in clone_list:
-        p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,7200,1))
-        p.start()
+    #for clone_name in clone_list:
+    #    p = multiprocessing.Process(target=do_io, args=(HOST_IP, clone_name,"80%",1,7200,1))
+    #    p.start()
+
+    ## delete all objects 
+    
     
         
 

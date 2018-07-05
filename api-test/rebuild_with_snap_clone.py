@@ -1,4 +1,6 @@
 import requests,json,time,logging,multiprocessing,subprocess
+from datetime import datetime
+
 import sys
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
@@ -22,17 +24,17 @@ logger = advance_logger()
 jsession= None
 xref = None
 ## importent inputs before run this script
-CHASSIS_IP = '172.25.26.9'
+CHASSIS_IP = '192.168.6.2'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
-CTRL_1_IP = "192.168.6.1"
+CTRL_1_IP = "192.168.6.2"
 CTRL_2_IP = "192.168.7.2"
 CTRL_NO1 = 6
 CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 2
-HOST_IP = "172.25.26.215"
+NO_OF_VOLUMES = 6
+HOST_IP = "172.25.50.31"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
 id_dict = {}
@@ -112,10 +114,7 @@ def call_api(api_url, method, req_data=None):
 
     r = requests.request(method, api_url, headers=header, data=json.dumps(req_data),
                          cookies={"JSESSIONID": jsession}, verify=False)
-    
-    #logger.info('aaaaaaaaaaaaaaaaaaaa%s'%dir(r))
-    #logger.info(vars(r))
-    assert(r.status_code ==200)
+    #assert(r.status_code ==200)
     return json.loads(r.text), str(r.status_code)
 
 
@@ -177,6 +176,118 @@ def get_object_id(object_type, object_name):
     id = stdout["id"]
     return id 
     
+
+def return_exact_time(time):
+    #return '2018-03-13 10:05:07.000748617'
+    return time.split('.')[0]
+
+def wait_till_task_completes(task_id,string=''):
+    tid = task_id[0] if type(task_id) == list else task_id
+    url = "https://%s/api/v1.0/notification/tasks/%s"%(CHASSIS_IP, tid)
+    count = 400
+    FMT = '%Y-%m-%d %H:%M:%S'
+    while 1:
+        stdout , retcode = call_api(url,'GET')
+        if stdout['displayState'] == "Completed" :
+            start_time = return_exact_time(stdout['time'])
+            end_time = return_exact_time(stdout['endTime'])
+            tdelta = datetime.strptime(end_time, FMT) - datetime.strptime(start_time, FMT)
+            logger.info(' %s Task completed in time %s '%(string, tdelta))
+            return 0
+        logger.info('Current task %s  state  %s '%(task_id,stdout['displayState']))
+        if stdout['displayState'] == "Failed" :
+            logger.info('Current task %s  state  %s is FAILED '%(task_id,stdout['displayState']))
+            start_time = return_exact_time(stdout['time'])
+            end_time = return_exact_time(stdout['endTime'])
+            tdelta = datetime.strptime(end_time, FMT) - datetime.strptime(start_time, FMT)
+            logger.info(' %s Task completed in time %s '%(string, tdelta))
+            return 1
+        time.sleep(30)
+
+    
+    
+    
+def drive_poweron(drive_num):
+    url = "https://%s/api/v1.0/chassis/drives/poweron"%(CHASSIS_IP)
+    data =  {
+            'device_list' : [drive_num]
+            }
+
+    logger.info('powering on the drive %s'%drive_num)
+    stdout , retcode = call_api(url,'POST', data)
+    #error_check(stdout , retcode)
+    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+    wait_till_task_completes(taskid)
+    print stdout,retcode
+
+
+def drive_poweroff(drive_num):
+    url = "https://%s/api/v1.0/chassis/drives/poweroff"%(CHASSIS_IP)
+    data =  {
+            'device_list' : [drive_num]
+            }
+    logger.info('powering off the drive %s'%drive_num)
+    stdout , retcode = call_api(url,'POST', data)
+    #error_check(stdout , retcode)
+    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+    wait_till_task_completes(taskid)
+    print stdout,retcode
+
+def drive_format(drive_num):
+    url = "https://%s/api/v1.0/chassis/drives/format"%(CHASSIS_IP)
+    data =  {
+            'device_list' : [drive_num]
+            }
+    logger.info('formatting the drive %s'%drive_num)
+    stdout , retcode = call_api(url,'POST', data)
+def wait_till_task_completes(task_id):
+    tid = task_id[0] if type(task_id) == list else task_id
+    url = "https://%s/api/v1.0/notification/tasks/%s"%(CHASSIS_IP, tid)
+    count = 200
+    while 1:
+        stdout , retcode = call_api(url,'GET')
+       # print json.dumps(stdout,indent=4)
+        if stdout['displayState'] == "Completed" :
+            logger.info('Current task %s  state  %s '%(task_id,stdout['displayState']))
+            return 0
+        if stdout['displayState'] == "Failed" :
+            logger.info('Current task %s  state  %s is FAILED '%(task_id,stdout['displayState']))
+            return 1
+        time.sleep(7)
+    
+def drive_poweron(drive_num):
+    url = "https://%s/api/v1.0/chassis/drives/poweron"%(CHASSIS_IP)
+    data =  {
+            'device_list' : [drive_num]
+            }
+
+    logger.info('powering on the drive %s'%drive_num)
+    stdout , retcode = call_api(url,'POST', data)
+    #error_check(stdout , retcode)
+    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+    wait_till_task_completes(taskid)
+    print stdout,retcode
+
+
+def drive_poweroff(drive_num):
+    url = "https://%s/api/v1.0/chassis/drives/poweroff"%(CHASSIS_IP)
+    data =  {
+            'device_list' : [drive_num]
+            }
+    logger.info('powering off the drive %s'%drive_num)
+    stdout , retcode = call_api(url,'POST', data)
+    #error_check(stdout , retcode)
+    taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+    wait_till_task_completes(taskid)
+    print stdout,retcode
+
+def drive_format(drive_num):
+    url = "https://%s/api/v1.0/chassis/drives/format"%(CHASSIS_IP)
+    data =  {
+            'device_list' : [drive_num]
+            }
+    logger.info('formatting the drive %s'%drive_num)
+    stdout , retcode = call_api(url,'POST', data)
 def wait_till_task_completes(task_id):
     tid = task_id[0] if type(task_id) == list else task_id
     url = "https://%s/api/v1.0/notification/tasks/%s"%(CHASSIS_IP, tid)
@@ -261,7 +372,6 @@ def assign(vol_name, ip1,ip2=None):
                 "ports": [port1,port2],
                 "hostnqn":[]
                 }
-
         logger.info('Assigning volume %s to ip %s,%s'%(vol_name, ip1,ip2))
         stdout,retcode =  call_api(url,'POST', data)
         error_check(stdout , retcode)
@@ -319,17 +429,15 @@ def create_snapshot(snap_name, vol_name):
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
     wait_till_task_completes(taskid)
 
-def create_clone1(clone_name, snap_name, reservation):
+def create_clone(clone_name, snap_name, reservation):
     url = "https://%s/api/v1.0/storage/snapshots/create"%CHASSIS_IP
-    print clone_name, snap_name, reservation
-    print get_object_id('volume',snap_name)
     data =  {
         "name": clone_name,
         "type": "Clone",
         "parent_id": get_object_id('volume',snap_name),
         "reservation":str(reservation)
     }
-    logger.info('Creating clone snapshot %s clone %s %s'%(snap_name,clone_name,data))
+    logger.info('Creating clone snapshot %s clone %s'%(snap_name,clone_name))
     stdout , retcode = call_api(url,'POST', data)
     error_check(stdout , retcode)
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
@@ -376,11 +484,8 @@ def create_vol(size, stripe , name, reservation, md_grp, flavor):
 
 def error_check(stdout, retcode):
     if (stdout['error'] != 0):
-        #print stdout,retcode
-        error = stdout["error_msg"]
-        logger.error("%s : %s"%(error,retcode))
-        assert(stdout['error'] == 0)
-        
+        print stdout,retcode
+    #assert(stdout['error'] == 0)
 
 def connect_host(ctrl_ip, host, vol_name):
     for ip in ctrl_ip.split(','):
@@ -456,7 +561,7 @@ def rebuild_media_grp(md_grp):
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
     logger.info('waiting for 180 sec')
     time.sleep(180)
-    ret_stat = wait_till_task_completes(taskid)
+    ret_stat = wait_till_task_completes(taskid,  ' REBUILD ')
     if ret_stat == 1 :
         print 'calling recursaviely rebuild '
         rebuild_media_grp(md_grp)
@@ -501,71 +606,6 @@ def ctrl_poweron(ctrl_slot):
     taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
     wait_till_task_completes(taskid)
     #print json.dumps(stdout,indent=4)
-
-
-def create_copy(pid,copy_type,name,resr=0):
-    url = "https://%s/api/v1.0/storage/snapshots/create"%(CHASSIS_IP)
-    if copy_type not in ('Snapshot', 'Clone'):
-        print "ERROR! Unknow copy type"
-        return(1)
-    logger.info("Creating %s : %s"%(copy_type,name))
-    if copy_type == "Snapshot":
-        data = {
-                "name": name,
-                "parent_id": pid,
-                "reservation": 0,
-                "type": "Snapshot"
-                }
-        stdout,retcode = call_api(url,'POST',data)
-        try:
-            error_check(stdout, retcode)
-        except AssertionError:
-            logger.error("stopping the code execution " )
-            sys.exit()
-        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        wait_till_task_completes(taskid)
-    else:
-        data = {
-                "name": name,
-                "parent_id": pid,
-                "reservation": str(resr),
-                "type": "Clone"
-                }
-        stdout,retcode = call_api(url,'POST',data)
-        error_check(stdout, retcode)
-        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        wait_till_task_completes(taskid)
-
-def get_existing_vols():
-    url = "https://%s/api/v1.0/storage/volumes"%(CHASSIS_IP)
-    stdout,retcode = call_api(url,'GET')
-    #print json.dumps(stdout,indent=4)
-    vol_list = []
-    for i in stdout:
-        if "name" in i.keys():
-            key = i["name"]
-            j = key.encode('ascii')
-            vol_list.append(j)
-    return vol_list
-    
-def used_media_in_mg(mgname):
-    device_list = dict()
-    stdout,retcode = check_media_on_chassis()
-    try:
-        for disk_dict in stdout:
-            if disk_dict['mediaGrpName'] == mgname:
-                key = disk_dict['slot']
-                j = key.encode('ascii')
-                s = disk_dict['displayPresenceState']
-                value = s.encode('ascii')
-                device_list[j] = value
-    except KeyError:
-        pass
-    return (device_list)
-
-def check_disk_state(disk_no,mg):
-    md_state_dict = used_media_in_mg(mg)
-    return(md_state_dict[disk_no])
 
 def create_copy(pid,copy_type,name,resr=0):
     url = "https://%s/api/v1.0/storage/snapshots/create"%(CHASSIS_IP)
@@ -619,8 +659,164 @@ def list_existing_obj(MG_NAME):
             clone = clone_name.encode('ascii')
             clone_list.append(clone)
     return (vol_list,snap_list,clone_list)
-      
+
+def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
+    create_vol(size, stripe , name, reservation, md_grp, flavor)
+    #create_vol('100', '4',vol, str(100), MG_NAME, 'INSANE')
+    assign(name,IP1,IP2)
+def multiproc(no):
+    vol_list = []
+    #volname= 'ML_TV'
+    volname= 'ML_VOL'
+    for i in range(no):
+        vol = volname+"_"+str(i)
+        p = multiprocessing.Process(target=create_assign_vol,args=('200', '4',vol, str(10), MG_NAME, 'INSANE',CTRL_1_IP,CTRL_2_IP))
+        #p = multiprocessing.Process(target=create_assign_vol,args=('100', '4',vol, str(10), MG_NAME, 'INSANE',CTRL_1_IP))
+        p.start()
+        p.join()
+        vol_list.append(vol)
+    return vol_list
+
+def used_media_in_mg(mgname):
+    device_list = dict()
+    stdout,retcode = check_media_on_chassis()
+    try:
+        for disk_dict in stdout:
+            if disk_dict['mediaGrpName'] == mgname:
+                key = disk_dict['slot']
+                j = key.encode('ascii')
+                s = disk_dict['displayPresenceState']
+                value = s.encode('ascii')
+                device_list[j] = value
+    except KeyError:
+        pass
+    return (device_list)
+
+def check_disk_state(disk_no,mg):
+    md_state_dict = used_media_in_mg(mg)
+    return(md_state_dict[disk_no])
+
+def rebuild_loop(device_list):
+    rebuild_no = 0
+    for i in device_list:
+        drive_poweroff(i)
+        logger.info("wating for 60 sec to confirm the disk status ")
+        time.sleep(60)
+        logging.info("drive got powered off successfully")
+        drive_poweron(i)
+        time.sleep(120)
+        if check_disk_state(str(i),MG_NAME) == "Active":
+            print "Disk is Active now"
+            logging.info("starting rebuild")
+            rebuild_media_grp(MG_NAME)
+            logger.info("next rebuild will start in 120 sec")
+            time.sleep(120)
+            logger.info("Rebuild iteration %s completed "%rebuild_no)
+        rebuild_no += 1
+
+def ctrl_poweroff_on(ctrl_no1,crtl_no2):
+    ctrls = locals() ## locals() retruns dict for function local variables
+    for i in ctrls:
+        slot = ctrls[i]
+        logger.info("powering off controller %s"%slot)
+        ctrl_poweroff(slot)
+        time.sleep(60)
+        ctrl_poweron(slot)
+        logger.info("next failover will triggered in 10 min")
+        time.sleep(600)
+
+def create_snap_clone(vol_list,c=None):
+    snap_list = []
+    clone_list = []
+    if c == 1:
+        for i in vol_list:
+            count = 1
+            vol_id = get_object_id('volume', i)
+            snap_name = "s"+str(count)+"_"+str(i)
+            create_copy(vol_id,"Snapshot",snap_name)
+            time.sleep(10)
+            snap_id = get_object_id("snapshot", snap_name)
+            clone_name = "c"+str(count)+"_"+str(snap_name)
+            create_copy(snap_id,"Clone",clone_name,90)
+            time.sleep(10)
+            snap_list.append(snap_name)
+            clone_list.append(clone_name)
+            count+=1
+        return(snap_list,clone_list)
+    else:
+        for i in vol_list:
+            count = 1
+            vol_id = get_object_id('volume', i)
+            snap_name = "snap"+str(count)+"_"+str(i)
+            create_copy(vol_id,"Snapshot",snap_name)
+            time.sleep(10)
+            snap_list.append(snap_name)
+            count+=1
+        return(snap_list)
+
+
+
+#get_chassis_info()
+#get_mediaGroup_info()
+#create_mg("RAID-6 (7+2)",4,"mg123")
+#delete_mg("mg123")
+
+#create_vol('100', '4','vol1', str(100), MG_NAME, 'INSANE')
 
 if __name__=='__main__':
-    #print get_existing_vols() 
-    pass
+    '''
+    # Starting the test here 
+    vol_list = multiproc(NO_OF_VOLUMES)
+    logger.info("sleeing for 20 sec")
+    time.sleep(10)
+    for volname in vol_list:
+    # connect the volume to the host 
+        logger.info("connecting vol to the host")
+        connect_host(CTRL_IPS, HOST_IP, volname)
+    '''
+    # start io on the volumes 
+        # 1 for multipath vol
+#p = multiprocessing.Process(target=do_io, args=(HOST_IP, volname,"80%",1,7200,1))
+        #p.daemon = True
+#p.start()
+        #p.join()
+    
+    ## Wating for some time to populate the data through FIO 
+    #logger.info("Wating for some time to populate the data through FIO")
+    #time.sleep(30)
+    #collecting media used in that MG 
+    ## collecting the slot if for the disks used in MG , And check its "Active" status
+    ## Sending disk status 
+    device_list =  used_media_in_mg(MG_NAME)    
+    logger.info("Active device from the MediaGroup : %s"%device_list)
+    # starting rebuild for all the drives one by one
+    # Now runnigng rebuild loop as a saparate process
+    #p = multiprocessing.Process(target=rebuild_loop , args=(device_list,)) 
+    #p.start()
+        
+    ## now start the FO/FB using cotnroller powerOff/on
+    #logger.info("now start the FO/FB using cotnroller powerOff/on")
+    #for i in range(10):
+        #ctrl_poweroff_on(CTRL_NO1,CTRL_NO2) 
+    #
+    #logger.info("Successfully completed this test")
+    ex_vol_list,snap_list,clone_list = list_existing_obj(MG_NAME)
+    logger.info("snapshot will be taken for following volumes : %s "%ex_vol_list)
+    snap_list,clone_list = create_snap_clone(ex_vol_list,1)
+    logger.info("Snapshots list : %s"%snap_list)
+    logger.info("Clone list : %s"%clone_list)
+
+    
+    '''
+    ## Assigning snapshot to the controllers
+    for snap_name in snap_list:
+        logger.info("Assigning %s to the controllers"%snap_name)
+        assign(snap_name,CTRL_1_IP,CTRL_2_IP)
+        time.sleep(6)
+    ## Assign clones to the controllers
+    for clone_name in clone_list:
+        logger.info("Assigning %s to the controllers"%clone_name)
+        assign(clone_name,CTRL_1_IP,CTRL_2_IP)
+    '''
+
+
