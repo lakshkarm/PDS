@@ -6118,3 +6118,17 @@
 2018-07-06 03:48:17,826 : 31293 : INFO : Current task ec41a74c-e965-4f81-9c0d-7a5d8e81a9fd  state  Completed 
 2018-07-06 03:48:27,836 : 31293 : INFO : Snapshots list : ['s1_ML_VOL_0', 's1_ML_VOL_1', 's1_ML_VOL_2', 's1_ML_VOL_3', 's1_ML_VOL_4', 's1_ML_VOL_5']
 2018-07-06 03:48:27,837 : 31293 : INFO : Clone list : ['c1_s1_ML_VOL_0', 'c1_s1_ML_VOL_1', 'c1_s1_ML_VOL_2', 'c1_s1_ML_VOL_3', 'c1_s1_ML_VOL_4', 'c1_s1_ML_VOL_5']
+2018-07-09 09:28:39,561 : 615 : INFO : Creating Snapshot : snap1_ML_VOL_0
+2018-07-09 09:31:10,041 : 637 : INFO : Creating Snapshot : s1_ML_VOL_0
+2018-07-09 09:31:25,705 : 637 : INFO : Current task 09c51949-237b-4dc0-995e-3f343b5fbbf3  state  Completed 
+2018-07-09 09:31:35,942 : 637 : INFO : Creating Clone : c1_s1_ML_VOL_0
+2018-07-09 09:31:51,983 : 637 : INFO : Current task 4464c201-e442-49aa-bd39-25015d96226e  state  Completed 
+2018-07-09 09:33:18,583 : 646 : INFO : Creating Snapshot : s1_ML_VOL_0
+2018-07-09 09:33:19,175 : 646 : ERROR : Failed to create snapshot, duplicate name : 200
+2018-07-09 09:33:27,502 : 658 : INFO : Creating Snapshot : s1_ML_VOL_0
+2018-07-09 09:33:43,379 : 658 : INFO : Current task 7a81de64-b436-4f7d-8b4e-5d13f006cced  state  Completed 
+2018-07-09 09:33:53,612 : 658 : INFO : Creating Clone : c1_s1_ML_VOL_0
+2018-07-09 09:34:09,573 : 658 : INFO : Current task b6f31c61-46ee-474f-a0c2-5225f4b23d96  state  Completed 
+2018-07-09 09:34:19,637 : 658 : INFO : Creating Snapshot : s2_ML_VOL_1
+2018-07-09 09:34:35,399 : 658 : INFO : Current task 9f1de710-d790-4279-86cb-a05df75f49fc  state  Completed 
+2018-07-09 09:34:45,627 : 658 : INFO : Creating Clone : c2_s2_ML_VOL_1

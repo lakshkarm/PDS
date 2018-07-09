@@ -26,12 +26,12 @@ CHASSIS_IP = '172.25.50.21'
 CHASSIS_USER  = 'admin'
 CHASSIS_PASS  = 'admin'
 CTRL_1_IP = "192.168.6.2"
-CTRL_2_IP = "192.168.6.1"
+CTRL_2_IP = "192.168.7.2"
 CTRL_NO1 = 6
 CTRL_NO2 = 10
 ZONE = 3
 MG_NAME = "manishmg1"
-NO_OF_VOLUMES = 4
+NO_OF_VOLUMES = 5
 HOST_IP = "172.25.50.31"
 CTRL_IPS = "%s,%s"%(CTRL_1_IP,CTRL_2_IP)
 
@@ -547,35 +547,60 @@ def create_snap_clone(vol_list,c=None):
     snap_list = []
     clone_list = []
     if c == 1:
+        count = 1
         for i in vol_list:
-            count = 1
             vol_id = get_object_id('volume', i)
-            snap_name = "snap"+str(count)+"_"+str(i)
+            snap_name = "s"+str(count)+"_"+str(i)
             create_copy(vol_id,"Snapshot",snap_name)
-            time.sleep(10)
+            time.sleep(5)
             snap_id = get_object_id("snapshot", snap_name)
-            clone_name = "C"+str(count)+"_"+str(snap_name)
+            clone_name = "c"+str(count)+"_"+str(snap_name)
             create_copy(snap_id,"Clone",clone_name,90)
-            time.sleep(10)
+            time.sleep(5)
             snap_list.append(snap_name)
             clone_list.append(clone_name)
             count+=1
         return(snap_list,clone_list)
     else:
+        count = 1
         for i in vol_list:
-            count = 1
             vol_id = get_object_id('volume', i)
             snap_name = "snap"+str(count)+"_"+str(i)
             create_copy(vol_id,"Snapshot",snap_name)
-            time.sleep(10)
+            time.sleep(5)
             snap_list.append(snap_name)
             count+=1
         return(snap_list)
 
 
+def list_existing_obj(MG_NAME):
+    vol_list = []
+    snap_list  = []
+    clone_list = []
+    #url = "https://%s/api/v1.0/storage/snapshots'"%(CHASSIS_IP)
+    #url = "https://%s/api/v1.0/storage/copies"%(CHASSIS_IP)
+    url = "https://%s/api/v1.0/storage/volumes/all"%(CHASSIS_IP)
+    stdout , retcode = call_api(url,'GET')
+    #print  json.dumps(stdout,indent=4)
+    for i in stdout:
+        if i["mediaGrpName"] == MG_NAME and i["displayType"] == "Volume":
+            vol_name = i["name"]
+            volume = vol_name.encode('ascii')
+            vol_list.append(volume)
+        elif i["mediaGrpName"] == MG_NAME and i["displayType"] ==  "Snapshot":
+            snap_name = i["name"]
+            snapshot = snap_name.encode('ascii')
+            snap_list.append(snapshot)
+        elif i["mediaGrpName"] == MG_NAME and i["displayType"] == "Clone":
+            clone_name = i["name"]
+            clone = clone_name.encode('ascii')
+            clone_list.append(clone)
+    return (vol_list,snap_list,clone_list)
+
 
 if __name__=='__main__':
     for i in range(10):
+        '''
         vol_list = []  
         def create_assign_vol(size, stripe , name, reservation, md_grp, flavor,IP1,IP2=None):
             create_vol(size, stripe , name, reservation, md_grp, flavor)
@@ -616,7 +641,9 @@ if __name__=='__main__':
         device_list =  used_media_in_mg(MG_NAME)    
 
         logger.info("following volumes are created and assigned : %s",vol_list)
+        '''
         ## Now taking snaphsots for all the volumes 
+        vol_list,snap_list,clone_list = list_existing_obj(MG_NAME)
         snap_list,clone_list = create_snap_clone(vol_list,1) 
         print snap_list,clone_list
 
@@ -657,7 +684,7 @@ if __name__=='__main__':
             delete_copy(snap_name) 
         
         # deleting volumes 
-        logger.info("deleting follwing vols : %s",vol_list)
-        for vol_name in vol_list:
-            delete_vol(vol_name)
+        #logger.info("deleting follwing vols : %s",vol_list)
+        #for vol_name in vol_list:
+        #    delete_vol(vol_name)
     

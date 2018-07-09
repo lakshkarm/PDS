@@ -805,6 +805,16 @@ if __name__=='__main__':
     snap_list,clone_list = create_snap_clone(ex_vol_list,1)
     logger.info("Snapshots list : %s"%snap_list)
     logger.info("Clone list : %s"%clone_list)
+    ## Assigning snapshot to the controllers
+    for snap_name in snap_list:
+        logger.info("Assigning %s to the controllers"%snap_name)
+        assign(snap_name,CTRL_1_IP,CTRL_2_IP)
+        time.sleep(6)
+    ## Assign clones to the controllers
+    for clone_name in clone_list:
+        logger.info("Assigning %s to the controllers"%clone_name)
+        assign(clone_name,CTRL_1_IP,CTRL_2_IP)
+
 
     
     '''
