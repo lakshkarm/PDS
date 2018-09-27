@@ -25,7 +25,8 @@ from lib.system.DRIVEUTILS import *
 
 from lib.system.CONTROLLER import (
     get_volume_network_map,
-    ControllerOps, 
+    get_all_ids_in_zone,
+    ControllerOps
 )
 
 from lib.system.DRIVEUTILS import (
@@ -96,6 +97,10 @@ def pds_ctrl_fofb():
     fio = FioUtils()
     pvlLibHandle = pvlclient.New("2.0",CHASSIS_IP,logger=logger)
     result = pvlLibHandle.auth.login(user=CHASSIS_USER,password=CHASSIS_PASS)
+    ctrl_id = list(get_all_ids_in_zone(ZONE))
+    ctrl_obj_0 = ControllerOps(pvlLibHandle,ctrl_id[0],"rdma")
+    ctrl_obj_1 = ControllerOps(pvlLibHandle,ctrl_id[1],"rdma")
+
 
         #calling base function to populate the objects 
     media_group,vol_list = base_function(pvlLibHandle,logger)
@@ -110,34 +115,48 @@ def pds_ctrl_fofb():
         # connet to the host
         status = host.connect_volume(vol)
         assert(status == 0)
-        
-    for i in range(50):
-        snap_list = []
-           #start fio on all the volumes
-        logger.info("Starting write on the vol-seq_write")
-        kwargs = {'offset':"0",'size':'1%',"verify_pattern":"0xABCD","verify_interval":4096,"do_verify":1}
-        status,response=fio.seq_write(vol_list, host, kwargs)
-        assert (status == 0) 
-
-        for vol in vol_list:
-               #Taking snaphost 
-            snap_name = str(vol.name) + str("_%s"%SNAP_PREFIX)
-            logger.info("Taking snapshot :%s"%snap_name)
-            snapshot = SnapShotOps(snap_name,volobj=vol,create=True)
-            assert(snapshot != None)
-            snap_list.append(snapshot)
     
-           #Write on remaning space of the volumes 
-        logger.info("Starting write on other space of the vol ")
-        kwargs = {'offset':"0",'size':'1%',"verify_pattern":"0xffff","verify_interval":4096,"do_verify":1}
-        status,response=fio.rand_write(vol_list, host, kwargs)
+    def startIO():
+        p1 = multiprocessing.current_process()
+        logger.info("Starting : %s : %s"%(p1.name,p1.pid))
+        print "Starting :",p1.name,p1.pid
+        logger.info("Starting write on the vol-seq_write")
+        kwargs = {'offset':"0",'size':'100%',"verify_pattern":"0xABCD","verify_interval":4096,"do_verify":1}
+        status,response=fio.seq_write(vol_list, host, kwargs)
         assert (status == 0)
+
         
-        # delete snapshot 
-        for snap in snap_list:
-            status = snap.delete_snapshot()
-            assert (status == True)
-        time.sleep(600)
+        #start fio on all the volumes
+    p1 = multiprocessing.Process(name="StartFio",target=startIO)
+    p1.start()
+     #logger.info("Starting write on the vol-seq_write")
+     #kwargs = {'offset':"0",'size':'1%',"verify_pattern":"0xABCD","verify_interval":4096,"do_verify":1}
+     #status,response=fio.seq_write(vol_list, host, kwargs)
+     #assert (status == 0) 
+    # start FOFB with fresh write
+    logger.info("Start controler poweroff/on")
+    for i in range(10):
+        # controller poeroff
+        status = ctrl_obj_0.power_off()
+        #assert(status == True)
+        time.sleep(60)
+
+        # controller poweron
+        status = ctrl_obj_0.power_on()
+        #assert(status == True)
+        time.sleep(150)
+        
+        # poweroff/on another controller
+        status = ctrl_obj_1.power_off()
+        #assert(status == True)
+        time.sleep(60)
+        
+        # poweroff/on another controller
+        status = ctrl_obj_1.power_on()
+        #assert(status == True)
+        time.sleep(60)
+
+    p1.join()
         
     #disconnect the vol
     for vol in vol_list:
@@ -157,7 +176,10 @@ def pds_degraded_vol__fofb():
     fio = FioUtils()
     pvlLibHandle = pvlclient.New("2.0",CHASSIS_IP,logger=logger)
     result = pvlLibHandle.auth.login(user=CHASSIS_USER,password=CHASSIS_PASS)
-
+    ctrl_id = list(get_all_ids_in_zone(ZONE)) 
+    ctrl_obj_0 = ControllerOps(pvlLibHandle,ctrl_id[0],"rdma")
+    ctrl_obj_1 = ControllerOps(pvlLibHandle,ctrl_id[1],"rdma")
+    
         #calling base function to populate the objects 
     media_group,vol_list = base_function(pvlLibHandle,logger)
 
@@ -185,17 +207,18 @@ def pds_degraded_vol__fofb():
     assert (status == 0)
 
     # start FOFB with fresh write 
+    logger.info("Start controler poweroff/on")
     for i in range(1):
         # controller poeroff 
-        status = power_off()
-        assert(status == True)
+        status = ctrl_obj_0.power_off()
+        #assert(status == True)
         time.sleep(60)
         
         # controller poweron 
-        status = power_on()        
-        assert(status == True)
+        status = ctrl_obj_0.power_on()        
+        #assert(status == True)
         time.sleep(60)
-    
+
     # start overwrite on the vols 
     logger.info("Starting write on the vol-seq_write")
     kwargs = {'offset':"0",'size':'1%',"verify_pattern":"0xABCD","verify_interval":4096,"do_verify":1}
