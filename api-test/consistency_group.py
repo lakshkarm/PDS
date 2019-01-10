@@ -672,28 +672,30 @@ def get_cg_id(cg_name):
         for cgs in stdout:
             if cgs["name"] == cg_name:
                 return cgs["id"]
-            else:
-                raise Exception("%s"%stdout["error_msg"])
-    except Exception as e:
-        logger.error(e)
+    except:
+        logger.info(" %s not present"%cg_name)
 
 
 def take_cg_snap(snap_name,cg_name):
     cg_id = get_cg_id(cg_name)
     url = "https://%s/api/v1.0/storage/cgs/%s/snapshots/create"%(CHASSIS_IP,cg_id)
     data = { 
-            "name":snap_name
+            "name":snap_name,
+            "cg_name":cg_name
            }
     try:
         stdout,retcode = call_api(url,'POST',data)
         #print json.dumps(stdout,indent=4)
         logger.info("%s is getting created"%snap_name)
-        #taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        #wait_till_task_completes(taskid)
-        if stdout["error"] == 0:
-            logger.info("%s  created successfully"%snap_name)
+        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+        if taskid:
+            task_status = wait_till_task_completes(taskid)
+            if stdout["error"] == 0 and task_status == 0:
+                logger.info("%s  created successfully"%snap_name)
+            else:
+                raise Exception("%s"%stdout["error_msg"])
         else:
-            raise Exception("%s"%stdout["error_msg"])
+            print"task id not present"
     except Exception as e:
         logger.error(e)
 
@@ -718,17 +720,17 @@ def cg_snap_name_id(cg_name):
         
 def delete_cg_snap(cg_name,snap_name):
     cg_snap_dict = cg_snap_name_id(cg_name)
-    cg_snap_id = cg_snap_dict["snap_name"]
+    cg_snap_id = cg_snap_dict[snap_name]
     url = "https://%s/api/v1.0/storage/cgs/snapshots/%s/delete"%(CHASSIS_IP,cg_snap_id)
     try:
         stdout,retcode = call_api(url,'POST')
         #print json.dumps(stdout,indent=4)
-        #taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
-        #wait_till_task_completes(taskid)
-        if stdout["error"] == 0:
+        taskid = stdout['taskid_list'] if stdout.has_key('taskid_list') else stdout['taskid']
+        task_status = wait_till_task_completes(taskid)
+        if stdout["error"] == 0 and task_status == 0:
             logger.info("%s  deleted successfully"%snap_name)
         else:
-            raise Exception("%s"%stdout["error_msg"])
+            raise Exception("Failed to delete the CG snap, check on UI logs for more info")
     except Exception as e:
         logger.error(e)
 
@@ -864,46 +866,46 @@ def ctrl_poweroff_on(ctrl_no1,crtl_no2):
 
 if __name__=='__main__':
     '''
-    #create_cg("test_cg_2")
+    #create_cg(cg_name)
     #create_vol('100', '4',"vol_1111", str(10), MG_NAME, 'INSANE')
-    get_cg_id("test_cg_2") 
-    take_cg_snap("hello_sp_2","test_cg_2")
-    cg_snap_name_id("test_cg_2")
-    cg_add_vol("test_cg_2","t1")
-    cg_delete_vol("test_cg_2","t1")
-    cg_delete("test_cg_2")
+    get_cg_id(cg_name) 
+    take_cg_snap(snap_name,cg_name)
+    cg_snap_name_id(cg_name)
+    cg_add_vol(cg_name,"t1")
+    cg_delete_vol(cg_name,"t1")
+    cg_delete(cg_name)
     '''
     total_vol,mg_vol = get_existing_vols("manishmg1")
-    print total_vol
-    print mg_vol
+    #print total_vol
+    print"Following vol present in MG : ", mg_vol
     
-    #def CG_oprations(cg_name,snap_name):
-    #for itr in range(1):
-    ## create CG 
-    create_cg("test_cg_2")
-    time.sleep(3)
-    ## add vol into CG
-    for vol in mg_vol:
-        cg_add_vol("test_cg_2",vol) 
-        time.sleep(2)
-    ## take snap of CG
-    take_cg_snap("hello_sp_2","test_cg_2")
-    time.sleep(3)
-    ## detel CG snap
-    delete_cg_snap("test_cg_2","hello_sp_2")
-    time.sleep(3)
-    ## delete vol CG
-    for vol in mg_vol:
-        cg_delete_vol("test_cg_2",vol)
-        time.sleep(2)
-    ## delete CG 
-    cg_delete("test_cg_2")
-    time.sleep(3)
-    logger.info("CG operations completed successfully")
-    
-    
+    def CG_oprations(cg_name,snap_name):
+        for itr in range(1):
+            ## create CG 
+            create_cg(cg_name)
+            time.sleep(3)
+            ## add vol into CG
+            for vol in mg_vol:
+                cg_add_vol(cg_name,vol) 
+                time.sleep(2)
+                ## take snap of CG
+                take_cg_snap(snap_name,cg_name)
+                time.sleep(3)
+                ## detel CG snap
+                delete_cg_snap(cg_name,snap_name)
+                time.sleep(3)
+            ## delete vol CG
+            for vol in mg_vol:
+                cg_delete_vol(cg_name,vol)
+                time.sleep(2)
+            ## delete CG 
+            cg_delete(cg_name)
+            time.sleep(3)
+            logger.info("CG operations completed successfully")
     
     
-    
-    
+    CG_oprations("tcg1","tcg1_snap") 
+    #get_cg_id('cg3')    
+    #take_cg_snap("s1","cg3") 
+    #delete_cg_snap("cg3","s1")
 
