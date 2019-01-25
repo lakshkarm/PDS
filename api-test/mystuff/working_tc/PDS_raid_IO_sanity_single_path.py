@@ -127,6 +127,7 @@ def pds_online_vol_IO_sanity():
         status,response=fio.seq_write(vol_list, host, kwargs)
         assert (status == 0)
     
+        ''' 
         # start overwrite with diff pattern (rw=rw,splitbs)
         logger.info("Starting over-write with diff pattern -rw=rw")
         kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDffff","verify_interval":4096,"do_verify":1,
@@ -148,7 +149,6 @@ def pds_online_vol_IO_sanity():
         status,response=fio.rand_write(vol_list, host, kwargs)
         assert (status == 0)
 
-        '''
         for vol in vol_list:
                #Taking snaphost 
             snap_name = str(vol.name) + str("_%s"%SNAP_PREFIX)
@@ -223,6 +223,7 @@ def pds_degraded_vol_IO_sanity():
         status,response=fio.seq_write(vol_list, host, kwargs)
         assert (status == 0)
     
+        '''
         # start overwrite with diff pattern (rw=rw,splitbs)
         logger.info("Starting over-write with diff pattern -rw=rw")
         kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDffff","verify_interval":4096,"do_verify":1,
@@ -243,7 +244,7 @@ def pds_degraded_vol_IO_sanity():
                   "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
         status,response=fio.rand_write(vol_list, host, kwargs)
         assert (status == 0)
-    
+    '''
     # poweron the drive again
     logger.info("Powering ON drive : %s"%media)
     status = power_on_drive(media,pvlLibHandle)
@@ -253,13 +254,15 @@ def pds_degraded_vol_IO_sanity():
     logger.info("Start rebuild 1>0")
     #status=media_group.synchronous_rebuild_media_group()
     status=media_group.asynchronous_rebuild_media_group()
+    time.sleep(60)
 
     # starting IO load
-    logger.info("Starting over-write with diff pattern -rw=randrw")
-    kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDabcd","verify_interval":4096,"do_verify":1,
-              "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
-    status,response=fio.rand_read_write(vol_list, host, kwargs)
-    assert (status == 0)
+    #logger.info("Starting over-write with diff pattern -rw=randrw")
+    #kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDabcd","verify_interval":4096,"do_verify":1,
+    #          "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
+    #status,response=fio.rand_read_write(vol_list, host, kwargs)
+    #assert (status == 0)
+    
 
 
 ################################ 1.Critical vol IO test
@@ -310,6 +313,7 @@ def pds_critical_vol_IO_sanity():
         status,response=fio.seq_write(vol_list, host, kwargs)
         assert (status == 0)
     
+        '''
         # start overwrite with diff pattern (rw=rw,splitbs)
         logger.info("Starting over-write with diff pattern -rw=rw")
         kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDffff","verify_interval":4096,"do_verify":1,
@@ -330,6 +334,7 @@ def pds_critical_vol_IO_sanity():
                   "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
         status,response=fio.rand_write(vol_list, host, kwargs)
         assert (status == 0)
+        '''
     
     # Poweron one drive and start the rebuild
     media = [mediaList[0]]
@@ -341,13 +346,14 @@ def pds_critical_vol_IO_sanity():
     logger.info("Start rebuild 2>1")
     #status=media_group.synchronous_rebuild_media_group()
     status=media_group.asynchronous_rebuild_media_group()
+    time.sleep(60)
 
     # starting IO load 
-    logger.info("Starting over-write with diff pattern -rw=randrw")
-    kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDabcd","verify_interval":4096,"do_verify":1,
-              "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
-    status,response=fio.rand_read_write(vol_list, host, kwargs)
-    assert (status == 0)
+    #logger.info("Starting over-write with diff pattern -rw=randrw")
+    #kwargs = {'offset':"0",'size':'50%',"verify_pattern":"0xABCDabcd","verify_interval":4096,"do_verify":1,
+    #          "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
+    #status,response=fio.rand_read_write(vol_list, host, kwargs)
+    #assert (status == 0)
 
     # Poweron second drive and start the rebuild
     media = [mediaList[1]]

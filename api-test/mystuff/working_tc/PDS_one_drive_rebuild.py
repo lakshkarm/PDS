@@ -4,9 +4,10 @@ import inspect
 import logging
 import json
 import pvlclient
-import time
+import time,os
 import requests
 from os import environ
+from os import environ as env
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from nose.plugins.attrib import attr
 from nose.tools import with_setup
@@ -34,7 +35,12 @@ from lib.system.DRIVEUTILS import (
 from lib.storage.CLEARCONFIG import(
     clear_zone_config
 )
-
+from lib.misc.MISCOPS import (
+    wait_till_task_complete,
+    run,
+    sleep_p,
+    setup_func
+    )
 from config.ENV import (
     CHASSIS_IP,
     CHASSIS_USER,
@@ -112,39 +118,54 @@ def pds_one_drive_rebuild():
         status = host.connect_volume(vol)
         assert(status == 0)
 
-    # start overwrite with diff pattern (rw=rw,splitbs)
-    logger.info("Starting over-write with diff pattern -rw=rw")
-    kwargs = {'offset':"0",'size':'10%',"verify_pattern":"0xABCDffff","verify_interval":4096,"do_verify":1,
-              "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
-    status,response=fio.seq_read_write(vol_list, host, kwargs)
-    assert (status == 0)
+    #start FIO thread here
+    temp_file_path = "%s/tmp/run_fio.%s"%(env['TESTDIR'] ,os.getpid())
+    cmd = "touch %s "%temp_file_path
+    run(cmd)
+    proc=multiprocessing.Process(target=fio.infinite_fio,args=(vol_list, host, temp_file_path))
+    proc.start()
+    logger.info('Fio process id code %s'%proc.pid)
+    sleep_p(60)
 
+    if proc.is_alive():
+        sleep_p(60)
+    else:
+        logger.error('Fio process failed %s'%proc.pid)
+        assert(proc.exitcode==0)
 
-    # Power off one drive
-    mediaList = media_group.get_media_group_disk()
-        
-    for i in range(1):
-        media = [mediaList[i]]
-        logger.info("Powering off drive : %s"%media)
-        status = power_off_drive(media,pvlLibHandle)
-        time.sleep(30)
-        
-        # poweron the drive again
-        logger.info("Powering ON drive : %s"%media)
-        status = power_on_drive(media,pvlLibHandle)
-        time.sleep(60)
+    try:
+        # Power off one drive
+        mediaList = media_group.get_media_group_disk()
+            
+        for i in range(1):
+            media = [mediaList[i]]
+            logger.info("Powering off drive : %s"%media)
+            status = power_off_drive(media,pvlLibHandle)
+            time.sleep(30)
+            
+            # poweron the drive again
+            logger.info("Powering ON drive : %s"%media)
+            status = power_on_drive(media,pvlLibHandle)
+            time.sleep(60)
+            if proc.is_alive():
+                # start async-rebuild with io 
+                logger.info("Start rebuild 1>0")
+                #status=media_group.synchronous_rebuild_media_group()
+                status=media_group.asynchronous_rebuild_media_group()
 
-        # start async-rebuild with io 
-        logger.info("Start rebuild 1>0")
-        #status=media_group.synchronous_rebuild_media_group()
-        status=media_group.asynchronous_rebuild_media_group()
+    except Exception as E:
+        logger.error('Stack trace for failure \n%s\n'%traceback.format_exc())
+        raise E
 
-        # starting IO load
-        logger.info("Starting over-write with diff pattern -rw=randrw")
-        kwargs = {'offset':"0",'size':'10%',"verify_pattern":"0xABCDabcd","verify_interval":4096,"do_verify":1,
-                  "bssplit":"4k/15:16k/15:32k/15:64k/15:128k/15:256k/10:512k/5:1m/5:2m/5"}
-        status,response=fio.rand_read_write(vol_list, host, kwargs)
-        assert (status == 0)
+    finally:
+        cmd = "rm -f %s "%temp_file_path
+        run(cmd)
+        if proc.is_alive():
+            proc.join()
+        code = proc.exitcode
+        if code != 0 :
+            logger.error('Fio failed on volumes ')
+            assert(code == 0 )
 
 
 
